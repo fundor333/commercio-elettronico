@@ -1,29 +1,9 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Questo è il codice scritto per il corso di Commercio Elettronico del professor Silvestri 
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
+* Salvare codice
+* Avere uno storico del codice
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact

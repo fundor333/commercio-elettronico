@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import urllib2
 
+
 class LettoreFile:
     input = ""
     output = ""
@@ -32,7 +33,8 @@ class GestoreCollezioneFile:
         mappa = {}
 
         for line in lines:
-            splitted = line.split()
+            splitted = line.upper()
+            splitted = splitted.split()
             for word in splitted:
                 if word in mappa:
                     mappa[word] = (mappa[word][0] + 1, mappa[word][1] + 1)
@@ -41,7 +43,7 @@ class GestoreCollezioneFile:
 
         for keyword in mappa.keys():
             if keyword in self.dizionario:
-                self.dizionario[keyword] = (self.dizionario[word][0] + 1, self.dizionario[word][1] + 1)
+                self.dizionario[keyword] = (self.dizionario[keyword][0] + 1, self.dizionario[keyword][1] + 1)
             else:
                 self.dizionario[keyword] = (1, 1)
 
@@ -56,6 +58,7 @@ class GestoreCollezioneFile:
             f.write('\n')
         f.close()
 
+
 def main():
     page1 = urllib2.urlopen('http://www.unive.it/data/46/1')
     page2 = urllib2.urlopen('http://www.unive.it/data/46/2')
@@ -65,23 +68,24 @@ def main():
     output3 = open('output3.txt', 'w')
 
     for line in page1:
+        line =line.replace("\W"," ")
         output1.write(line)
 
     for line in page2:
-        output2.write(line)
+        output2.write(line.replace('\w', ''))
 
     for line in page3:
-        output3.write(line)
+        output3.write(line.replace('\w', ''))
 
     output1.close()
     output2.close()
     output3.close()
 
-    lista=('output1.txt','output2.txt','output3.txt')
+    lista = ('output1.txt', 'output2.txt', 'output3.txt')
 
-    Variabile=GestoreCollezioneFile(lista)
-    Variabile.printer()
+    variabile = GestoreCollezioneFile(lista)
+    variabile.printer()
 
-#Esecutore intero progetto
+# Esecutore intero progetto
 if __name__ == "__main__":
     main()
