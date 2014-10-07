@@ -7,8 +7,17 @@ class LettoreFile:
     output = ""
 
     def __init__(self, i, o):
-        self.input = open(i, 'r')
+        self.input = urllib2.urlopen(i)
         self.output = open(o, 'w')
+
+    def elaboratore(self):
+        for line in self.input:
+            self.output = self.output + self.pulisciparola(line)
+        return self
+
+    def pulisciparola(self,word):
+        #word= word.split('\W')
+        return word
 
     def tuttomaiuscolo(self):
         for line in self.input:
@@ -50,41 +59,18 @@ class GestoreCollezioneFile:
     def printer(self):
         f = open('dizout.txt', 'w')
         for x in self.dizionario:
-            f.write(str(self.dizionario[x][0]))
-            f.write(" ")
-            f.write(str(self.dizionario[x][1]))
-            f.write(' ')
-            f.write(x)
-            f.write('\n')
+            f.write(str(self.dizionario[x][0])+" "+str(self.dizionario[x][1])+' '+x+'\n')
         f.close()
 
 
 def main():
-    page1 = urllib2.urlopen('http://www.unive.it/data/46/1')
-    page2 = urllib2.urlopen('http://www.unive.it/data/46/2')
-    page3 = urllib2.urlopen('http://www.unive.it/data/46/3')
-    output1 = open('output1.txt', 'w')
-    output2 = open('output2.txt', 'w')
-    output3 = open('output3.txt', 'w')
-
-    for line in page1:
-        line =line.replace("\W"," ")
-        output1.write(line)
-
-    for line in page2:
-        output2.write(line.replace('\w', ''))
-
-    for line in page3:
-        output3.write(line.replace('\w', ''))
-
-    output1.close()
-    output2.close()
-    output3.close()
-
     lista = ('output1.txt', 'output2.txt', 'output3.txt')
 
-    variabile = GestoreCollezioneFile(lista)
-    variabile.printer()
+    LettoreFile('http://www.unive.it/data/46/1', lista[0])
+    LettoreFile('http://www.unive.it/data/46/2', lista[1])
+    LettoreFile('http://www.unive.it/data/46/3', lista[2])
+
+    GestoreCollezioneFile(lista).printer()
 
 # Esecutore intero progetto
 if __name__ == "__main__":
