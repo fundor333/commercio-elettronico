@@ -1,0 +1,5 @@
+Cerco->site:www.ansa.it mafia
+Google->h3 class r contenente un a
+Url Google->https://www.google.it/search?q=site%3Awww.ansa.it+mafia&btnG=Cerca&gbv=1
+Ansa->articleBody
+Libreria da usare->xPath
