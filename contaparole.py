@@ -15,12 +15,13 @@ class Contaparole:
         new_dict = dict()
         rigadelfile.split("")
         for singolaparola in rigadelfile:
-            if new_dict.get(singolaparola)
+            if new_dict.get(singolaparola):
+                #TODO add something
         return None
 
 
 def main():
-    Contaparole("0001.txt")
+    Contaparole("../repository/0001.txt")
 
 
 # Esecutore intero progetto
