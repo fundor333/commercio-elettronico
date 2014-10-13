@@ -1,0 +1,38 @@
+#titolo Le tappe nella conoscenza del Dna - Biotech - Scienza&Tecnica
+  Ecco le principali tappe nella storia e nelle conseguenze della scoperta del codice della vita: 
+ 1865: Johann Gregor Mendel scopre le leggi dell'ereditarieta' 
+1902: Walter Stanford Sutton ipotizza che l' informazione 
+ereditaria sia contenuta nei cromosomi, scoperti 20 anni prima 
+1907: Thomas Hunt Morgan scopre che i cromosomi sono sequenze di informazioni genetiche 
+1944: Oswald Avery scopre che i geni sono fatti di acido desossiribonucleico (Dna) 
+1953: James Watson e Francis Crick scoprono la struttura del Dna 
+1961: Francois Jacob e Jacques Monod scoprono che l' Rna - messaggero copia il Dna e permette la produzione delle proteine 
+1973: primo brevetto per la tecnica del Dna ricombinante, che modifica il Dna di un organismo inserendo in esso frammenti di Dna appartenenti ad un altro organismo 
+1975: negli Usa nasce la prima azienda biotecnologica 
+1976: identificato il primo gene responsabile del cancro 
+1977: primo prodotto dell'ingegneria genetica: l'insulina umana 
+1978: pimo trapianto di geni tra mammiferi 
+1982: l'insulina umana artificiale e' il primo farmaco ottenuto con le biotecnologie 
+1983: il biochimico Kary Mullis mette a punto la Pcr (reazione a catena della polimerasi), tecnica che permette di moltiplicare numerosissime volte frammenti di Dna 
+1985: la tecnica delle impronte genetiche (Dna fingerprinting), determina i segni genetici distintivi di ogni individuo 
+1985: identificato il primo gene di una malattia ereditaria (fibrosi cistica) 
+1986: parte in tutto il mondo il Progetto genoma umano 
+1988: primo brevetto di un animale transgenico, l'oncotopo 
+1991: primo trapianto di geni su una bambina colpita da un deficit immunologico ereditario 
+1992: primo intervento di terapia genica anticancro 
+1996: identificati primi geni responsabili dello sviluppo del cervello 
+1996: scoperto il gene della malattia di Werner, che provoca l'invecchiamento precoce 
+1997: la terapia genica viene utilizzata con successo per far ricrescere vasi sanguigni, creando by-pass naturali 
+1999: scoperto il gene supervisore che separa la testa dal tronco 
+1999: identificato il cosiddetto gene della longevita', il primo del genere scoperto nei mammiferi. Si chiama P66shc ed e' coinvolto nel controllo della durata della vita 
+2000: presentata la mappa completa del genoma umano, in aprile dall'azienda privata Celera, di Craig Venter, e in giugno dal consorzio internazionale pubblico 
+2000: decifrato per la prima volta il genoma di una pianta, la Arabidopsis thaliana 
+2001: la sequenza completa del genoma umano viene pubblicata on line 
+2002: Craig Venter annuncia di voler costruire in laboratorio una forma di vita artificiale modificando il batterio Mycoplasma genitalium 
+2002: completata la mappa genetica del topo 
+2003: mappa del cromosoma maschile Y 
+2004: decifrato il cromosoma più lungo, il 5 
+2005: mappa del cromosoma X 
+2007: primo cromosoma sintetico, ottenuta da Craig Venter 
+2008: in Gran Bretagna via libera alla ricerca su embrioni ibridi uomo-animale 
+2010: nell’istituto di Venter viene costruita in laboratorio la prima cellula artificiale  

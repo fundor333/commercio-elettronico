@@ -1,0 +1,11 @@
+#titolo Le componenti della distanza di sicurezza - Guidare in Sicurezza - ACI
+  Le componenti della distanza di sicurezza 
+La distanza di sicurezza è la distanza che ogni veicolo deve mantenere da quello che lo precede, per potersi arrestare, quando necessario, senza tamponarlo. Nella valutazione della distanza di sicurezza è importante tenere in considerazione alcuni fattori : la prontezza dei riflessi del conducente; il tipo e lo stato di efficienza del veicolo; la velocità; la visibilità e le condizioni atmosferiche; le condizioni del traffico; la pendenza della strada e l'entità del carico.  
+In teoria, nel calcolo di questa distanza si dovrebbe considerare solo l'equivalente della distanza percorsa in un secondo, cioè nel tempo mediamente impiegato per decidere se l'accensione dello stop del veicolo che precede implica la necessità di una nostra frenata e quindi agire di conseguenza. Si dà infatti per scontato che il veicolo davanti ha uno spazio di arresto uguale a quello del veicolo che segue.  
+Quale deve essere la distanza di sicurezza? 
+Tenuto conto che al raddoppio della velocità corrisponde uno spazio di frenata quadruplo, è prudente non scendere mai (neanche nella fase iniziale di un sorpasso, quando cioè si inizia ad uscire dalla "scia" del veicolo che precede) al di sotto delle seguenti distanze dal veicolo che precede:  
+- a 50Km/h distanza di sicurezza minima 25 metri equivalente alla lunghezza di due autobus 
+- a 90Km/h distanza di sicurezza minima 40 metri equivalente alla lunghezza di due autotreni 
+- a 130Km/h distanza di sicurezza minima 130 metri equivalente alla lunghezza di un campo da calcio. 
+Se i freni non sono perfettamente efficienti, i pneumatici sono consumati, il veicolo è molto carico, lo spazio di frenata si allungherà di molto, e sarà quindi necessario aumentare le distanze almeno della metà.  
+Tali valori non devono essere considerati per la guida in caso di nebbia, quando invece devono valere altre considerazioni.  

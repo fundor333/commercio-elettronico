@@ -1,0 +1,70 @@
+#titolo Il polpo Paul ha scelto, vince la Spagna - Mondiali Sudafrica
+  
+ 
+ [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] 
+ 
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+ 
+ [if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Tabella normale";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";}
+</style>
+<![endif] 
+ (ANSA) - ROMA - La coppa, almeno fac-simile, la merita lui. Il polpo Paul, star indiscussa dei mondiali sudafricani, che non ha sbagliato una sola previsione nella rassegna iridata, compresa l'eliminazione della Germania in semifinale: e ora, chiamato all'ultimo pronostico, il cefalopode piu' famoso del mondo non ha esitato di fronte alle vaschette di cibo immerse nel suo acquario di Oberhausen: Paul si e' infilato dritto in quella con la bandiera spagnola. Insomma per il polpo indovino domani sera sara' la Spagna a sollevare per la prima volta nella sua storia la coppa del mondo. 
+ A parziale risarcimento per i tedeschi Paul ha predetto anche l'esito della finalina pe ril terzo posto: la nazionale di Loew salirà sul podio, battendo l'Uruguay. E se in molti festeggiano in anticipo, c'e' da dire che per gli 'esclusi' dal vaticinio le ore si fanno pesanti. Ma la tensione la vive anche il povero Paul, soprattutto quella dei tifosi delle squadre che ha ‘colpito’ con i suoi insindacabili responsi: i tedeschi, feriti, ora dicono che porta male e rilanciano sul web ricette per cucinarlo, gli argentini raccolgono la sfida sul web e propongono ‘salse sudamericane’ per metterlo in casseruola. Anzi sembra proprio che gli argentini siano i piu’ arrabbiati: sul web i tifosi dell’albiceleste hanno creato un software dove e’ possibile prendere a pugni un polpo che somiglia in maniera impressionante al povero Paul. 
+ In difesa del polpo ci sono animalisti e spagnoli: questi ultimi, in particolare, propongono di portalo in Spagna e si lasciano andare all'ironia sulle cruente intenzioni dei tifosi tedeschi. Anche il presidente spagnolo Jose' Luis Zapatero si dice ''preoccupato'' per eventuali ritorsioni tedesche su Paul. 
+ Dal suo canto Paul puo’ contare su una vasta rete di estimatori su Facebook dove sono apparsi numerosi gruppi a suo sostegno. L’acquario di Oberhausen, in Germania, vedra’ sicuramente aumentare i suoi visitatori e il giorno dell’ultimo vaticinio di Paul, almeno per questi mondiali, c’e’ da scommettere – e’ proprio il caso di dirlo - che ci saranno le tv di mezzo mondo. 
+ Qualche ombra sui ‘vaticini’ di Paul sembra gettarla un biologo peruviano: Alfredo Salazar, questo il nome dello scienziato, sospetta che ‘’Paul sia influenzato dai suoi allevatori e nello stesso acquario dove si trova’’. Salazar non ha prove ma teme che ‘’possa essere attirato da un tipo di cibo particolare’’ ad entrare in una vaschetta piuttosto che in un’altra. 
+ In ogni caso, il lavoro di Paul sembra essere vicino alla conclusione. L’unica certezza e’ che una trovata pubblicitaria, iniziata quasi per giorno due anni fa agli Europei di calcio, sta facendo divertire mezzo mondo, rubando titoli di quotidiani e servizi televisivi a calciatori e allenatori.  

@@ -1,0 +1,65 @@
+#titolo Top Sudafrica - Scopri il Sudafrica
+
+ [if gte mso 9]><xml>
+ 
+  Normal
+  0
+  14
+  
+  
+  false
+  false
+  false
+  
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+ 
+</xml><![endif] [if gte mso 9]><![endif] 
+<!--
+ /* Font Definitions */
+ @font-face
+	{
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;"Times New Roman";
+	mso-fareast-"Times New Roman";}
+@page Section1
+	{size:595.0pt 842.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+--> [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-style-parent:"";
+	font-size:10.0pt;"Times New Roman";}
+</style>
+<![endif] 
+ Non si può lasciare il Sudafrica senza aver goduto di almeno una di queste proposte, tra le più straordinarie del paese: arte, natura, cultura, life style, piacere. 
+ 
+Namaqualand:  nella parte meridionale del Northern Cape, un deserto che esplode in una miriade di fiori selvatici nei mesi primaverili di agosto e settembre.   
+ Kalahari:  una terra ancora estremamente selvaggia e dura, affascinante per i contrasti di colori tra la terra sabbiosa rossa, il verde della savana e il blu intenso del cielo. Qui si può osservare il leone del Kalahari dalla criniera nera.   
+ Table Mountain:  raggiungete con la funivia la cima della Table Mountain e potete godere da un’altitudine di 1080m di una meravigliosa vista 360° della città di Cape Town e di tutta la baia. 
+ Balene:  da luglio a novembre le balene australi provenienti dall’Antartide raggiungono le coste del Sudafrica dove è possibile ammirarle mentre sguazzano e giocano fra le onde. 
+ Penisola del Capo:   il panorama che si apre agli occhi del visitatore che raggiunge il Capo di Buona Speranza lo lascerà a bocca aperta. Non per nulla Sir Francis Drake lo definì “il più bel promontorio del mondo”. 
+ Blyde River Canyon:  il terzo canyon al mondo in ordine di grandezza, scavato dal fiume Blyde per 20km di lunghezza e 700m di profondità. Strada panoramica e vedute mozzafiato. 
+ Cradle of Humankind:  il più ricco sito paleo-antropologico del mondo, con testimonianze risalenti fino a 3.3 milioni di anni fa, a soli 40 min di auto da Johannesburg. 
+ Mapungubwe:  l’antica città dell’oro, con le sue suggestive rovine, è oggi Patrimonio dell’Umanità. 
+ Modjadjiskloof:  nelle vicinanze si trova il Sunland Baobab, più grande baobab del mondo (6000 anni di età e più di 40 metri di circonferenza), che dentro al suo tronco ospita un bar. 
+ Rustemburg:  il Vredefort Dome (sito protetto dall’Unesco come Patrimonio dell’Umanità) è un cratere di un meteorite che cadde sulla terra 2000 milioni di anni fa (40 chilomeri di diametro). 
+ Stellenbosch:  assaggiate il vino all’azienda Tokara, una cantina mozzafiato per la sua curatissima estetica ed eleganza tra cemento, vetro, luci e giochi d’acqua perfettamente fusi col paesaggio. 
+ Cape Town : il Daddy Cool di Cape Town è il posto più in voga per concedersi un aperitivo al tramonto, mentre per i nottambuli le ore piccole si fanno nei tanti club di Long Street, con musica dal vivo, quali Zula Tunes o il Cafè African Image. 
+  
+ 
+   

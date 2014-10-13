@@ -1,0 +1,46 @@
+#titolo AGRICOLTURA: CON L'INFORMATICA SI STIMA IL FORAGGIO - Qualitá Alto Adige
+ 
+     (ANSA) - BOLZANO, 5 MAR - Esperti nel settore foraggero e
+zootecnico hanno avuto un incontro presso il Centro di
+sperimentazione della Laimburg per discutere gli elementi di un
+nuovo strumento informatico che aiutera' gli agricoltori a
+stimare in modo rapido e conveniente la qualita' del foraggio
+del primo taglio dei prati.
+   Per la definizione della razione ottimale del foraggio per il
+bestiame bisogna conoscere la qualita' del foraggio ottenuto dai
+propri prati. Difatti, razioni composte in modo sbilanciato
+possono influire sulla salute del bestiame e percio' sulla
+produzione di latte o carne. L'alternativa alle analisi chimiche
+del foraggio sono attualmente le tabelle del valore foraggero
+che forniscono valori orientativi della qualita' del foraggio.  
+   Queste tabelle riproducono pero' la situazione reale solo in
+parte, in quanto si basano su pochi fattori. ''Tramite il
+progetto webGras che seguiamo presso il Centro di
+Sperimentazione Laimburg vogliamo sviluppare uno strumento
+pubblicamente accessibile, con il quale gli agricoltori possano
+stimare facilmente e con sufficiente precisione la qualita' del
+foraggio ottenuto dal primo taglio dei prati'', come ha spiegato
+Giovanni Peratoner, che coordina il progetto finanziato dal
+Fondo Europeo per lo Sviluppo Regionale (Fesr). ''Per poter
+adattare lo strumento alle esigenze della prassi - come ha detto
+- abbiamo invitato gli esperti del settore a contribuire al
+nostro lavoro con la loro esperienza.'' Nel corso del decennio
+passato le collaboratrici ed i collaboratori del settore
+agricoltura montana presso il Centro di sperimentazione Laimburg
+hanno raccolto, in cooperazione con la consulenza tecnica per i
+contadini di montagna e le scuole professionali per
+l'agricoltura, oltre 5.000 campioni di foraggio provenienti da
+35 siti sperimentali sparsi in tutto l'Alto Adige. Il Centro di
+Laimburg ha analizzato questi campioni ed ha elaborato i
+risultati per individuare i fattori principali che influenzano
+la qualita'. Nel progetto webGras, questi dati vengono associati
+ad altri parametri quali per esempio la disponibilita' di
+energia per la crescita delle piante, quali la radiazione
+globale e l'andamento delle temperature, al fine di creare un
+modello in grado di descrivere la qualita' del foraggio. Su
+questa base sara' ora creata un'applicazione accessibile in
+internet che consenta all'agricoltore di stimare la qualita' del
+foraggio dei propri prati. (ANSA).
+           
+
+ 

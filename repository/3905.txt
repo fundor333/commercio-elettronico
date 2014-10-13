@@ -1,0 +1,59 @@
+#titolo La Commissione Europea - L'ABC dell'Europa - ANSA Europa
+  [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif] [if !mso]><object
+classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif] [if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Tabella normale";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif] 
+ La  Commissione Europea  ha il potere di iniziativa legislativa e quello di vigilare sull'applicazione della normativa comunitaria da parte degli Stati Membri tramite lo strumento della procedura di infrazione. Per questo e per il suo ruolo di responsabile dell'attuazione della normativa comunitaria, la Commissione europea ama auto-definirsi la ''guardiana dei Trattati'', un'espressione usata a turno da tutti i suoi presidenti. 
+   
+ La Commissione Ue deriva dall'Alta autorità della Comunità europea del carbone e dell'acciaio (Ceca), creata nel 1951 e insediatasi il 10 agosto 1952 a Lussemburgo. I Trattati di Roma del 1957 affiancarono alla Ceca la Comunità economica europea (Cee) e la Comunità europea dell'energia atomica (Euratom), entrambe dotate di una propria Commissione. Questo sistema duro' fino al primo luglio 1967, quando le tre Commissioni vennero fuse in una sola, con sede a Bruxelles, in cui tutti i paesi trovavano rappresentanza, per quanto asimmetrica: i paesi grandi con due membri e quelli piccoli con uno. Ogni membro dev'essere completamente indipendente dal suo Stato di origine. 
+   
+ Dal 2004, con la prima Commissione Barroso, ogni paese e' rappresentato da un commissario. Il Trattato di Lisbona prevedeva una riduzione del numero dei commissari, ma la norma, dopo la bocciatura del referendum in Irlanda, e' stata abrogata.  Al di la' dell'attivita' di iniziativa legislativa, che viene poi portata a termine dal Consiglio dei ministri e dal Parlamento europeo, e di vigilanza, la Commissione Ue ha gestito tutti gli allargamenti dell’Unione, l'introduzione della moneta comune e l'armonizzazione del mercato interno. 
+   
+ Lezioni d'Europa: il presidente della Commissione europea 
+   
+ 
+ 
+    

@@ -1,0 +1,89 @@
+#titolo La Corte dei Conti - L'ABC dell'Europa - ANSA Europa
+  [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif] [if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Tabella normale";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif] 
+ [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif] [if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Tabella normale";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif] Istituita nel 1975, la  Corte dei Conti  entra in funzione due anni dopo in Lussemburgo, dove è ancora di casa, con il compito di controllare e verificare la gestione finanziaria della Ue e delle sue istituzioni. Solo con il Trattato di Maastricht del 1992 la Corte assume a sua volta il rango di istituzione Ue con l’onere collegato di dover pubblicare una DAS, Dichiarazione annuale sull'affidabilità e la regolarità dei conti dell'Unione. Con i successivi Trattati di Amsterdam, Nizza e Lisbona, sono aumentate le competenze di questa istituzione, che ora esercita il controllo di bilancio anche sulla politica estera e di sicurezza comune, sulla giustizia e gli affari interni e ha inoltre il potere di appello di fronte alla Corte di Giustizia Ue qualora ritenga che le sue prerogative siano state limitate dalle altre istituzioni comunitarie. 
+   
+ Nel concreto, la Corte dei Conti esamina tutte le entrate e le spese dell'Unione e dei suoi organi, controllandone la legittimità e la regolarità e accertandone la corretta gestione finanziaria. La verifica avviene tramite audit periodici, a carattere annuale, e audit selezionati in alcuni settori del bilancio o dei rendiconti di un settore specifico della politica comunitaria. Quando la Corte viene a conoscenza di un presunto caso di frode o corruzione, trasmette immediatamente l'informazione all'OLAF, l’Ufficio europeo per la lotta antifrode, che ha la responsabilità di svolgere indagini dettagliate e di prendere le dovute misure. Nel DAS, la Corte oltre a rendere nota la legittimità e regolarità dei conti dell'UE si pronuncia anche sui principi di economicità, efficienza ed efficacia delle spese dell'Unione, in quello che viene chiamato “controllo della sana gestione finanziaria”.Al di là del ruolo da ‘controllore’, la Corte svolge anche un’importante funzione di consulenza sulle proposte legislative per combattere le frodi fiscali e le irregolarità finanziarie. Interviene inoltre, al servizio di Parlamento e Consiglio Ue, come consulente nell’esecuzione del bilancio comunitario. 
+   
+ I poteri della Corte non sono giurisdizionali, e i suoi pareri non sono quindi vincolanti, ma riveste comunque un ruolo di primaria importanza per il corretto funzionamento della macchinaria comunitaria. I membri sono uno per Stato membro della Ue, rimangono in carica per 6 anni, rinnovabili, e decidono a maggioranza all’interno del collegio, l'organo decisionale della Corte. Ogni tre anni viene eletto un Presidente, sorta di primus inter pares, a cui spetta il compito di coordinare i lavori e rappresentare l’istituzione nelle relazioni esterne. Il Presidente attuale è il portoghese Vítor Manuel da Silva Caldeira. Al Segretario generale spetta invece l’organizzazione dei 760 funzionari della Corte.  

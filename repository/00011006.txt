@@ -1,0 +1,36 @@
+#titolo Celle solari per produrre combustibile 'verde' - Rinnovabili - Ambiente&Energia
+ 
+            
+            TRIESTE - Rendere economica una molecola che imiti e migliori la
+fotosintesi delle piante per creare celle solari che producano
+combustibile 'rinnovabile' e 'verde'. E' la ricerca in corso
+alla Scuola Internazionale Superiore di Studi Avanzati di
+Trieste (Sissa), pubblicata sui Proceedings of the National
+Academy of Sciences (Pnas). L'energia prodotta con i pannelli solari, elettricita' o calore,
+va utilizzata subito, e' difficile da accumulare, conservare,
+trasportare. Inventare celle solari che producano invece energia
+in una forma accumulabile e trasportabile, cioe' combustibile,
+e' la scommessa futura dell'energia solare. Per questo gli
+scienziati della Sissa stanno lavorando a un catalizzatore che
+imita e migliora la natura. Nella fotosintesi, processo in cui sono fondamentali i
+catalizzatori, molecole 'tagliano e incollano' altre molecole,
+cioe' ossidano l'acqua, cioe' separano l'idrogeno dall'ossigeno. L'idrogeno (che e' gia' un combustibile, ma difficile da
+maneggiare) serve in seguito ai processi di sintesi che dagli
+atomi di idrogeno e quelli di carbonio formano zuccheri. L'obiettivo e' ottenere lo stesso processo in modo artificiale
+con catalizzatori inorganici, piu' veloci e resistenti di quelli
+naturali, che sono lenti. Quelli esistenti sono efficienti ma
+costosi e scarsi in natura. ''La parte cruciale del processo di fotosintesi artificiale e'
+l'ossidazione dell'acqua. Noi abbiamo simulato come una molecola
+di Ru4-poliossimetalato (Ru4-Pom) funziona in questo processo. Questa reazione complessa richiede catalizzatori proprio come
+nel processo naturale'', spiega Simone Piccinin, ricercatore
+della Sissa e dell'Istituto Officina dei Materiali (Cnr-Iom) e
+primo autore del paper. Ru4-Pom e' stata scelta perche' gia' in
+precedenza ne era stata dimostrata l'efficienza in maniera
+sperimentale dal gruppo dell'Itm-Cnr e dell'Universita' di
+Padova che ha sintetizzato per primo la molecola e che ha
+collaborato anche a questo studio. ''Mancava pero' la comprensione del processo e cosi' abbiamo
+riprodotto il comportamento elettronico della molecola con
+simulazioni numeriche'', precisa Stefano Fabris, coordinatore
+del lavoro teorico. Oltre a Sissa, Cnr-Iom e Universita' di
+Padova ha collaborato allo studio anche Elettra Sincrotrone di
+Trieste.

@@ -1,0 +1,80 @@
+#titolo Messico: Carlos Vela - Le Stelle - Mondiali Sudafrica
+  
+ [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif] 
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+ [if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Tabella normale";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif] Furono in molti, nel 2005, a rimanere incantati davanti ai giovanissimi messicani che vinsero il mondiale Under 17 in Peru'. Il migliore di tutti era Carlos Vela, attaccante di Cancun, ''bombardero'' in erba e capocannoniere di quella edizione. Da allora, Vela si e' rapidamente affermato come uno dei migliori talenti del calcio internazionale anche senza trovare sempre posto nell'Arsenal di Arsene Wenger. 
+    
+Fu una storia di permessi e carte bollate mancanti che dirotto' il giovanissimo messicano in Spagna, prima al Vigo - dove resta ai margini - poi al Salamanca, dove convince invece tutti segnando otto gol in seconda divisione all'esordio. Prestato all'Osasuna, gioca quasi tutte le partite e corona il suo sogno numero 1: ottiene il permesso di soggiorno in Inghilterra e si trasferisce dai Gunners, nell'estate del 2008.    Il sogno, pero', si trasforma presto in dura realta': davanti, Carlitos ha troppi campioni per giocare con continuita'. Complice anche un infortunio, all'inizio di questa stagione ha cominciato a scalpitare per cambiare aria e trovare un posto da titolare nell'anno dei mondiali, cosi' da non perdere il posto in nazionale. Al lungo tira e molla con la societa' ha posto fine Wenger, che e' intervenuto spiegando che il ragazzo ''ha solo 20 anni e deve diventare un uomo. Siamo convinti che fara' progressi enormi e segnera' valanghe di gol''. Traduzione: contratto fino al 2015, che Vela ha firmato proprio mentre, dalla patria messicana, Aguirre gli inviava tutti i messaggi possibili di conferma della fiducia. 
+    
+Prima punta che gli allenatori fanno giocare spesso da trequartista, Vela ha nella rapidita', nel dribbling e nella versatilita' le qualita' migliori, che spesso lo hanno fatto paragonare, in Inghilterra, a Dennis Bergkamp.  
+                         
+
+
+
+  

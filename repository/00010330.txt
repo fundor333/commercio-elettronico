@@ -1,0 +1,77 @@
+#titolo Carlos Eugenio Simon - Mondiali Sudafrica
+  
+ [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif] 
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+ [if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Tabella normale";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif] Carlos Eugenio Simon è nato il 3 settembre 1965 a Porto Alegre (Brasile) ed è internazionale dal 1998. Nella vita di tutti i giorni è giornalista. Arbitro tenuto in grande considerazione nel Sud-America, ha esordito sul proscenio internazionale con i Mondiali Under 20 del 1999, in Nigeria: 3 le direzioni: Messico-Irlanda 1-0 e Messico-Australia 3-1 nella fase a gironi, oltre a Spagna-Stati Uniti 3-2, negli ottavi di finale. Presente alle Olimpiadi di Sydney 2000, ha diretto in quell’occasione 3 gare: Nigeria-Australia 3-2 e Stati Uniti-Repubblica Ceca 2-2, nella fase a gironi, oltre a Spagna-Italia 1-0, ai quarti di finale. Nel 2001 ha arbitrato 2 gare alla coppa America, in Colombia: Uruguay-Costarica 1-1 nella fase a gironi e Messico-Cile 2-0 ai quarti di finale, un’esperienza bissata nel 2007 in Venezuela, dove è stato presente in 3 incontri: Argentina-Colombia 4-2 e Venezuela-Uruguay 0-0 nei gironi eliminatori ed Argentina-Perù 4-0 ai quarti di finale. A livello di club vanta ben 4 finali dirette: Real Madrid-Olimpia Asuncion 2-0 (Intercontinentale 2002), Olimpia Asuncion-San Lorenzo 2-0 (Recopa 2003), River Plate-Cienciano 3-3 (Copa Sudamericana 2003) ed infine Bolivar-Boca Juniors 1-0 (Copa Sudamericana 2004). Nelle qualificazioni a Sudafrica 2010 ha diretto 5 incontri, tutti nel continente sudamericano, con bilancio di 2 successi interni (Uruguay-Paraguay 2-0 e Colombia-Perù 1-0), altrettanti pareggi (Perù-Paraguay 0-0 ed Argentina-Paraguay 1-1) ed 1 vittoria esterna (Venezuela-Argentina 0-2).  
+   
+IL TERZO MONDIALE DI SIMON. Carlos Eugenio Simon è al suo terzo Mondiale, dopo le due gare dirette a Corea-Giappone 2002 (Inghilterra-Svezia 1-1 ed Italia-Messico 1-1, entrambe nei gironi eliminatori) e le 3 a Germania 2006 (Italia-Ghana 2-0 e Spagna-Tunisia 2-0 nella fase a gironi e Germania-Svezia 2-0 agli ottavi di finale), concedendo 2 rigori e decretando 1 espulsione.  
+    
+SALGONO A 19 I PLURIPRESENTI. Gli arbitri che detengono il primato di più partecipazioni alle fasi finali dei Mondiali sono 17, ciascuno dei quali è stato presente in 3 edizioni. In ordine cronologico citiamo: il belga Langenus (1930, 1934, 1938), lo svedese Eklind (1934, 1938, 1950), l’inglese Ellis (1950, 1954, 1958), il gallese Griffiths (1950, 1954, 1958), l’ungherese Zsolt (1954, 1958, 1966), lo spagnolo Gardeazabal Garay (1958, 1962, 1966), il peruviano Yamasaki (1962, 1966, 1970), lo scozzese Davidson (1962, 1970 e 1974), il tedesco Tschenscher (1966, 1970, 1974), l’uruguayano Barreto Ruiz (1970, 1974, 1978), l’israeliano Klein (1970, 1978, 1982), l’ungherese Palotai (1974, 1978, 1982), il rumeno Rainea (1974, 1978, 1982), lo svedese Fredriksson (1982, 1986, 1990), il siriano Al Sharif (1986, 1990, 1994), il francese Quiniou (1986, 1990, 1994) e Bujsaim (Emirati Arabi Uniti - 1994, 1998, 2002). A Sudafrica 2010 due dei 30 arbitri selezionati, riserve incluse, taglieranno questo traguardo, facendo salire a 19 i fischietti presenti per la terza volta nella loro carriera ad un Mondiale: si tratta del brasiliano Carlos Simon (2 presenze nel 2002 e 3 nel 2006) e del colombiano Oscar Ruiz Acosta (3 gare dirette nel 2002, 1 nel 2006). 
+GLI ASSISTENTI.I due assistenti che comporranno la terna arbitrale brasiliana diretta da Simon saranno i connazionali Roberto Braatz (nato il 3 ottobre 1967, internazionale dal 2005) ed Altemir Hausmann (nato il 5 dicembre 1968, internazionale dal 2004). 
+
+
+
+  

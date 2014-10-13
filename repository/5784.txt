@@ -1,0 +1,57 @@
+#titolo Giovani - Scopri il Sudafrica - Lifestyle
+
+ [if gte mso 9]><xml>
+ 
+  Normal
+  0
+  14
+  
+  
+  false
+  false
+  false
+  
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+ 
+</xml><![endif] [if gte mso 9]><![endif] [if !mso]>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif] 
+<!--
+ /* Font Definitions */
+ @font-face
+	{
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;"Times New Roman";
+	mso-fareast-"Times New Roman";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+ [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-style-parent:"";
+	font-size:10.0pt;"Times New Roman";}
+</style>
+<![endif] 
+ A  Grahamstown , che ogni anno ospita il  National Arts  Festival , nel 2010 si  terrà, in contemporanea ai mondiali di  calcio, la nuova edizione: ci si aspetta  oltre 200 mila visitatori  curiosi di conoscere i nuovi talenti africani (circa  2000 produzioni  tra cabaret, teatro, musica, comici, teatro di strada, jazz,  installazioni multimediali, graphic design, arte tessile, ceramica,   scultura, fotografia, dipinti, acquerelli, gessi, vetri, etc).  In genere i giovani, anche se non direttamente artisti, si coagulano intorno agli appuntamenti internazionali che hanno a che fare con la creatività perché, a differenza che in Europa, in Sudafrica non c’è una divisione netta tra gli artisti e il loro pubblico: tutti contribuiscono, peer to peer, alla creazione dell’opera, che è in costante divenire (opera aperta), in una sorta di continua condivisione delle risorse. Parola d’ordine è “glocalizzare”, ossia contaminare arte tradizionale e artigianato locale con i linguaggi del contesto culturale e artistico internazionale. In tal senso l’ African Fashion Week , manifestazione fashion di alto profilo e molto originale artisticamente, è un po’ il simbolo dell’effervescenza sudafricana di questo momento e centro di interesse per stilisti, artisti, giornalisti, vip, fotografi. Qui potrebbero farsi vedere anche personaggi cult della nuova generazione di sudafricani come il dj  Portable-Bodycode , i registi  Roger Michell  (in uscita col suo nuovo film,  Morning Glory ) o  Gavin Hood  (maestro per i giovani film-makers neri), i musicisti Freshly Ground and Goldfish. 
+ Appuntamento imperdibile per tutti gli under 30 è, a settembre, il  Woodstock  ( Hartbeeshoek ): è il piu grande festival di musica e life style orientato ai giovani. Oltre a ritmi commerciali, kwaito, hip pop, techno, house, anche mercatini di life style alternativo. Una maratona di happening per quattro giorni consecutivi, pacchia soprattutto per gli studenti, vista la sistemazione accampata. Nello stesso mese, poi, anche l’ Arts Alive , a  Johannesburg: 600 artisti in una mescolanza da far girare la testa tra danza, arte visiva, poesia, musica e quant’altro in locali sparsi in tutta la città (il concerto principale, allo stadio, ospita superstar internazionali ed è un appuntamento in agenda per tutti, mentre il popolarissimo jazz sul lago è l’ultimo giorno). 
+ Un altro tipo di target, ma sempre giovane e amante del life style, fa riferimento al team velico sudafricano Shosholoza, il primo a rappresentare l’Africa e la sua bandiera e il primo team africano ad aver partecipato all’America’s Cup. Infatti, come nel resto del mondo, la vela anche qui è simbolo di uno status sociale ricco e colto (soprattutto da quando lo Shosholoza ha partecipato all’ultimo e definitivo act, il14esimo, della Louis Vuitton Cup a Valencia qualificandosi settimo, alle spalle del secondo team italiano Mascalzone Latino e, nel 2008, alla 40a Barcolana, classificandosi al terzo posto). La barca, che nel 2006 ha vinto il premio per miglior dipinto su scafo (un disegno di una strana onda multicolore, ciò che un anziano saggio di un piccolo villaggio del Sudafrica ha mostrato al capitano) è al centro di una serie di party privati a tema.  
+    

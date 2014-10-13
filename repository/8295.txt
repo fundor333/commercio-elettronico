@@ -1,0 +1,11 @@
+#titolo Sistema di rilvezione automatica - Guidare in Sicurezza - ACI
+  Dalla convinzione che almeno il 20% degli incidenti gravi hanno come causa esclusiva o concomitante la stanchezza del conducente, e che almeno un altro 10% ha come causa situazioni di degrado psico-fisico (per malattia, assunzione di sostanze ecc.), sono nati una serie di progetti che intendono monitorare le condizioni del conducente, attivando un segnale di allarme a bordo del veicolo quando risulta che esse hanno raggiunto un determinato livello di pericolosità. Una prima serie di progetti ha cercato di individuare alcuni "segni fisici caratteristici", quali la chiusura delle palpebre per un periodo troppo lungo, la diminuita tensione muscolare delle mani sul volante, la presenza di vapori alcolici nell'abitacolo.  
+
+Ognuno di questi "segni" (rivelato da appositi sensori, molto sensibili, collocati nell'abitacolo) può dar luogo, da solo o con altri, all'attivazione dell'allarme dentro il veicolo. La difficoltà insita in questi progetti (che tuttavia continuano ad avanzare) è nella eliminazione dei "falsi allarmi", che alla lunga porterebbero il conducente a disattivarli.  
+
+Un altro gruppo di progetti ha cercato invece di individuare dei "modelli comportamentali" che possono far sospettare condizioni alterate: velocità eccessiva o troppo costante, ondeggiamenti dello sterzo, avvicinamenti pericolosi ad altri veicoli o ai bordi della carreggiata. Anche in questi casi, al raggiungimento di un determinato valore di pericolosità, si attiverebbe automaticamente un allarme dentro l'abitacolo.  
+
+Questi dispositivi potrebbero integrarsi con altri sistemi di allarme per la rilevazione degli errori, attivando una procedura di "messa in sicurezza" del veicolo con il diretto intervento sugli organi (ad esempio costringendolo a fermarsi a lato della carreggiata), previo avviso ad una "centrale operativa" in grado di localizzare il veicolo ed inviare i soccorsi.  
+
+Per ora si tratta solo di progetti e di realizzazioni sperimentali, ma è probabile che nel futuro possano entrare nella dotazione almeno di certi veicoli. 
+  

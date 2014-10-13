@@ -1,0 +1,61 @@
+#titolo Carne e Pesce - Scopri il Sudafrica - Enogastronomia
+
+ [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif] 
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->      Come ben sa l’Argentina, la carne qui è decisamente tra le migliori al mondo (compreso pollo, usatissimo nelle ricette tradizionali, agnello e maiale, molto saporiti: ovunque si fanno “ braai ”, barbecue, momento importante di socializzazione): i  Boerewors  sono salsiccie speziate con coriandolo e pomodori secchi, uno dei cibi più esportati della tradizione culinaria sudafricana, di origine tedesca. Piatti tradizionali per carnivori sono il Sosatie, cubetti di maiale o agnello allo spiedo con albicocche secche, il  Billtong , pezzettini di struzzo, impala, bufalo o antilope essiccati e lo  Skilpadjies , un barbecue campagnolo di fegato tritato avvolto in uno strato di grasso, molto speziato. Ma anche la Tagine, di importazione nordafricana, che allo stufato di carne aggiunge noci e datteri, cumino e cardamomo.  
+Anche il pesce è eccezionale, visti ben due oceani a servizio dei pescatori. Nella costa vicino a Durban si mangia il  barracuda , mentre a Cape Town, grazie alle correnti fredde dell'Atlantico, si trovano ostriche,  aragoste e gamberi  (i famosi  piri piri ) ovunque e a prezzi assolutamente da competizione. I menu sono comunque sempre molto vari e non manca mai il paté di  Snoek  affumicato e il  Kingklip  al forno, alla griglia o fritto, pesci d’oceano di tenace consistenza.                                      
+
+
+
+
+
+
+
+  

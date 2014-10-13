@@ -1,0 +1,29 @@
+#titolo Pari big match Bayern-B. Dortmund - Calcio
+Risultati della 15/a giornata di Bundesliga   
+Bayer Leverkusen-Norimberga                1-0  
+Bayern Monaco-Borussia Dortmund            1-1  
+Augusta-Friburgo                           1-1  
+Magonza-Hannover 96                        2-1  
+Greuther Fuerth-Stoccarda                  0-1  
+Schalke 04-Borussia Moenchengladbach       1-1  
+Fortuna Dusseldorf-Eintracht Francoforte   4-0  
+Hoffenheim-Werder Brema 1-4 
+Wolfsburg-Amburgo 1-1 
+ 
+   
+ addCustomPlayer('r8rmao144zbx1d2zo8wjjg14s', '2EE7CFF169D54C739901A1BCEB16EB37', 'o8dpiopt4a39zuh255lutpxw', 620, 540, 'perfr8rmao144zbx1d2zo8wjjg14s-o8dpiopt4a39zuh255lutpxw', 'eplayer4'); 
+ Classifica:  
+Bayern Monaco punti 38;  
+Bayer Leverkusen 30;  
+Borussia Dortmund 27;  
+Schalke 04 25;  
+Eintracht Francoforte 24;  
+Magonza 23;  
+Stoccarda 22;  
+Borussia Moenchengladbach,Werder Brema e Amburgo 21;  
+Friburgo e Hannover 20;  
+Fortuna Duesseldorf 18;  
+Norimberga e Wolfsburg 16;  
+Hoffenheim 12;  
+Augusta e Greuther Fuerth 8. 
+    

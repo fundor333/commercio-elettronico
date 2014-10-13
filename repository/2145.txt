@@ -1,0 +1,81 @@
+#titolo Spagna: Fernando Torres - Le Stelle - Mondiali Sudafrica
+  
+ [if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:HyphenationZone>14</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif] 
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 57.6pt 2.0cm 57.6pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+ [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif] 
+ Da sempre lo chiamano il Nino, "il ragazzo"; vuoi perche' effettivamente quello e', vuoi per quel suo aspetto da adolescente che lo fa sembrare ancora piu' giovane. Ma a 26 anni Fernando Torres, dopo aver conquistato a suon di gol l'Europeo con la sua Spagna, vuole essere atteso e temuto come l'altro 'Nino', il vento tropicale capace di portare devastazioni e paura. 
+ 
+Immagine che ben si adatta a quella delle difese che saranno costrette a fronteggiare l'iberico sui campi del Sudafrica, dove la Spagna cerca la definitiva consacrazione, dopo aver interrotto il lungo digiuno di 44 anni con la vittoria continentale di due anni orsono. ''Tutti si aspettano grandi cose dalla nazionale spagnola, ma non sara' facile visto che ognuno giocherà contro di noi la partita della vita - ha spiegato di recente - Non capita spesso di avere un gruppo in grado di vincere un mondiale come la Spagna di oggi. Bisogna cogliere l'occasione al volo perche' spesso nel calcio non ci sono prove d'appello e potremmo non essere in grado di lottare per il mondiale in futuro". 
+ 
+Per l'angelo biondo del Liverpool, quella verso il Sudafrica sara' comunque un corsa ad ostacoli che tiene in apprensione la Spagna. L'attaccante dei 'reds', operato nuovamente al menisco a Barcellona dal professor Ramon Cugat, resterà fuori all'incirca un mese e mezzo, giusto in tempo utile per presentarsi al Mondiale. In molti, nella Madrid ammaliata dal tifo per i biancorossi dell'Atletico, avevano sperato di poter fare di Fernando la bandiera del club per tutta la vita, la risposta biancorossa a quello che Raul ha rappresentato per anni sulla sponda Real. Il destino, e le ragioni del business, per', hanno diviso le storie di Torres e del club in cui si e' formato (e a cui nel 2003-04, appena 20enne, ha regalato una stagione da 19 gol): troppo forte il ragazzo, troppo incerto il futuro ad alto livello dell'Atletico, che anzi con la partenza di Torres ha incassato milioni preziosi per cercare di riproporsi tra le protagoniste della Liga (trovando nel "Kun" Aguero l'erede del Nino). E allora bando ai sentimentalismi e alla fine della stagione 2006-2007, quel ragazzo che ad appena 19 anni aveva ricevuto la fascia di capitano dell'Atletico (82 gol in 214 partite, solo nella Liga), ha fatto la valigia e preso il primo aereo disponibile per Liverpool. 
+ 
+Voluto fortissimamente da Rafa Benitez, acquistato dai 'colchoneros' per la cifra record di 36 milioni di euro, Fernando ha impiegato poche partite per diventare un idolo della 'Kop', la leggendaria curva che ospita i tifosi piu' caldi del Liverpool ad Anfield Road. Tecnica sopraffina, rapidita', prestanza fisica, opportunismo innato in area di rigore unito a una giusta dose di freddezza (dote conquistata col maturare della carriera). Alla fine del primo anno con i 'Reds', per Torres arrivano 24 gol (battuto il record di Van Nistelrooy per un debuttante in Premier, 23 reti) in campionato e alcune 'gemme' preziose in Champions League (6 reti in totale, tra le sue vittime Inter e Chelsea, che hanno comunque pagato il loro tributo allo spagnolo). 
+ 
+Dopo una stagione da protagonista, con 33 reti totali, Euro2008 diventa cosi' per il Nino la prova del nove. Per diversi motivi: il principale e' l'assenza dalla spedizione iberica di Sua Maesta', Raul Gonzalez Blancom silurato dal ct Aragones sull'altare di un rapporto mai facile e di una generazione di talenti che dalla presenza del madridista avrebbe, a detta del ct spagnolo, ricevuto piu' svantaggi che benefici. La mossa si rivela vincente e Torres firma il gol decisivo nella finale contro la Germania, riscattando la delusione Mondiale di due anni prima dove, nonostante i suoi tre gol nel torneo, le Furie Rosse furono estromesse ai quarti dalla Francia di Zidane. Lo scorso anno in Confederations Cup altri tre gol, nonostante la sconfitta in semifinale contro gli Stati Uniti, a conferma che Ferrando Torres, in coppia con David Villa, non e' piu' soltanto il ragazzo dalla faccia d'angelo, ma un navigato centravanti d'area di rigore. Normale che un attaccante del livello dello spagnolo abbia sempre addosso gli occhi di tutti i top team europei. In particolare, il futuro di Torres a Liverpool sembra essere legato non solo ai problemi finanziari del club, ma anche a quello di Rafa Benitez. I tifosi della Juventus hanno cominciato a sognare il doppio colpo, ma e' inutile dire che per il Nino gli acquirenti non mancano di certo. 
+    

@@ -1,0 +1,30 @@
+#titolo I TWEET SUL #TERREMOTO - Associate
+  
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#terremoto',
+  interval: 30000,
+  title: 'Terremoto in Emilia',
+  subject: 'La diretta twitter',
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#8fd9b2',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#19b34f'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    behavior: 'all'
+  }
+}).render().start();
+

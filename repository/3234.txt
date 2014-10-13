@@ -1,0 +1,15 @@
+#titolo Cosa si intende per sicurezza attiva - Guidare in Sicurezza - ACI
+  Per sicurezza attiva si intende quell'insieme di dispositivi, sistemi od apparati che dovrebbero impedire il verificarsi di un incidente, con una funzione quindi soprattutto preventiva. Il sistema di sicurezza attiva più importante, a stretto rigore, è il conducente stesso, il cui perfetto "funzionamento" sarebbe la migliore garanzia contro la possibilità di un incidente. In realtà, rientrano nella sicurezza attiva un gran numero di dispositivi presenti sui veicoli, alcuni ben noti come ad esempio:  
+•i freni 
+•le luci 
+•lo sterzo 
+•i pneumatici e gli ammortizzatori 
+•lo stesso tergicristallo, in determinate condizioni 
+Secondo la definizione, rientra in questa classe perfino la segnaletica stradale, la cui funzione preventiva (se essa è adeguatamente disposta e tenuta in buone condizioni) è motivo della sua stessa esistenza; anche le strade (se ben progettate, ben realizzate e ben tenute) sarebbero un elemento di sicurezza attiva.  
+Altri dispositivi o sistemi di sicurezza attiva sono meno noti, meno comuni o ancora sperimentali:  
+•l'ABS (sistema antibloccaggio delle ruote) sistemi anti-collisione 
+•sistemi di comunicazione e di allarme per pericoli od ostacoli 
+•sistemi per la rilevazione delle condizioni del conducente o per la correzione automatica di errori di guida 
+Quando si tratta di dispositivi montati su veicoli, è possibile che essi abbiano limiti o condizioni di efficacia, che è bene conoscere preventivamente e di cui comunque è opportuno essere coscienti, per non assumere rischi che il dispositivo non è in grado di gestire. In altre parole, la disponibilità di un sistema di sicurezza attiva con elevate caratteristiche di efficacia non può diventare giustificazione per comportamenti o manovre più rischiose. Inoltre, i dispositivi più complessi o tecnologicamente avanzati non mettono al riparo da possibili guasti improvvisi (come succede talvolta nei nostri stessi PC), possono richiedere speciali cure di manutenzione e revisione periodica e devono essere trattati da personale particolarmente esperto. 
+Per questo motivo, non è consigliabile utilizzare "pezzi di recupero" per la sostituzione di dispositivi di sicurezza attiva a bordo di veicoli, a meno che non siano stati accuratamente revisionati con tecniche appropriate e siano accompagnati da precisa garanzia del revisionatore circa la permanenza delle caratteristiche originali di sicurezza.  
+v  

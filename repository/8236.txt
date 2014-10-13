@@ -1,0 +1,64 @@
+#titolo Nuovi Media - Scopri il Sudafrica - Lifestyle
+
+ [if gte mso 9]><xml>
+ 
+  Normal
+  0
+  14
+  
+  
+  false
+  false
+  false
+  
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+ 
+</xml><![endif] [if gte mso 9]><![endif] 
+<!--
+ /* Font Definitions */
+ @font-face
+	{
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;"Times New Roman";
+	mso-fareast-"Times New Roman";}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:0cm;
+	margin-right:-7.45pt;
+	margin-bottom:0cm;
+	margin-left:2.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:16.0pt;
+	mso-fareast-"Times New Roman";
+	mso-bidi-"Times New Roman";
+	color:black;}
+@page Section1
+	{size:595.0pt 842.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+ [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-style-parent:"";
+	font-size:10.0pt;"Times New Roman";}
+</style>
+<![endif] 
+ Life style è anche il nutrito entourage del mondo dei nouvi media. Dal 5 al 7 luglio 2010 si terrà in Sudafrica, a Grahamstown, organizzato dalla Rhodes University School of Journalism and Media Studies, “The second world journalism education congress” (il primo si è tenuto a Singapore nel 2007) e attirerà molte personalità del giornalismo e della comunicazione in generale (tv, web, etc) internazionale.  
+ Il mercato dell’informazione in Sudafrica è floridissimo già dal 1994 (dopo la fine dell’Apartheid e con il “ Bill of Rights ”, che garantisce a ogni cittadino la libertà di espressione e di stampa). Con i mondiali di calcio, che hanno sparato il paese al centro del globo, la pubblicazione dei quotidiani ha subito una notevole nuova impennata: il Sudafrica pubblica 20 quotidiani (15 milioni di lettori al giorno), 13 settimanali di news e politica e 280 periodici, dai femminili a quelli di sport (sono almeno tre, per esempio, i periodici dedicati ai surfisti). Ci sono anche una serie di “community newspaper” che hanno una circolazione di quasi 6 milioni di lettori. Intorno a queste nuove pubblicazioni si concentrano gruppi di giovani intellettuali capaci di competere anche coi pilastri del giornalismo ( Daily Sun, The Star, Sowetan, Die Burger, Beeld,  etc, roccaforte di politici, uomini e donne di potere e, naturalmente, l’intellighenzia sudafricana).  
+ Oggi tuttavia, il glamour si concentra soprattutto intorno a quelle che sono le nuove produzioni tv, prima tra tutte “ The No. 1 Ladies’ Detective Agency ”, la serie televisiva sulle vicende della donna detective Mma Ramotswe, che ha avuto uno strepitoso successo. 
+    

@@ -1,0 +1,2 @@
+#titolo Chrome OS inattaccabile da hacker - Associate
+(ANSA) - ROMA, 11 MAR - Nonostante piu' di 3 milioni di dollari di montepremi messo in palio da Google, nessun hacker e' riuscito a violare il sistema operativo Chrome. E' il risultato del 'contest' organizzato da Big G in occasione di una conferenza sulla sicurezza a Vancouver. La gara, era chiamata Pwinium e si e' tenuta in concomitanza con il Pwn2Own, un altro contest che invece ha dato piu' soddisfazione agli hacker: sono stati 'bucati' tutti i principali browser, Firefox, Internet Explorer 10 e lo stesso Chrome.  

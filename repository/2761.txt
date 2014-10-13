@@ -1,0 +1,50 @@
+#titolo Il Garante Europeo per la Protezione dei Dati  - L'ABC dell'Europa - ANSA Europa
+  [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif] [if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Tabella normale";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif] 
+ Al pari dei garanti nazionali, il  Garante europeo della protezione dei dati , GEPD, è un'autorità di sorveglianza indipendente che ha il compito di garantire che le istituzioni e gli organi dell'UE rispettino il diritto alla vita privata e alla protezione dei dati nel trattamento dei dati personali e nella elaborazione delle politiche comunitarie. Un settore che è in costante aumento, per il diffondersi delle nuove tecnologie ma anche per la sempre maggior influenza delle politiche comunitarie in settori che toccano direttamente il diritto alla privacy. 
+   
+ Il mandato del Garante, a cui è stato affiancato un Garante aggiunto, viene sviluppato seguendo tre aree di lavoro principali: supervisione, consultazione e cooperazione. Come supervisore il Garante è chiamato a controllare il trattamento dei dati personali nelle istituzioni e negli organi dell'UE, agendo anche sulla base delle denunce individuali. Nel ruolo consultivo, il GEPD consiglia la Commissione, il Parlamento ed il Consiglio su materie inerenti alla tutela dei dati nello sviluppo ed applicazione della legislazione comunitaria. 
+   
+ In questo ambito, particolare attenzione è stata data all'accordo SWIFT sull'accesso alle informazioni finanziarie, alla revisione della direttiva e-Privacy sulle comunicazioni elettroniche, agli sviluppi del programma di Stoccolma sulla giustizia e gli affari interni ed alla revisione dei regolamenti Eurodac e Dublino sulla politica in materia di asilo. Infine, il Garante coordina l’attività dei garanti nazionali per promuovere un approccio coerente alla tutela dei dati in tutta la Ue oltre a supervisionare il trattamento delle informazioni in Eurodac, la banca dati dei richiedenti asilo.Il Garante, Peter Hustinx, ed il Garante aggiunto, Giovanni Buttarelli, sono in carica dal gennaio 2009 con un mandato di 5 anni. 
+   
+    

@@ -1,0 +1,5 @@
+#titolo Frattali - Ricercando EFGHI
+  I frattali sono delle particolari forme geometriche che si vedono spesso in natura, come quella di alberi, dei broccoli o dei fiocchi di neve. La caratteristica principale di queste figure è che da qualsiasi distanza le si guardi, hanno sempre la stessa forma. si dice quindi che sono 'auto simili'. 
+Nell'abete, ad esempio, i singoli rami sembrano avere la stessa forma dell'albero, e i rametti la forma del ramo più grande.  
+Nel 1975 il matematico polacco Benoit Mandelbrot cercò per la prima volta di dare una 'forma' matematica a questi oggetti quasi senza forma, riuscendo così a 'costurire' in maniera artificiale nuove bellissimi oggetti frattali. 
+Grazie a questi studi molte altre ricerche hanno potuto osservare come questa 'bizzarra' matematica sia in grado di spiegare in parte molti fenomeni naturali chiamati caotici, come i cambiamenti climatici e il battito del cuore.  

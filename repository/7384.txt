@@ -1,0 +1,196 @@
+#titolo Scopri in breve il Sudafrica - Scopri il Sudafrica
+
+ [if gte mso 9]><xml>
+ 
+  Normal
+  0
+  14
+  
+  
+  false
+  false
+  false
+  
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+ 
+</xml><![endif] [if gte mso 9]><![endif] 
+<!--
+ /* Font Definitions */
+ @font-face
+	{}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;"Times New Roman";
+	mso-fareast-"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+ [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-style-parent:"";
+	font-size:10.0pt;"Times New Roman";}
+</style>
+<![endif] 
+ 
+ [if gte mso 9]><xml>
+ 
+  Normal
+  0
+  14
+  
+  
+  false
+  false
+  false
+  
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+ 
+</xml><![endif] [if gte mso 9]><![endif] [if !mso]>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif] 
+<!--
+ /* Font Definitions */
+ @font-face
+	{
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;"Times New Roman";
+	mso-fareast-"Times New Roman";}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{}
+@list l0:level1
+	{
+	margin-left:18.0pt;
+	text-indent:-18.0pt;
+	mso-bidi-"Times New Roman";}
+@list l0:level2
+	{
+	text-indent:-18.0pt;
+	mso-ascii-"Courier New";
+	mso-hansi-"Courier New";
+	mso-bidi-"Courier New";}
+@list l0:level3
+	{
+	text-indent:-18.0pt;
+	mso-bidi-"Times New Roman";}
+@list l0:level4
+	{
+	text-indent:-18.0pt;
+	mso-bidi-"Times New Roman";}
+@list l0:level5
+	{
+	text-indent:-18.0pt;
+	mso-ascii-"Courier New";
+	mso-hansi-"Courier New";
+	mso-bidi-"Courier New";}
+@list l0:level6
+	{
+	text-indent:-18.0pt;
+	mso-bidi-"Times New Roman";}
+@list l0:level7
+	{
+	text-indent:-18.0pt;
+	mso-bidi-"Times New Roman";}
+@list l0:level8
+	{
+	text-indent:-18.0pt;
+	mso-ascii-"Courier New";
+	mso-hansi-"Courier New";
+	mso-bidi-"Courier New";}
+@list l0:level9
+	{
+	text-indent:-18.0pt;
+	mso-bidi-"Times New Roman";}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+ [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-style-parent:"";
+	font-size:10.0pt;"Times New Roman";}
+</style>
+<![endif] 
+ GEOGRAFIA 
+ Con una superficie di 1.221.037 Kmq, di cui 3.000 km di costa, il Sudafrica ha un'estensione pari alla Germania, la Francia e l’Italia messe insieme. 
+ Posizionato sull'estrema punta meridionale dell'Africa, immediatamente a sud del Tropico del Capricorno, il Sudafrica confina a nord con la Namibia, il Botswana, lo Zimbabwe e il Mozambico, ad ovest è bagnato dall'Oceano Atlantico e ad est dalle tiepide acque dell'Oceano Indiano. All'interno dei suoi confini si trovano anche due piccoli Stati indipendenti dal territorio montuoso: il Lesotho e lo Swaziland. 
+ Il Sudafrica si compone di  9 province , estremamente diverse tra loro ed affascinanti da visitare: Gauteng, Limpopo, Mpumalanga, Kwa-Zulu Natal, Free State, Western Cape, Eastern Cape, Northern Cape, North West. 
+   
+ CITTÀ PRINCIPALI 
+ Cape Town , la capitale legislativa del Paese, con i suoi 2 milioni di abitanti circa, è la più incantevole metropoli sudafricana, incastonata in uno scenario unico al mondo tra la Table Mountain e la splendida baia. Da visitare il Castle of Good Hope, la South African National Gallery, i giardini “The Company Garden” e di Kirstenbosch, il Victoria & Alfred Waterfront e da non perdere la veduta dall'alto della Table Mountain. Particolare è il Bo-Kaap, quartiere malese dalle sgargianti case colorate, frequente set di film, spot e servizi fotografici di moda. 
+ Johannesburg,  la capitale economica e finanziaria, ha ancora inciso nel suo dna il marchio di “Città dell’oro”. I suoi 5 milioni di abitanti si distribuiscono nei grandi sobborghi collegati da una capillare e moderna rete autostradale. Oltre al Museo dell’Apartheid, la Gold Reef City e Soweto, da visitare è Sandton, il quartiere con gli hotel più lussuosi ed il mall nella Mandela Square punteggiata da ristoranti di tutti i tipi. 
+ Tshwane , ex-Pretoria, è la capitale amministrativa, con la sede del governo centrale. Malgrado lo stile dell’architettura urbanistica abbia un forte imprinting coloniale, è affascinante l’accostamento di palazzi antichi e moderne strutture governativo-finanziarie. Gli ampi viali di alberi fioriti di Jacaranda, tra ottobre e novembre, sono uno spettacolo incredibile. 
+ Durban , nel KwaZulu-Natal, è un crogiolo di cultura europea, zulu ed indiana (qui vive la più numerosa comunità indiana del Paese). La vita della città ruota attorno al lungomare, la splendida spiaggia e la Marine Parade costellata di grandi alberghi internazionali, ristoranti, negozi, centri commerciali, tante bancarelle. La zona attorno a Grey Street ospita un variopinto mercato indiano e tanti piccoli negozi di spezie, gioielli ed ornamenti finemente lavorati. 
+ Kimberly,  Capitale del Northern cape, e’ definita ‘la citta’ dei diamanti’ poiche’ tuttora e’ un importante snodo dell’industria diamantifera, oltre che centro agricolo e turistico. La sua storia legata alla ricerca dei diamanti e’ ben rappresentata dal Big Hole, il grande buco da 800 metri risultato di un frenetico lavoro durato anni. 
+ Port Elizabeth , istoriata nella meravigliosa Algoa Bay, nell'Eastern Cape, è una cittadina tranquilla, destinazione perfetta per una sosta rilassante e divertente. Da qui a Cape Town si snoda la  Garden  Route , uno dei paesaggi più belli di tutto il Sudafrica, una strada costiera punteggiata da pittoresche cittadine e da splendide spiagge 
+   
+ CLIMA 
+ Il Sudafrica gode di un clima favorevole tutto l'anno, con inverni miti ed estati calde ma secche. Le stagioni sono invertite rispetto all’emisfero boreale: il periodo invernale va da giugno a settembre e il periodo estivo da dicembre a marzo. 
+ Visitabile 12 mesi l'anno, Il Sudafrica è uno dei paesi del mondo con la più alta percentuale di giornate di sole all'anno ed è praticamente privo di stagione delle piogge. 
+ I giorni migliori per poter osservare gli animali selvatici sono quelli invernali, limpidi e secchi, quando la scarsità della vegetazione rende più facile l’avvistamento. 
+   
+ POPOLAZIONE 
+ Coniata dall’Arcivescovo Desmond Tutu, l'espressione " Nazione Arcobaleno " è ormai l'icona e l'immagine stessa del Sudafrica e ne cattura a pieno l'essenza di straordinario mix di differenze culturali, tribali e linguistiche che compongono questo paese in cui oggi convivono gruppi di origine etnica differente: oltre ai San e Khoi, ci sono gli Nguni che, includendo Zulu, Xhosa, Swasi, Ndebele, rappresentano i due terzi della popolazione, i Sotho-Tswana (i Sotho del sud, del nord e dell’ovest), gli Tsonga, i Venda, gli Afrikaner (di origine olandese), gli Inglesi, i Coloured (termine che indica l'incrocio fra razza africana, asiatica e bianca), gli Indiani. 
+ I 44.800.000 abitanti sono quindi suddivisi in: 
+ -          35,4 milioni di neri 
+ -          4,3 milioni di bianchi 
+ -          4 milioni di "coloured" 
+ -          1,1 milioni di indiani/asiatici 
+ La maggioranza della popolazione (il 75,5%) è di religione cristiana, ma esiste un'alta percentuale di atei (11,5%). Con l'arrivo di molte popolazioni d'origine asiatica si sono, poi, diffuse anche l'induismo (1,4%) e l'islamismo (1,4%). Solo una minoranza dei sudafricani (0,04%) rimane legata alle antiche credenze religiose tribali. 
+ Oggi i villaggi culturali, i centri heritage e qualche parco tematico ricostruiscono, più o meno fedelmente o scenograficamente, la vita di tutti i giorni e i contesti delle antiche tribù o dei primi coloni, presentandoli come realtà separate. Ma il vero  melting pot  sudafricano, il crogiolo delle infinite culture che si stemperano producendo qualcosa di completamente nuovo, vibra soprattutto nelle città, dove tradizioni e usanze diverse si aggrovigliano, si mixano e danno vita a nuove reinterpretazioni, in una realtà dove gli opposti, invece di annullarsi, si esaltano a vicenda. 
+   
+ LINGUA 
+Dal punto di vista linguistico, questa pacifica convivenza di popoli ha fatto si che in Sudafrica siano riconosciute ben 11 lingue ufficiali: afrikaans, inglese, isiNdebele, isiXhosa, isiZulu, sepedi, sesotho, seTswana, siSwati, thisvenda e xitsonga. La maggior parte dei sudafricani è multilingue e l’inglese è diffusamente parlato, in particolare nei centri urbani. 
+   
+ ORDINAMENTO POLITICO       
+ Il Sudafrica è una repubblica presidenziale che vanta un esemplare decentramento amministrativo dello Stato. Il governo ha infatti sede 6 mesi a Pretoria (capitale amministrativa) e 6 mesi a Cape Town (capitale legislativa dove risiede il parlamento), mentre Bloemfontain, dove ha sede la corte suprema, è la capitale giuridica del paese.    
+   
+ FUSO ORARIO  Il Sudafrica non ha nessun fuso orario rispetto all’ora legale italiana (un’ora in più rispetto all’ora solare italiana). 
+   
+   
+ VALUTA 
+La moneta locale è il Rand (simbolo: R o Zar), il cui cambio attuale è circa 10,50 Rand per un Euro. 
+   
+ FORMALITÀ D’INGRESSO         
+ Ai cittadini della Comunità Europea per viaggiare in Sudafrica è necessario il passaporto in corso di validità per 30 giorni oltre la data di rientro del viaggio, e con una pagina completamente libera. Il soggiorno massimo consentito è di 3 mesi e non è necessario alcun visto.       
+   
+ COME SI ARRIVA 
+ Facilmente raggiungibile grazie all’assenza di fuso orario, il Sudafrica è servito dalle principali linee aeree: South African Airways, Lufthansa, Swiss, British Airways, Klm, AirFrance, Iberia, Tap, Qatar Airways, Emirates, Olympics. 
+    

@@ -1,0 +1,56 @@
+#titolo L’ultimo Shuttle - Dossier - Scienza&Tecnica
+  [if gte mso 9]><xml>
+ 
+  Normal
+  0
+  
+  
+  14
+  
+  
+  false
+  false
+  false
+  
+  IT
+  X-NONE
+  X-NONE
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+</xml><![endif] [if gte mso 9]><![endif] [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-style-parent:"";
+	font-size:11.0pt;"Calibri","sans-serif";
+	mso-fareast-"Times New Roman";
+	mso-bidi-"Times New Roman";}
+</style>
+<![endif]  Le altre due navette del programma, il Discovery e l’Endeavour, hanno gia’ compiuto la loro ultima missione ed entrambe si stanno preparando ad essere esposte in un museo. L’Enterprise, che si trova adesso al Museo Smithsonian di Washington sarà trasferito nell’  Air and Space Museum di New York, mentre  il Discovey prendera’ il suo posto allo  Smithsonian National Air and Space Museum;  l’Endeavour è destinato al  California Science Center di Los Angeles e l ’Atlantis avra’ un posto d’onore nel  Kennedy Space Center, presso l’area aperta ai visitatori e adibita anche a museo.  Potrebbero trovare posto in un museo perfino i detriti del Challenger, esploso al decollo nel 1986, e del Columbia, che si è disintegrato al rientro, il primo febbraio 2003: li ha richiesti il museo Smithsonian di Washington, per ricordare che l’avventura dello spazio ha avuto anche costi alti in termini di vite umane. 
+ L’intera storia dello shuttle racconta grandi speranze e disillusioni. Si sperava di avere a disposizione un traghetto delle stelle capace di fare un volo a settimana a prezzi accessibili, dando un impulso senza precedenti all’esplorazione spaziale, ma si sono dovuti fare i conti con i problemi relativi alla sicurezza, i costi sono aumentati in modo imprevedibile e i voli si sono diradati. Giudicato da alcuni un veicolo ormai vecchio, considerato da altri un mezzo straordinario che forse guardava troppo in avanti, lo shuttle resta comunque la macchina piu’ complessa e sofisticata mai costruita finora, che ha permesso di realizzare un’impresa come la Stazione Spaziale Internazionale e di portare in orbita strumenti scientifici straordinari come il telescopio spaziale Hubble, che ha rivoluzionato l’astronomia, e il cacciatore di antimateria Ams (Alpha Magnetic Spectrometer), che promette di rivoluzionare la fisica.  

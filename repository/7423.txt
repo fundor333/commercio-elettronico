@@ -1,0 +1,51 @@
+#titolo La Corte di Giustizia dell’Unione Europea - L'ABC dell'Europa - ANSA Europa
+  [if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:HyphenationZone>14</w:HyphenationZone>
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif] [if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif] [if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Tabella normale";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif] 
+ La  Corte di Giustizia dell'Unione Europea  ha il compito di garantire l'osservanza del diritto comunitario all'interno dell'Ue, facendo rispettare e applicare le norme contenute nei Trattati. Le sue sentenze hanno profondamente modificato molti aspetti della vita dei cittadini europei obbligando gli Stati membri ad applicare il diritto comunitario. 
+   
+ La Corte ha sede in Lussemburgo. Creata nel 1952, all'indomani della nascita della Comunita' europea del carbone e dell'acciaio (Ceca), la Corte di giustizia ha visto ampliare i suoi compiti e la sua struttura mano a mano che le istituzioni comunitarie crescevano. Nel  1988 e' stato introdotto il Tribunale dell'Ue e piu' recentemente, nel 2004, il Tribunale della funzione pubblica. 
+   
+ Le competenze della Corte vanno dai giudizi contro gli Stati membri per inadempimento di una normativa Ue, a coronamento della procedura di infrazione lanciata dalla Commissione Ue, o per annullamento. In questo caso un privato, uno Stato membro o un'istituzione comunitaria possono chiedere l'annullamento di un atto giuridico comunitario. 
+   
+ Su richiesta di un tribunale di uno Stato membro, la Corte e' chiamata a precisare una questione relativa all'interpretazione o alla validità di un atto di diritto europeo. La risposta data e' giuridicamente vincolante e vale per tutti gli Stati Ue, com'e' stato per il caso 'Bosman', in cui la Corte ha deciso di privilegiare il principio della libera circolazione dei lavoratori sulle norme che regolavano il sistema dei trasferimenti nel mondo del calcio. 
+    

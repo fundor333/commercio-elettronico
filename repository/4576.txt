@@ -1,0 +1,5 @@
+#titolo Huszti si infortuna mentre calcia un rigore! - Calcio
+Infrrtunio a Szabolcs Huszti mentre calcia il rigore in Hannover_Amburgo, match concluso 5-1 per i padroni di casa. 
+ 
+   
+ addCustomPlayer('r8rmao144zbx1d2zo8wjjg14s', '2EE7CFF169D54C739901A1BCEB16EB37', 'kx5reznxsv8g183do1k3702or', 620, 540, 'perfr8rmao144zbx1d2zo8wjjg14s-kx5reznxsv8g183do1k3702or', 'eplayer4');  

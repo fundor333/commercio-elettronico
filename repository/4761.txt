@@ -1,0 +1,19 @@
+#titolo Premier League - Speciali
+Classifica finale premier league: 
+Manchester United 89;  
+Manchester City 78;  
+Chelsea 75;  
+Arsenal 73;  
+Tottenham 72;  
+Everton 63;  
+Liverpool 61;  
+West Bromwich 49;  
+Swansea e West Ham 46;  
+Norwich 44;  
+Fulham 43;  
+Stoke 42;  
+Southampton, Aston Villa e Newcastle 41;  
+Sunderland 39;  
+Wigan 36;  
+Reading 28;  
+Queens Park R. 25.  

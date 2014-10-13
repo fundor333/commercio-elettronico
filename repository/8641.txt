@@ -1,0 +1,63 @@
+#titolo Danza - Scopri il Sudafrica - Arte
+
+ [if gte mso 9]><xml>
+ 
+  Normal
+  0
+  14
+  
+  
+  false
+  false
+  false
+  
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+ 
+</xml><![endif] [if gte mso 9]><![endif] [if !mso]>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif] 
+<!--
+ /* Font Definitions */
+ @font-face
+	{
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;"Times New Roman";
+	mso-fareast-"Times New Roman";
+	color:windowtext;}
+p
+	{
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;"Times New Roman";
+	mso-fareast-"Times New Roman";
+	color:black;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+-->
+ [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-style-parent:"";
+	font-size:10.0pt;"Times New Roman";}
+</style>
+<![endif] 
+ Il Sudafrica sta diventando un luogo di interesse internazionale per nuovi talenti artistici, soprattutto nella danza contemporanea e nella musica elettronica. Sono ormai moltissimi i festival sparsi per il paese e l’offerta, culturalmente ricchissima, copre ogni periodo dell’anno. Si va da proposte per addetti ai lavori, tra avanguardia e sperimentazione, a spettacoli pop e di massa, per tutti, sudafricani, africani e pubblico internazionale. Per la danza è il FNB Dance Umbrella, a Johannesburg (febbraio), la principale fucina di nuove proposte contemporanee (ha lanciato molti talenti sudafricani in tutto il mondo tra cui Vincent Mantsoe, Robyn Orlin and Boyzie Cekwana). Ma anche i 200 spettacoli su 3 palchi diversi del Klein Karoo Nationale Kunstefees, a Oudtshoorn (Western Cape), in aprile, nato come alternativa afrikaans all’English National Arts Festival, si propone di promuovere, accanto a professionisti internazionali, giovani emergenti (attori, danzatori e coreografi).  
+    

@@ -1,0 +1,7 @@
+#titolo La scala Richter e la vecchia Mercalli - Terra & Poli - Scienza&Tecnica
+  La scala adottata dai sismologi per misurare l'intensita' di un terremoto e' la Richter. 
+Contrariamente alla vecchia scala Mercalli, basata sulla constatazione degli effetti provocati dal terremoto, la scala Richter e' l'unica che abbia valore scientifico perche' basata sul valore dell'energia liberata dal sisma, espressa nella magnitudo. 
+Ideata nel 1935 dal sismologo americano Charles Richter,l'omonima scala non prevede un valore massimo. Tuttavia si ritiene estremamente difficile che un terremoto possa superare il valore di 9. Tra un valore e l’altro della scala c’è una progressione di tipo logaritmico, vale a dire che per poter confrontare i diversi valori della magnitudo occorre moltiplicare per 30. 
+Utilizzata piu' spesso in passato e oggi quasi in disuso e' la scala Mercalli, una scala empirica basata sugli effetti del terremoto e che si puo' quindi applicare soltanto dove esistono centri abitati. La scala e' graduata da 1 a 12 e ad ogni grado corrispondono diversi effetti avvertiti dalla popolazione (lampadari che tremano, caduta di cornicioni, fino a panico generale e catastrofe totale). 
+Simile alla scala Richter e' la scala Mks, utilizzata soprattutto nell'Europa dell'Est. Prende nome dai tre scienziati (Medvedev, Sponheuer e Karnik) che l'hanno ideata ed e' basata anch'essa su dodici gradi. 
+    

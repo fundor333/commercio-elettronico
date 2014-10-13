@@ -1,0 +1,57 @@
+#titolo Mondiali - Scopri il Sudafrica
+
+ [if gte mso 9]><xml>
+ 
+  Normal
+  0
+  14
+  
+  
+  false
+  false
+  false
+  
+   
+   
+   
+   
+   
+  
+  MicrosoftInternetExplorer4
+ 
+</xml><![endif] [if gte mso 9]><![endif] 
+<!--
+ /* Font Definitions */
+ @font-face
+	{
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;"Times New Roman";
+	mso-fareast-"Times New Roman";}
+@page Section1
+	{size:595.0pt 842.0pt;
+	margin:70.85pt 2.0cm 2.0cm 2.0cm;}
+div.Section1
+	{page:Section1;}
+--> [if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tabella normale";
+	mso-style-parent:"";
+	font-size:10.0pt;"Times New Roman";}
+</style>
+<![endif] 
+ (ANSA) - MILANO, 4 MAG - I Mondiali in Sudafrica secondo le imprese italiane, potrebbero essere oltre che l'evento mediatico e sportivo dell'anno, anche una concreta opportunità economica. E' quanto emerge da un'indagine della Camera di commercio di Milano, per lo speciale ANSA "Scopri il Sudafrica" in occasione dei Mondiali 2010, realizzata ad aprile su oltre 600 imprenditori e protagonisti del mondo economico a Milano e in Italia. 
+   
+ Per l'evento è atteso un giro d'affari di oltre 3 miliardi, soprattutto nel settore del commercio e turismo. Lo riconosce quel 7% di imprese che conta su una crescita nei rapporti d'affari col Sudafrica, così come quel 5,7% che si aspetta un fatturato in crescita grazie agli stessi Mondiali; e quel 6,4% che sta per investire proprio per sfruttare meglio l'opportunità dal punto di vista economico. In particolare, per il 25% degli intervistati la propria azienda sarà influenzata dai Mondiali, mentre il 9% crede che sarà interessato il titolare o i collaboratori e il 6% prevede la predisposizione e l'utilizzo di strumenti interni per l'aggiornamento sui risultati.      
+   
+ Quanto all'attesa nei confronti dell'evento in Sudafrica, si dividono tra scettici (per il 30% l'attesa è scarsa; in particolare gli ultracinquantenni: il 56%) e fiduciosi: per il 27% l'attesa è ottima, buona o discreta, in particolare per gli impiegati: 41,3 per cento.  Più interessati i giovani: il 14% degli under 40 crede che l'azienda beneficierà dell'interessamento diretto del titolare, dei collaboratori o iniziative per i clienti. Mentre l'8,3%  prevede la predisposizione e utilizzo di strumenti interni per aggiornamento sui risultati (e solo il 3% dei maggiori di 50 anni).   
+   
+ A livello calcistico, invece, cosa ci si aspetta dalla nazionale? Le più ottimiste sono le donne: si aspettano una vittoria o un buon posizionamento nel 69% dei casi, contro il 47% degli uomini (contro una media del 50%). 
+   
+ Il sondaggio fa parte dello speciale ANSA in occasione dei Campionati Mondiali di Calcio (Sud Africa, 11 giugno-11 luglio 2010): ANSA promuove uno speciale editoriale 'Sudafrica 2010', composto da un bouquet di contenuti multiformato (testo, foto e video) che garantiranno una copertura totale dell'evento calcistico più importante dell'anno. Il sito propone contenuti di tipo turistico, economico, culturale e di intrattenimento, che raccontano le caratteristiche e bellezze di questo Paese meno note ai navigatori. Lo speciale, denominato "Scopri il Sudafrica", è anche inserito all'interno del nuovo canale InViaggio. (ANSA).  

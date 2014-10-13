@@ -1,0 +1,53 @@
+#titolo Ruote e pneumatici - Guidare in Sicurezza - ACI
+  Caratteristiche 
+Profondità degli intagli del battistrada 
+Per legge, deve essere di almeno 1,6 millimetri su tutta la superficie. Ma questo è un "valore limite", che non assicura le migliori prestazioni soprattutto su terreno bagnato.  
+Pressione 
+Un pneumatico leggermente sgonfio peggiora la stabilità in curva e rende il veicolo insicuro sul bagnato. La pressione normale di esercizio è indicata sul libretto d'uso; se il veicolo è molto carico e si prevede un viaggio lungo, è opportuno aumentarla leggermente.  
+Integrità del pneumatico 
+Tagli e lacerazioni sui fianchi del pneumatico possono essere pericolosi se hanno intaccato le "tele" della struttura. Cambiatelo senza esitazioni. Ricordate che un pneumatico nuovo, appena montato, necessita di almeno un centinaio di km di "rodaggio" e di stabilizzazione prima di fornire il meglio delle proprie prestazioni. Per i primi 100 km, quindi, guidate "piano". Su ogni asse i pneumatici, per legge, devono essere dello stesso tipo.  
+Cerchione 
+Le deformazioni ed ammaccature del cerchione producono vibrazioni allo sterzo, possono contribuire al distacco del pneumatico, fanno sfuggire l'aria nei pneumatici "tubeless" (senza camera d'aria). Una accurata "ribattitura" può eliminare l'inconveniente, ma questa non è possibile su alcuni tipi di cerchioni in lega. E' preferibile sostituire il cerchione piuttosto che rinunciare al vantaggio del pneumatico "tubeless" che, in caso di foratura, impiega più tempo a sgonfiarsi.  
+Leggere un pneumatico 
+Sui fianchi del pneumatico è presente un gran numero di informazioni, alcune obbligatorie ed altre volontariamente riportate dal fabbricante, in base ad accordi tra i produttori. 
+Le informazioni riportate sul pneumatico sono diverse secondo i mercati ai quali esso è destinato e le norme di omologazione che, di conseguenza, esso deve rispettare. 
+Per il mercato europeo devono essere presenti le informazioni richieste dal Regolamento ECE-ONU n. 30 (in www.unece.org/trans/main/wp29/wp29regs21-40.html); in alternativa, tra i Paesi dell´UE, devono essere rispettate le prescrizioni della Direttiva 92/23, sostanzialmente simile, quanto a contenuto normativo, al Regolamento ECE-ONU n. 30, ma con in più un test di rumorosità del pneumatico. 
+Per il mercato USA (e nel resto del mondo, talvolta in alternativa alle norme ECE-ONU ed a quelle UE) devono invece essere rispettate le prescrizioni della normativa FMVSS 109, integrata dallo standard 49CFR575.104 (UTQG - Uniform tire quality grading). Le norme USA prescrivono una maggiore quantità di informazioni sul pneumatico. Tuttavia, poiché il mercato dei pneumatici è mondiale, è facile trovare anche in Italia prodotti che recano entrambi i tipi di iscrizioni. Leggendole ed interpretandole correttamente si possono conoscere meglio le caratteristiche di questo componente essenziale del veicolo 
+Le caratteristiche rilevanti di un pneumatico 
+Le caratteristiche fondamentali, prese in considerazione da tutte le "norme" sopra citate, sono le seguenti:  
+le dimensioni fisiche:  
+•larghezza della sezione (in millimetri) 
+•altezza della sezione (come percentuale della larghezza) 
+•diametro del cerchione (in pollici) 
+le caratteristiche prestazionali:  
+•velocità massima ammissibile 
+•massimo carico ammissibile sulla ruota 
+le caratteristiche costruttive:  
+•struttura 
+•attitudine all'uso senza camera d'aria 
+•settimana e anno di costruzione 
+Queste caratteristiche sono riportate sui pneumatici con "marcature" impresse a caldo ed attraverso l´uso di "codici". Oltre a questi elementi, le norme USA prevedono ulteriori indicazioni.  
+Marcature secondo Regolamento ECE-ONU e Direttiva 92/23/CEE 
+- Senso di rotazione obbligato, nei pneumatici con intagli asimmetrici che prevengono l´aquaplaning solo se ruotano nella direzione corretta; questo implica che un pneumatico, montato su cerchione, non può essere impiegato su un lato diverso 
+- TWI: in corrispondenza dell´indicatore di usura, un tassello che compare all´interno di una scanalatura principale del battistrada per indicare che si è raggiunto lo spessore minimo di legge di 1,6 mm 
+- Larghezza della sezione (in mm) e altezza della sezione, come percentuale rispetto alla larghezza della sezione (in questo caso, l´altezza della sezione è il 70% della larghezza, cioè circa 130 mm) 
+- R = pneumatico a struttura radiale; se utilizzabile a velocità superiore a 240 km/h, il simbolo è ZR 
+- "Tubeless": può essere utilizzato senza camera d´aria 
+- Settimana (prime due cifre) e anno (ultima cifra o ultime due cifre) di costruzione 
+- M+S(o anche M/S, M&S, M.S): indica un pneumatico "per uso invernale", cioè particolarmente adatto per pioggia, neve sciolta e fango e basse temperature; inadatto per uso ad alte temperature ed all´asciutto  
+- "Reinforced": presente quando il pneumatico, nel tipo per veicoli merci leggeri, ha una struttura rinforzata rispetto al tipo per autovetture 
+- Simbolo indicante che il pneumatico è di tipo "run flat", in grado cioè di funzionare anche sgonfio ad una velocità di almeno 80 km/h per una distanza di 80 km; in questo caso è presente anche la lettera F prima dell'elemento 11 (diametro del cerchione) 
+- Marchio di omologazione, secondo Regolamento ECE-ONU (tipo a) oppure secondo la Direttiva 92/23 (tipo b); il numero dentro la cornice indica il Paese di omologazione, i numeri dalla terza cifra in poi fuori della cornice indicano il numero di omologazione 
+- Diametro del cerchione, in pollici 
+- "Indice di carico", un numero in codice che, secondo una tabella, indica il carico massimo ammesso sulla ruota 
+- "Categoria di velocità", un codice alfabetico che, secondo una tabella, indica la velocità massima alla quale può essere usato il pneumatico; nelle prove di omologazione, questa velocità viene mantenuta per 20 minuti e alla fine di essa il pneumatico non deve presentare danni. 
+Marcature secondo le norme USA 
+Le caratteristiche rilevanti di un pneumatico - Marcature secondo le norme USA  
+Nel sistema di omologazione USA sono presenti tutti gli elementi dell'omologazione ECE-ONU e dell'omologazione UE, eccetto il marchio di omologazione relative a queste ultime; talvolta, l'indicazione relativa alle dimensioni è preceduta dalla lettera P ("passenger car"), per indicare che il pneumatico è adatto solo per autovetture. In aggiunta, è però presente la stringa di caratteri dell'omologazione USA, secondo le specifiche del DOT (Department of Transportation) in cui, dopo l'indicazione DOT, il primo gruppo alfanumerico, di due caratteri, è il codice dello stabilimento di produzione. Si rivela molto utile in caso di richiami e, attraverso il sito ufficiale www.nhtsa.dot.gov/cars/rules/manufacture/ , chiunque può conoscere a che cosa corrisponde quel codice. Il secondo gruppo, ancora di due caratteri, reca la codifica DOT delle dimensioni del pneumatico (in pratica, un riassunto codificato degli elementi 3, 4 e 11 dell´omologazione ECE-ONU/UE). Il terzo gruppo, opzionale ma con contenuto notificato al DOT, di 4 caratteri al massimo, è a disposizione del produttore per proprie codifiche ad uso interno. Il quarto gruppo, racchiuso in un rettangolo e/o contrassegnato da un triangolino, reca la settimana (primi 2 caratteri) e l´anno (ultimi due caratteri) di produzione.  
+Inoltre, il carico massimo e la pressione massima (in psi, libbre per pollice quadrato) sono indicati in chiaro.  
+Vi sono poi indicazioni, non richieste dalle marchiature ECE-ONU/UE, relative al numero di tele e alla loro natura sia nel battistrada che nei fianchi, nonché il Paese di produzione.  
+Infine, è presente la classificazione di qualità del pneumatico per tre aspetti considerati dalle norme sull´Uniform Tire Quality Grading, rispetto alle prestazioni di un pneumatico standard in una procedura standard di verifica:  
+•treadwear: considerato 100 il numero-indice del consumo di battistrada del pneumatico standard, un indice 200 indica che lo stesso consumo di battistrada si realizza con una percorrenza doppia e così via  
+•traction: riguarda l´aderenza del pneumatico, in condizioni standard di laboratorio, nell´arresto su fondo bagnato. La qualità della prestazione va da AA (il valore più alto) a C 
+•temperature: indica la capacità del pneumatico nel dissipare il calore prodotto durante il rotolamento; varia da A (il grado migliore) a C  
+Nei pneumatici destinati al mercato USA sono inoltre spesso presenti "Safety warnings", cioè informazioni e prescrizioni di sicurezza relative all´uso, al montaggio e smontaggio, ai carichi e alle pressioni di esercizio.   
