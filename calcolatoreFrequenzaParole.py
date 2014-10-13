@@ -1,7 +1,8 @@
 #!/usr/bin/python
 import codecs
+import string
 import urllib
-# import lxml.html as H
+import lxml.html as H
 # import lxml.etree as ET
 import BeautifulSoup
 # import codecs
@@ -42,7 +43,14 @@ class ElaboratoreFile:
         return self
 
     def elaboratore(self,file,stringacercata):
+        root = H.fromstring
         res = root.xpath(stringacercata)
+        if res:
+            for fr in res:
+                fieldRank = int(fr.xpath('td[1]//div[@class="left"]')[0].text)
+                name = string.join(fr.xpath('td[2]')[0].itertext()).strip()
+
+
 
 class AppURLopener(urllib.FancyURLopener):
     version = "App/1.7"
