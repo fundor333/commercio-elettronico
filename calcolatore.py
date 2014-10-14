@@ -1,47 +1,40 @@
 __author__ = 'Fundor333'
 
-import operator
 
 class Contaparole:
     nome = ""
     fileinput = None
-    main_dict = {}
+    main_dict = None
 
-    def __init__(self, nome):
+    def __init__(self, nome, dizionario):
         self.nome = nome
+        self.main_dict = dizionario
         self.fileinput = open(nome, 'r')
+        dictionary = {}
         for line in self.fileinput:
-            self.appoggiodict(line)
+            self.appoggiodict(line, dictionary)
+        self.addDizionario(dictionary)
 
-    def appoggiodict(self, rigadelfile):
-        new_dict = {}
-        rigadelfile = rigadelfile.split()
 
-        for singolaparola in rigadelfile:
-            if singolaparola in new_dict:
-                new_dict[singolaparola] = (1, new_dict[singolaparola][1] + 1)
+    def appoggiodict(self, rigadelfile, dictionary):
+        for singolaparola in rigadelfile.split():
+            if singolaparola in dictionary.keys():
+                dictionary[singolaparola] = dictionary[singolaparola] + 1
             else:
-                new_dict[singolaparola] = (1, 1)
+                dictionary[singolaparola] = 1
 
-        for campo in new_dict:
-            if campo in self.main_dict:
-                self.main_dict[campo] = {list(self.main_dict[campo])[0] + new_dict[campo][0],list(self.main_dict[campo])[1] + new_dict[campo][1]}
+
+    def addDizionario(self, dizzio):
+        for campo in dizzio:
+            if campo in self.main_dict.keys():
+                self.main_dict[campo] = (
+                    self.main_dict[campo][0] + 1, self.main_dict[campo][1] + dizzio[campo])
             else:
-                self.main_dict[campo] = {new_dict[campo]}
+                self.main_dict[campo] = (1, dizzio[campo])
+
 
     def printer(self, filename):
         nome = open(filename, "w")
         for riga in self.main_dict:
-            print(riga)
-            nome.write(riga)
+            nome.writelines(riga + str(self.main_dict[riga]) + "\n")
         nome.close()
-
-
-def main():
-    diz = Contaparole("0001.txt")
-    diz.printer("output.txt")
-
-
-# Esecutore intero progetto
-if __name__ == "__main__":
-    main()
