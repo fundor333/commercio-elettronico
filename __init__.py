@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import codecs
+import string
 import urllib
 import lxml.html as html
 import BeautifulSoup
@@ -8,11 +9,11 @@ import time
 GOOGLEURL = "https://www.google.it/search?q=site:www.ansa.it+crisi&sasite:www.ansa.it+mafia&gbv=&start="
 TAGCLASS = "articleBody"
 FILEURL = "url"
-NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
+NUMERORISULTATI = 5  # il valore indicato va moltiplicato per 10
 WAITINGTIME = 2  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//div[@itemprop="articleBody"]/text()'
-CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
+CERCAINGOOGLE = 0  # Mettere a 0 per poter scaricare risultati aggiornati
 CERCAINRESULT = 0  # Mettere a 0 per poter scaricare i file aggiornati
 
 
@@ -59,7 +60,7 @@ class Contaparole:
     def printer(self, filename):
         nome = open(filename, "w")
         for riga in self.main_dict:
-            nome.writelines(riga + str(self.main_dict[riga]) + "\n")
+            nome.writelines(riga+ " "+ str(self.main_dict[riga][0]) + " "+ str(self.main_dict[riga][1]) + "\n")
         nome.close()
 
 
@@ -81,6 +82,7 @@ class ElaboratoreRicerca:
     def elaboratorequery(self, inputfile, query, output):
         files = html.fromstring(inputfile)
         for url in files.xpath(query):
+            url=string.replace(url,"/url?q=","")
             output.write(url + "\n")
 
     def printer(self, nome):
@@ -92,10 +94,10 @@ class ElaboratoreRicerca:
         if CERCAINRESULT == 0:
             print("Start downloading from result")
             appoggio = open(FILEURL + ".txt", 'r')
-            for i in range(0,len(self.url.keys())):
+            for i in range(0, len(self.url.keys())):
                 print("Waiting number " + str(i + 1) + " of " + str(len(self.url.keys())))
                 time.sleep(WAITINGTIME)
-                urllib.urlretrieve(self.url.keys()[i], self.listafilename[i] + '.html')
+                urllib.urlretrieve(self.url.keys()[i], str(self.listafilename[i]) + '.html')
                 self.printer(self.listafilename[i])
             self.estrattore(FILEURL + "elaborati", QUERYSITO)
         for i in range(len(appoggio.readlines())):
@@ -139,10 +141,10 @@ def main():
 
     listanomi = range(len(appoggio))
 
-    num = len(listanomi)-1
+    num = len(listanomi) - 1
     print(num)
     for i in range(len(listanomi) - 1):
-        listanomi[i] = "risultati" + str(i)
+        listanomi[i] = "risultatia" + str(i)
 
     listaurl = {}
     for url in appoggio:
