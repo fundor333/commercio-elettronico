@@ -13,8 +13,8 @@ NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
 WAITINGTIME = 2  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
-CERCAINGOOGLE = 0  # Mettere a 0 per poter scaricare risultati aggiornati
-CERCAINRESULT = 0  # Mettere a 0 per poter scaricare i file aggiornati
+CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
+CERCAINRESULT = 1  # Mettere a 0 per poter scaricare i file aggiornati
 
 
 class AppURLopener(urllib.FancyURLopener):
@@ -29,7 +29,7 @@ class Contaparole:
     def __init__(self, listnomi, dizionario):
         self.listanome = listnomi
         self.main_dict = dizionario
-        print("Elaborazione in corso")
+        print("Work in progress")
         for nome in listnomi.keys():
             self.fileinput = open(nome + ".txt", 'r')
             dictionary = {}
@@ -77,7 +77,6 @@ class ElaboratoreRicerca:
         files = html.fromstring(inputfile)
         for risposta in files.xpath(query):
             if risposta[1:7] != "/search":
-                print("prova" + risposta)
                 output.write(risposta + '\n')
 
     def printer(self, nome):
@@ -103,7 +102,6 @@ class ElaboratoreRicerca:
 
     def altroesecutore(self, flag, numeromassimo, waiting, fileout, query):
         if flag == 0:
-            print(self.listafilename.keys())
             print("Start downloading from urls")
             for i in range(len(self.url.keys())):
                 print("Waiting number " + str(i + 1) + " of " + str(numeromassimo))
@@ -112,10 +110,6 @@ class ElaboratoreRicerca:
                 self.printer(self.listafilename.keys()[i])
             for i in range(len(fileout)):
                 output = codecs.open(fileout.keys()[i] + "_changed.txt", 'w', 'utf-8')
-                # todo
-                print("Secondo test")
-                print(i)
-                print(self.listafilename.keys()[i])
                 self.elaboratorequery(decode_html(self.listafilename.keys()[i]), query, output)
                 output.close()
         for i in range(numeromassimo):
@@ -139,9 +133,7 @@ def main():
         listaurl[GOOGLEURL + str(i * 10)] = "inserito"
         listanomi["pagine_di_ricerca_" + str(i)] = "inserito"
     appoggio = ElaboratoreRicerca(listaurl, listanomi)
-    print("Elaboratore finito")
     appoggio.googleesecutore(CERCAINGOOGLE, NUMERORISULTATI, WAITINGTIME, FILEURL, QUERYGOOGLE)
-    print("Fine parte uno")
 
     appoggio = open(FILEURL + ".txt", 'r')
     appoggio = appoggio.readlines()
