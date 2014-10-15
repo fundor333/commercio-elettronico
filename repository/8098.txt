@@ -1,8 +1,0 @@
-#titolo Cosa si intende per sicurezza passiva - Guidare in Sicurezza - ACI
-  I dispositivi ed i sistemi di sicurezza passiva hanno lo scopo di diminuire le conseguenze negative dell'incidente, una volta che questo si sia verificato. In particolare, hanno il compito di assorbire l'energia cinetica posseduta dai corpi degli occupanti il veicolo, in modo che essi non urtino - o urtino a velocità inferiore - contro le strutture del veicolo o contro il suolo. La gestione dell' energia cinetica posseduta dal veicolo e dai suoi occupanti al momento dell'urto è quindi il campo di applicazione tipico dei dispositivi di sicurezza passiva e l'oggetto principale delle ricerche che la riguardano. 
-Secondo la definizione, rientrano in questa classe dispositivi quali: 
-le cinture di sicurezza 
-i poggiatesta 
-gli airbag 
-i dispositivi di ritenuta per bambini 
-ma possono rientrarvi anche i guard-rail lungo le strade, che oltre alla funzione di "contenimento" hanno anche quella di assorbire l'energia cinetica del veicolo attraverso la loro deformabilità. In realtà, tutto il veicolo - in particolare se è un'autovettura - è concepito secondo criteri di sicurezza passiva. In caso d'urto, la deformazione della parte anteriore e di quella posteriore hanno il fine di preservare l'abitacolo, che deve rimanere il più possibile intatto. Sterzo, pedaliera, portiere ecc. devono rispondere a precise e numerose normative comunitarie in materia di sicurezza passiva riguardanti la omologazione di varie parti o dispositivi. Le prestazioni di sicurezza passiva di numerosi veicoli sono inoltre testate dal programma Euro-NCAP , attraverso crash-test condotti a 64 hm/h contro barriere deformabili, nonché prove di urto laterale o a bassa velocità.  

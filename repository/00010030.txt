@@ -1,4 +1,0 @@
-#titolo VIDEO - Il Faraone: 'Balotelli, portaci al 3/o posto' - Calcio
-  
-   
- addCustomPlayer('tzi40dupzw991qoci6z1m54ry', '964985e1-76d5-4a3a-e044-002128369326', '1ptd9lkqyxbqw18uuahfrim1xx', 620, 540, 'perftzi40dupzw991qoci6z1m54ry-1ptd9lkqyxbqw18uuahfrim1xx', 'eplayer4');  

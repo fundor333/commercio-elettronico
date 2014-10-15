@@ -1,9 +1,0 @@
-#titolo Chiavette 3G e 4G vulnerabili ad hacker - Tecnologia e Internet
-     (ANSA) - ROMA, 18 MAR - Attenzione alle 'chiavette' delle
-aziende tlc che fanno da modem 3G e 4G, perche' potrebbero
-essere una fonte di 'infezione' per il computer. E' l'allarme
-lanciato da due ricercatori russi nella conferenza Black Hat
-Europe di Amsterdam: hanno sottolineato come la provenienza dei
-dispositivi sul mercato e' riferibile a due aziende cinesi. Sotto la lente Huawei e Zte, gia' nell'occhio del ciclone di una
-campagna che accusava la Cina di spiare, attraverso proprio le
-sue aziende, l'hi-tech Usa.

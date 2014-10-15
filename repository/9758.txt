@@ -1,2 +1,0 @@
-#titolo Sistema di sicurezza attiva e preventiva - Guidare in Sicurezza - ACI
-  Funzionamento, prestazioni e limiti: cosa si intende per sicurezza attiva, ABS, sistemi anticollisione,  sistemi di comunicazione e di allarme per ostacoli o pericoli, sistemi di rivelazione automatica delle condizioni psico-fisiche dei conducenti, sistemi per la correzione automatica degli errori di guida  
