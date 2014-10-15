@@ -72,22 +72,10 @@ class ElaboratoreRicerca:
         self.url = url
         urllib._urlopener = AppURLopener()
 
-    def googleesecutore(self):
-        if CERCAINGOOGLE == 0:
-            print("Start downloading from Google")
-            for i in range(NUMERORISULTATI):
-                print("Waiting number " + str(i + 1) + " of " + str(NUMERORISULTATI))
-                time.sleep(WAITINGTIME)
-                urllib.urlretrieve(self.url[i], self.listafilename[i] + '.html')
-                self.printer(self.listafilename[i])
-            self.estrattore()
-        for i in range(NUMERORISULTATI):
-            self.printer(self.listafilename[i])
-
-    def estrattore(self):
-        output = open(FILEURL + ".txt", 'w')
-        for i in range(1, NUMERORISULTATI):
-            self.elaboratorequery(decode_html(self.listafilename[i]), QUERYGOOGLE, output)
+    def estrattore(self, fileurl, query):
+        output = open(fileurl + ".txt", 'w')
+        for i in range(1, len(self.listafilename)):
+            self.elaboratorequery(decode_html(self.listafilename[i]), query, output)
         output.close()
 
     def elaboratorequery(self, inputfile, query, output):
@@ -104,14 +92,25 @@ class ElaboratoreRicerca:
         if CERCAINRESULT == 0:
             print("Start downloading from result")
             appoggio = open(FILEURL + ".txt", 'r')
-            listaurl = range(len(appoggio.readlines()))
-            for i in range(len(appoggio.readlines())):
+            for i in range(0,len(self.url.keys())):
+                print("Waiting number " + str(i + 1) + " of " + str(len(self.url.keys())))
+                time.sleep(WAITINGTIME)
+                urllib.urlretrieve(self.url.keys()[i], self.listafilename[i] + '.html')
+                self.printer(self.listafilename[i])
+            self.estrattore(FILEURL + "elaborati", QUERYSITO)
+        for i in range(len(appoggio.readlines())):
+            self.printer(self.listafilename[i])
+
+    def googleesecutore(self):
+        if CERCAINGOOGLE == 0:
+            print("Start downloading from Google")
+            for i in range(NUMERORISULTATI):
                 print("Waiting number " + str(i + 1) + " of " + str(NUMERORISULTATI))
                 time.sleep(WAITINGTIME)
                 urllib.urlretrieve(self.url[i], self.listafilename[i] + '.html')
                 self.printer(self.listafilename[i])
-            self.estrattore()
-        for i in range(len(appoggio.readlines())):
+            self.estrattore(FILEURL, QUERYGOOGLE)
+        for i in range(NUMERORISULTATI):
             self.printer(self.listafilename[i])
 
 
@@ -125,8 +124,8 @@ def decode_html(nome):
 
 
 def main():
-    listaurl = range(NUMERORISULTATI * 10)
-    listanomi = range(NUMERORISULTATI * 10)
+    listaurl = range(NUMERORISULTATI)
+    listanomi = range(NUMERORISULTATI)
 
     for i in range(NUMERORISULTATI):
         listaurl[i] = GOOGLEURL + str(i * 10)
@@ -136,12 +135,18 @@ def main():
 
     appoggio = open(FILEURL + ".txt", 'r')
 
-    listaurl = range(len(appoggio.readlines()))
-    listanomi = range(len(appoggio.readlines()))
+    appoggio = appoggio.readlines()
 
-    for i in range(len(appoggio.readlines())):
-        listaurl[i] = appoggio.readlines()[i]
-        listanomi[i] = "risultatielaborati" + str(i)
+    listanomi = range(len(appoggio))
+
+    num = len(listanomi)-1
+    print(num)
+    for i in range(len(listanomi) - 1):
+        listanomi[i] = "risultati" + str(i)
+
+    listaurl = {}
+    for url in appoggio:
+        listaurl[url] = "inserito"
 
     appoggio = ElaboratoreRicerca(listaurl, listanomi)
     appoggio.risultatiesecutore()
