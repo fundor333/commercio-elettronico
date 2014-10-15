@@ -9,10 +9,11 @@ GOOGLEURL = "https://www.google.it/search?q=site:www.ansa.it+crisi&sasite:www.an
 TAGCLASS = "articleBody"
 FILEURL = "url"
 NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
-WAITINGTIME = 2
+WAITINGTIME = 2  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//div[@itemprop="articleBody"]/text()'
 CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
+CERCAINRESULT = 0  # Mettere a 0 per poter scaricare i file aggiornati
 
 
 class AppURLopener(urllib.FancyURLopener):
@@ -64,24 +65,28 @@ class Contaparole:
 
 class ElaboratoreRicerca:
     listafilename = None
+    url = None
 
     def __init__(self, url, listanemaname):
         self.listafilename = listanemaname
+        self.url = url
         urllib._urlopener = AppURLopener()
+
+    def googleesecutore(self):
         if CERCAINGOOGLE == 0:
             print("Start downloading from Google")
             for i in range(NUMERORISULTATI):
                 print("Waiting number " + str(i + 1) + " of " + str(NUMERORISULTATI))
                 time.sleep(WAITINGTIME)
-                urllib.urlretrieve(url[i], listanemaname[i] + '.html')
-                self.printer(listanemaname[i])
+                urllib.urlretrieve(self.url[i], self.listafilename[i] + '.html')
+                self.printer(self.listafilename[i])
             self.estrattore()
-        for name in self.listafilename:
-            self.printer(name)
+        for i in range(NUMERORISULTATI):
+            self.printer(self.listafilename[i])
 
     def estrattore(self):
         output = open(FILEURL + ".txt", 'w')
-        for i in range(NUMERORISULTATI):
+        for i in range(1, NUMERORISULTATI):
             self.elaboratorequery(decode_html(self.listafilename[i]), QUERYGOOGLE, output)
         output.close()
 
@@ -95,6 +100,20 @@ class ElaboratoreRicerca:
         outputfile.write(decode_html(nome))
         outputfile.close()
 
+    def risultatiesecutore(self):
+        if CERCAINRESULT == 0:
+            print("Start downloading from result")
+            appoggio = open(FILEURL + ".txt", 'r')
+            listaurl = range(len(appoggio.readlines()))
+            for i in range(len(appoggio.readlines())):
+                print("Waiting number " + str(i + 1) + " of " + str(NUMERORISULTATI))
+                time.sleep(WAITINGTIME)
+                urllib.urlretrieve(self.url[i], self.listafilename[i] + '.html')
+                self.printer(self.listafilename[i])
+            self.estrattore()
+        for i in range(len(appoggio.readlines())):
+            self.printer(self.listafilename[i])
+
 
 def decode_html(nome):
     html_string = file(nome + '.html').read()
@@ -105,20 +124,28 @@ def decode_html(nome):
     return converted.unicode
 
 
-def recuperapagine(listaurl, listanomi):
-    appoggio = None
-    # Genera gli indirizzi delle pagine google cercate e le recuperasalvandole e elaborandole una prima volta
-    appoggio = ElaboratoreRicerca(listaurl, listanomi)
-
-
 def main():
-    listaurl = range(NUMERORISULTATI)
-    listanomi = range(NUMERORISULTATI)
+    listaurl = range(NUMERORISULTATI * 10)
+    listanomi = range(NUMERORISULTATI * 10)
 
     for i in range(NUMERORISULTATI):
         listaurl[i] = GOOGLEURL + str(i * 10)
         listanomi[i] = "risultati" + str(i)
-    recuperapagine(listaurl, listanomi)
+    appoggio = ElaboratoreRicerca(listaurl, listanomi)
+    appoggio.googleesecutore()
+
+    appoggio = open(FILEURL + ".txt", 'r')
+
+    listaurl = range(len(appoggio.readlines()))
+    listanomi = range(len(appoggio.readlines()))
+
+    for i in range(len(appoggio.readlines())):
+        listaurl[i] = appoggio.readlines()[i]
+        listanomi[i] = "risultatielaborati" + str(i)
+
+    appoggio = ElaboratoreRicerca(listaurl, listanomi)
+    appoggio.risultatiesecutore()
+
     diz = {}
     Contaparole(listanomi, diz).printer("output.txt")
 
