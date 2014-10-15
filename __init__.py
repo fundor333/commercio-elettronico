@@ -1,47 +1,103 @@
 #!/usr/bin/python
 import codecs
 import urllib
-# import lxml.html as h
-# import lxml.etree as ET
+import lxml.html as html
 import BeautifulSoup
-# import codecs
+import time
 
-from calcolatore import Contaparole
-
-GOOGLEURL = "https://www.google.it/search?q=site:www.ansa.it+mafia&sa=G&gbv=2&sei=Z4k3VKCtDc20aYaPgKgL"
+GOOGLEURL = "https://www.google.it/search?q=site:www.ansa.it+crisi&sasite:www.ansa.it+mafia&gbv=&start="
 TAGCLASS = "articleBody"
-FILEURL = "url.txt"
-NUMERORISULTATI = 100
-
-
-class WebPage:
-    filen = ""
-
-    def __init__(self, url, name):
-        self.filen = name
-        urllib.urlretrieve(url, name + '.html')
-        elaborato = decode_html(name + '.html')
-        outputfile = codecs.open(name + ".txt", 'w', 'utf-8')
-        outputfile.write(elaborato)
-        outputfile.close()
-
-
-class ElaboratoreFile:
-    filename = ""
-
-    def __init__(self, name):
-        self.filename = name
-
-    def googleextractor(self):
-        return self
+FILEURL = "url"
+NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
+WAITINGTIME = 2
+QUERYGOOGLE = '//h3[@class="r"]/a/@href'
+QUERYSITO = '//div[@itemprop="articleBody"]/text()'
+CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
 
 
 class AppURLopener(urllib.FancyURLopener):
     version = "App/1.7"
 
 
-def decode_html(filename):
-    html_string = file(filename).read()
+class Contaparole:
+    listanome = ""
+    fileinput = None
+    main_dict = None
+
+    def __init__(self, listnomi, dizionario):
+        self.listanome = listnomi
+        self.main_dict = dizionario
+        for nome in listnomi:
+            self.fileinput = open(nome + ".txt", 'r')
+            dictionary = {}
+            for line in self.fileinput:
+
+                for singolaparola in line.split():
+                    if singolaparola in dictionary.keys():
+                        dictionary[singolaparola] += 1
+                    else:
+                        dictionary[singolaparola] = 1
+
+            self.adddizionario(dictionary)
+
+    def appoggiodict(self, line, dictionary):
+        for singolaparola in line.split():
+            if singolaparola in dictionary.keys():
+                dictionary[singolaparola] += 1
+            else:
+                dictionary[singolaparola] = 1
+
+    def adddizionario(self, dizzio):
+        for campo in dizzio:
+            if campo in self.main_dict.keys():
+                self.main_dict[campo] = (
+                    self.main_dict[campo][0] + 1, self.main_dict[campo][1] + dizzio[campo])
+            else:
+                self.main_dict[campo] = (1, dizzio[campo])
+
+    def printer(self, filename):
+        nome = open(filename, "w")
+        for riga in self.main_dict:
+            nome.writelines(riga + str(self.main_dict[riga]) + "\n")
+        nome.close()
+
+
+class ElaboratoreRicerca:
+    listafilename = None
+
+    def __init__(self, url, listanemaname):
+        self.listafilename = listanemaname
+        urllib._urlopener = AppURLopener()
+        if CERCAINGOOGLE == 0:
+            print("Start downloading from Google")
+            for i in range(NUMERORISULTATI):
+                print("Waiting number " + str(i + 1) + " of " + str(NUMERORISULTATI))
+                time.sleep(WAITINGTIME)
+                urllib.urlretrieve(url[i], listanemaname[i] + '.html')
+                self.printer(listanemaname[i])
+            self.estrattore()
+        for name in self.listafilename:
+            self.printer(name)
+
+    def estrattore(self):
+        output = open(FILEURL + ".txt", 'w')
+        for i in range(NUMERORISULTATI):
+            self.elaboratorequery(decode_html(self.listafilename[i]), QUERYGOOGLE, output)
+        output.close()
+
+    def elaboratorequery(self, inputfile, query, output):
+        files = html.fromstring(inputfile)
+        for url in files.xpath(query):
+            output.write(url + "\n")
+
+    def printer(self, nome):
+        outputfile = codecs.open(nome + ".txt", 'w', 'utf-8')
+        outputfile.write(decode_html(nome))
+        outputfile.close()
+
+
+def decode_html(nome):
+    html_string = file(nome + '.html').read()
     converted = BeautifulSoup.UnicodeDammit(html_string, isHTML=True)
     if not converted.unicode:
         print("Errore conversione unicode")
@@ -49,19 +105,22 @@ def decode_html(filename):
     return converted.unicode
 
 
+def recuperapagine(listaurl, listanomi):
+    appoggio = None
+    # Genera gli indirizzi delle pagine google cercate e le recuperasalvandole e elaborandole una prima volta
+    appoggio = ElaboratoreRicerca(listaurl, listanomi)
+
+
 def main():
-    lista = ""  # TODO elenco dei URL dei file che ho trovato con google
-    nomefile = "risultati"
+    listaurl = range(NUMERORISULTATI)
+    listanomi = range(NUMERORISULTATI)
 
-    urllib._urlopener = AppURLopener()
-    google = WebPage(GOOGLEURL, nomefile)
-
-    ElaboratoreFile(nomefile).googleextractor()
-
+    for i in range(NUMERORISULTATI):
+        listaurl[i] = GOOGLEURL + str(i * 10)
+        listanomi[i] = "risultati" + str(i)
+    recuperapagine(listaurl, listanomi)
     diz = {}
-    for i in lista:
-        dizzio = Contaparole(i + ".txt", diz)
-        dizzio.printer("output.txt")
+    Contaparole(listanomi, diz).printer("output.txt")
 
 # Esecutore intero progetto
 if __name__ == "__main__":
