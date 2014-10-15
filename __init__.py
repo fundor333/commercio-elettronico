@@ -13,8 +13,8 @@ NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
 WAITINGTIME = 2  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
-CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
-CERCAINRESULT = 1  # Mettere a 0 per poter scaricare i file aggiornati
+CERCAINGOOGLE = 0  # Mettere a 0 per poter scaricare risultati aggiornati
+CERCAINRESULT = 0  # Mettere a 0 per poter scaricare i file aggiornati
 
 
 class AppURLopener(urllib.FancyURLopener):
