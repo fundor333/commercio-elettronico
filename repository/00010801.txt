@@ -1,3 +1,0 @@
-#titolo Idrogeno, vettore energetico  - Ambiente&Energia
-  L’idrogeno, non è una fonte energetica ma un vettore, ed è l’elemento  più abbondante nell’universo e sul pianeta è presente nell’acqua e negli  idrocarburi, tuttavia per ricavarlo da tali sostanze vi è bisogno di  energia elettrica. Esso può essere utilizzato nelle celle a combustibile  (FC) per la produzione di energia, con un impatto ambientale molto  ridotto. 
-Il problema fondamentale è che non è disponibile  sulla Terra allo stato elementare e pertanto è necessario ottenerlo da  fonti secondarie, come per esempio l’acqua e i combustibili fossili.  Attualmente lo sviluppo delle FC è uno dei settori di maggiore interesse  da parte dei ricercatori nel campo energetico.  

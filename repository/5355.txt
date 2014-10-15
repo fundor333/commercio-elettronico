@@ -1,8 +1,0 @@
-#titolo Produzione in Europa - Dati ANFIA Mercato e Produzione
-  ANFIA, Associazione Nazionale Filiera Industria Automobilistica, pubblica periodicamente le elaborazioni dei dati - diffusi da OICA e dalle Associazioni nazionali consorelle di ANFIA - relativi alla produzione di autoveicoli in Europa (inclusi UE27, Est Europa, Turchia). 
- Le elaborazioni riguardano: 
- la  produzione  complessiva in Europa per  tipo di autoveicolo  (autovetture – veicoli commerciali  – autocarri - autobus) nel progressivo da inizio anno 
-     il  trend annuale della produzione complessiva di autoveicoli leggeri  (autovetture + veicoli commerciali leggeri)  in Europa Occidentale  (EU15) negli ultimi 10 anni. 
-     la  produzione di autovetture per aree  (EU27 – EU15 – EU10 )  e per Paesi  nel progressivo da inizio anno 
-     la  produzione di veicoli commerciali, veicoli industriali e autobus per aree e per Paesi  nel progressivo da inizio anno. 
-
