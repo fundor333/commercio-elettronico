@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+
+%impostazioni lingua italiana
+\usepackage[T1]{fontenc}	% imposta la codifica dei font
+\usepackage[utf8x]{inputenc}	% lettere accentate da tastiera
+\usepackage[italian]{babel}
+
+ \title{Prima consegna del corso di Commercio Elettronico}
+ \author{Matteo Scarpa}
+  \date{\today}
+
+\begin{document}
+
+\maketitle
+
+<<fig=TRUE,echo=FALSE>>=
+scan("output.txt")
+ @
+
+\end{document}

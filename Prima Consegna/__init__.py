@@ -13,8 +13,8 @@ NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
 WAITINGTIME = 2  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
-CERCAINGOOGLE = 0  # Mettere a 0 per poter scaricare risultati aggiornati
-CERCAINRESULT = 0  # Mettere a 0 per poter scaricare i file aggiornati
+CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
+CERCAINRESULT = 1  # Mettere a 0 per poter scaricare i file aggiornati
 
 
 class AppURLopener(urllib.FancyURLopener):
@@ -59,6 +59,7 @@ class Contaparole:
 
     def printer(self, filename):
         nome = open(filename, "w")
+        nome.writelines("Parola NumeroPagine NumeroRicorrenze\n")
         for riga in self.main_dict:
             nome.writelines(riga + " " + str(self.main_dict[riga][0]) + " " + str(self.main_dict[riga][1]) + "\n")
         nome.close()
