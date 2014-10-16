@@ -1,30 +1,32 @@
 #!/usr/bin/python
 import codecs
-import string
 import urllib
-import lxml.html as html
-import BeautifulSoup
 import time
 
+import lxml.html as html
+import BeautifulSoup
+
+
 GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&sasite:www.ansa.it+mafia&gbv=&start="
-TAGCLASS = "articleBody"
 FILEURL = "url"
 NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
 WAITINGTIME = 2  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
-CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
-CERCAINRESULT = 1  # Mettere a 0 per poter scaricare i file aggiornati
+CERCAINGOOGLE = 0  # Mettere a 0 per poter scaricare risultati aggiornati
+CERCAINRESULT = 0  # Mettere a 0 per poter scaricare i file aggiornati
 
 
 class AppURLopener(urllib.FancyURLopener):
     version = "App/1.7"
 
 
+# ####################################################
+
 class Contaparole:
     listanome = ""
     fileinput = None
-    main_dict = None
+    main_dict = {}
 
     def __init__(self, listnomi, dizionario):
         self.listanome = listnomi
@@ -44,6 +46,7 @@ class Contaparole:
 
     def appoggiodict(self, line, dictionary):
         for singolaparola in line.split():
+            singolaparola = singolaparola.sub('\W').lower()
             if singolaparola in dictionary.keys():
                 dictionary[singolaparola] += 1
             else:
@@ -60,10 +63,13 @@ class Contaparole:
     def printer(self, filename):
         nome = open(filename, "w")
         nome.writelines("Parola NumeroPagine NumeroRicorrenze\n")
+        # Ordinare per frequenza partendo da .items
         for riga in self.main_dict:
             nome.writelines(riga + " " + str(self.main_dict[riga][0]) + " " + str(self.main_dict[riga][1]) + "\n")
         nome.close()
 
+
+# ##################################
 
 class ElaboratoreRicerca:
     listafilename = None
@@ -116,6 +122,8 @@ class ElaboratoreRicerca:
         for i in range(numeromassimo):
             self.printer(self.listafilename.keys()[i])
 
+
+# ############################
 
 def decode_html(nome):
     html_string = file(str(nome) + '.html').read()
