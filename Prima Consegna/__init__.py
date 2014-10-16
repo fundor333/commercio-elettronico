@@ -2,12 +2,13 @@
 import codecs
 import urllib
 import time
+import re
 
 import lxml.html as html
 import BeautifulSoup
 
 
-GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&sasite:www.ansa.it+mafia&gbv=&start="
+GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&start="
 FILEURL = "url"
 NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
 WAITINGTIME = 2  # in secondi
@@ -36,17 +37,18 @@ class Contaparole:
             self.fileinput = open(nome + ".txt", 'r')
             dictionary = {}
             for line in self.fileinput:
-
-                for singolaparola in line.split():
-                    if singolaparola in dictionary.keys():
-                        dictionary[singolaparola] += 1
-                    else:
-                        dictionary[singolaparola] = 1
+                for parolanonelaborata in line.split():
+                    for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
+                        if singolaparola != "":
+                            if singolaparola in dictionary.keys():
+                                dictionary[singolaparola.lower()] += 1
+                            else:
+                                dictionary[singolaparola.lower()] = 1
             self.adddizionario(dictionary)
 
     def appoggiodict(self, line, dictionary):
         for singolaparola in line.split():
-            singolaparola = singolaparola.sub('\W').lower()
+            singolaparola = singolaparola.sub('\W')
             if singolaparola in dictionary.keys():
                 dictionary[singolaparola] += 1
             else:
@@ -63,9 +65,23 @@ class Contaparole:
     def printer(self, filename):
         nome = open(filename, "w")
         nome.writelines("Parola NumeroPagine NumeroRicorrenze\n")
-        # Ordinare per frequenza partendo da .items
+        # TODO Ordinare per frequenza partendo da .items
+        i=0
+        a = range(len(self.main_dict.items()))
+        for elemento in self.main_dict.items():
+            a[i] = elemento[1][1]
+            i += 1
+        a.sort()
         for riga in self.main_dict:
             nome.writelines(riga + " " + str(self.main_dict[riga][0]) + " " + str(self.main_dict[riga][1]) + "\n")
+        nome.close()
+        nome = open("mod" + filename, "w")
+        i = 0
+        a.reverse()
+        nome.write("rank ricorrenze \n")
+        for riga in a:
+            nome.writelines(str(i) + " " + str(riga) + "\n")
+            i = i + 1
         nome.close()
 
 

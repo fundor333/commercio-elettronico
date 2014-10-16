@@ -1,0 +1,29 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T1]{fontenc}	
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+
+ \title{Prima consegna del corso di Commercio Elettronico}
+ \author{Matteo Scarpa}
+  \date{\today}
+
+\begin{document}
+
+\maketitle
+
+<<echo=FALSE>>=
+file <- read.table("modoutput.txt",header=T)
+attach(file)
+summary(ricorrenze)
+@
+
+<<fig=TRUE,echo=FALSE>>=
+plot(rank, ricorrenze)
+@
+
+<<fig=TRUE,echo=FALSE>>=
+plot(log(rank), log(ricorrenze))
+@
+
+\end{document}
