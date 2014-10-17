@@ -8,14 +8,14 @@ import lxml.html as html
 import BeautifulSoup
 
 
-GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&start="
+GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&num=100&start="
 FILEURL = "url"
-NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 10
-WAITINGTIME = 2  # in secondi
+NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 100
+WAITINGTIME = 3  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
-CERCAINGOOGLE = 0  # Mettere a 0 per poter scaricare risultati aggiornati
-CERCAINRESULT = 0  # Mettere a 0 per poter scaricare i file aggiornati
+CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
+CERCAINRESULT = 1  # Mettere a 0 per poter scaricare i file aggiornati
 
 
 class AppURLopener(urllib.FancyURLopener):
@@ -64,7 +64,7 @@ class Contaparole:
 
     def printer(self, filename):
         nome = open(filename, "w")
-        nome.writelines("Parola NumeroPagine NumeroRicorrenze\n")
+        nome.writelines("parola rank ricorrenze\n")
         # TODO Ordinare per frequenza partendo da .items
         i=0
         a = range(len(self.main_dict.items()))
@@ -161,13 +161,13 @@ def main():
     appoggio.googleesecutore(CERCAINGOOGLE, NUMERORISULTATI, WAITINGTIME, FILEURL, QUERYGOOGLE)
 
     appoggio = open(FILEURL + ".txt", 'r')
-    appoggio = appoggio.readlines()
 
     listaurl = {}
     for url in appoggio:
-        if url.split('/search')[0] != '' and url != "":
+        if url.split("/search")[0]!=0:
             url = url.split("/url?q=")[1]
-            listaurl[url.split('&sa=')[0]] = "inserito"
+            url = url.split('&sa=')[0]
+            listaurl[url] = "inserito"
 
     listanomi = {}
     for i in range(len(listaurl)):
