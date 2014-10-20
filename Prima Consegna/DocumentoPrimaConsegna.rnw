@@ -16,12 +16,12 @@ Il programma \'e stato sviluppato per scaricare un numero variabile di pagine de
 Per come \'e stato scritto il programma, questo scarta in automatico pagine web non contenenti articoli e parole formate da caratteri speciali. In oltre produce al massimo $100*n+2*n+3$ file ove $n$ \'e il numero di ricerce eseguite su Google. Il valore di pagine esaminate \'e variabile in quanto non tutti i risultati di Google sono articoli che rispondono alla nostra query ma anche pagine riassuntive o di ricerca o $404$ che non vengono esaminate dal programma.
 	
 <<echo=FALSE>>=
-file <- read.table("modoutput.txt",header=T)
+file <- read.table("modoutput.txt",header=T,sep=" ")
 @
 \section*{Analisi dei dati}
 \begin{center}
 <<fig=TRUE,echo=FALSE>>=
-plot(rank, ricorrenze,main="Grafico con scala lineare")
+plot( file$rank, file$ricorrenze,xlab="rank", ylab="ricorrenze",main="Grafico con scala lineare")
 @
 \end{center}
 
@@ -29,7 +29,7 @@ I dati ricavati mostrano una \textit{long tail} molto evidente che evidenziano l
 
 \begin{center}
 <<fig=TRUE,echo=FALSE>>=
-plot(log(rank), log(ricorrenze),main="Grafico con scala logaritmica")
+plot(log(file$rank),log(file$ricorrenze),main="Grafico con scala logaritmica")
 @
 \end{center}
 \end{document}

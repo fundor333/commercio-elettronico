@@ -14,8 +14,8 @@ NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 100
 WAITINGTIME = 3  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
-CERCAINGOOGLE = 1  # Mettere a 0 per poter scaricare risultati aggiornati
-CERCAINRESULT = 1  # Mettere a 0 per poter scaricare i file aggiornati
+CERCAINGOOGLE = 0  # Mettere a 0 per poter scaricare risultati aggiornati
+CERCAINRESULT = 0  # Mettere a 0 per poter scaricare i file aggiornati
 
 
 class AppURLopener(urllib.FancyURLopener):
@@ -78,7 +78,7 @@ class Contaparole:
         nome = open("mod" + filename, "w")
         i = 0
         a.reverse()
-        nome.write("rank ricorrenze \n")
+        nome.write("rank ricorrenze\n")
         for riga in a:
             nome.writelines(str(i) + " " + str(riga) + "\n")
             i = i + 1
@@ -164,7 +164,7 @@ def main():
 
     listaurl = {}
     for url in appoggio:
-        if url.split("/search")[0]!=0:
+        if url.split("/search?q=")[0]!="":
             url = url.split("/url?q=")[1]
             url = url.split('&sa=')[0]
             listaurl[url] = "inserito"
@@ -178,7 +178,7 @@ def main():
 
     num = len(listanomi)
     listanomi = {}
-    for i in range(num):
+    for i in range(1,num):
         listanomi["risultati_" + str(i) + "_changed"] = "inserito"
 
     diz = {}
