@@ -18,18 +18,23 @@ Per come \'e stato scritto il programma, questo scarta in automatico pagine web 
 <<echo=FALSE>>=
 file <- read.table("modoutput.txt",header=T,sep=" ")
 @
+
 \section*{Analisi dei dati}
 \begin{center}
+	
 <<fig=TRUE,echo=FALSE>>=
 plot( file$rank, file$ricorrenze,xlab="rank", ylab="ricorrenze",main="Grafico con scala lineare")
 @
+
 \end{center}
 
 I dati ricavati mostrano una \textit{long tail} molto evidente che evidenziano la possibilit\'a di rappresentare i dati attraverso una funzione logaritmica.
 
 \begin{center}
+	
 <<fig=TRUE,echo=FALSE>>=
-plot(log(file$rank),log(file$ricorrenze),main="Grafico con scala logaritmica")
+plot(log(file$rank),log(file$ricorrenze),xlab="rank", ylab="ricorrenze",main="Grafico con scala logaritmica")
 @
+
 \end{center}
 \end{document}

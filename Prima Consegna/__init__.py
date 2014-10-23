@@ -1,3 +1,5 @@
+__author__ = 'Fundor333'
+
 #!/usr/bin/python
 import codecs
 import urllib
@@ -64,7 +66,7 @@ class Contaparole:
 
     def printer(self, filename):
         nome = open(filename, "w")
-        nome.writelines("parola rank ricorrenze\n")
+        nome.writelines("parola pagineDiPresenza ricorrenze\n")
         # TODO Ordinare per frequenza partendo da .items
         i=0
         a = range(len(self.main_dict.items()))
@@ -72,15 +74,15 @@ class Contaparole:
             a[i] = elemento[1][1]
             i += 1
         a.sort()
-        for riga in self.main_dict:
-            nome.writelines(riga + " " + str(self.main_dict[riga][0]) + " " + str(self.main_dict[riga][1]) + "\n")
+        for numero in self.main_dict:
+            nome.writelines(numero + " " + str(self.main_dict[numero][0]) + " " + str(self.main_dict[numero][1]) + "\n")
         nome.close()
         nome = open("mod" + filename, "w")
-        i = 0
+        i = 1
         a.reverse()
         nome.write("rank ricorrenze\n")
-        for riga in a:
-            nome.writelines(str(i) + " " + str(riga) + "\n")
+        for numero in a:
+            nome.writelines(str(i) + " " + str(numero) + "\n")
             i = i + 1
         nome.close()
 
@@ -123,12 +125,11 @@ class ElaboratoreRicerca:
         for i in range(numeromassimo):
             self.printer(self.listafilename.keys()[i])
 
-    def altroesecutore(self, flag, numeromassimo, waiting, fileout, query):
+    def altroesecutore(self, flag, numeromassimo, fileout, query):
         if flag == 0:
             print("Start downloading from urls")
             for i in range(len(self.url.keys())):
                 print("Waiting number " + str(i + 1) + " of " + str(numeromassimo))
-                time.sleep(waiting)
                 urllib.urlretrieve(self.url.keys()[i], str(self.listafilename.keys()[i]) + '.html')
                 self.printer(self.listafilename.keys()[i])
             for i in range(len(fileout)):
@@ -174,7 +175,7 @@ def main():
         listanomi["risultati_" + str(i)] = "inserito"
 
     appoggio = ElaboratoreRicerca(listaurl, listanomi)
-    appoggio.altroesecutore(CERCAINRESULT, len(listaurl), 0, listanomi, QUERYSITO)
+    appoggio.altroesecutore(CERCAINRESULT, len(listaurl), listanomi, QUERYSITO)
 
     num = len(listanomi)
     listanomi = {}
