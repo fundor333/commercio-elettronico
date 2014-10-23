@@ -12,7 +12,7 @@ import BeautifulSoup
 
 GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&num=100&start="
 FILEURL = "url"
-NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 100
+NUMERORISULTATI = 1  # il valore indicato va moltiplicato per 100
 WAITINGGOOLETIME = 2  # in secondi per ritardare google
 WAITINOTHERTIME = 0 # in secondi per ritardare i risultati
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
@@ -37,25 +37,20 @@ class Contaparole:
         self.main_dict = dizionario
         print("Work in progress")
         for nome in listnomi.keys():
-            self.fileinput = open(nome + ".txt", 'r')
-            dictionary = {}
-            for line in self.fileinput:
-                for parolanonelaborata in line.split():
-                    for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
-                        if singolaparola != "":
-                            if singolaparola in dictionary.keys():
-                                dictionary[singolaparola.lower()] += 1
-                            else:
-                                dictionary[singolaparola.lower()] = 1
-            self.adddizionario(dictionary)
+            self.generadizionario(nome)
 
-    def generasingolodizionario(self, line, dictionary):
-        for singolaparola in line.split():
-            singolaparola = singolaparola.sub('\W')
-            if singolaparola in dictionary.keys():
-                dictionary[singolaparola] += 1
-            else:
-                dictionary[singolaparola] = 1
+    def generadizionario(self,nome):
+        self.fileinput = open(nome + ".txt", 'r')
+        dictionary = {}
+        for line in self.fileinput:
+            for parolanonelaborata in line.split():
+                for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
+                    if singolaparola != "":
+                        if singolaparola in dictionary.keys():
+                            dictionary[singolaparola.lower()] += 1
+                        else:
+                            dictionary[singolaparola.lower()] = 1
+        self.adddizionario(dictionary)
 
     def adddizionario(self, dizzio):
         for campo in dizzio:
@@ -109,7 +104,7 @@ class ElaboratoreRicerca:
         outputfile.write(decode_html(nome))
         outputfile.close()
 
-    def esecutoreunico(self, flag, numeromassimo, waiting, fileout, query, lunghezza, google):
+    def esecutore_unico(self, flag, numeromassimo, waiting, fileout, query, lunghezza, google):
         if flag == 0:
             print("Start downloading from result")
             for i in range(len(self.url.keys())):
@@ -150,7 +145,7 @@ def main():
         listaurl[GOOGLEURL + str(i * 10)] = "inserito"
         listanomi["pagine_di_ricerca_" + str(i)] = "inserito"
     appoggio = ElaboratoreRicerca(listaurl, listanomi)
-    appoggio.esecutoreunico(CERCAINGOOGLE, NUMERORISULTATI, WAITINGGOOLETIME, FILEURL, QUERYGOOGLE, len(listanomi.keys()), 0)
+    appoggio.esecutore_unico(CERCAINGOOGLE, NUMERORISULTATI, WAITINGGOOLETIME, FILEURL, QUERYGOOGLE, len(listanomi.keys()), 0)
 
     appoggio = open(FILEURL + ".txt", 'r')
 
@@ -166,7 +161,7 @@ def main():
         listanomi["risultati_" + str(i)] = "inserito"
 
     appoggio = ElaboratoreRicerca(listaurl, listanomi)
-    appoggio.esecutoreunico(CERCAINRESULT, len(listaurl), WAITINOTHERTIME, listanomi, QUERYSITO, len(listanomi), 1)
+    appoggio.esecutore_unico(CERCAINRESULT, len(listaurl), WAITINOTHERTIME, listanomi, QUERYSITO, len(listanomi), 1)
 
     num = len(listanomi)
     listanomi = {}
