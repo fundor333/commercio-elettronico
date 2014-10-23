@@ -1,3 +1,4 @@
+from math import sqrt
 import re
 
 __author__ = 'Fundor333'
@@ -8,12 +9,29 @@ ELENCOFILE = range(NUM)
 
 
 class confrontaarray:
-    nomefile1 = ""
-    nomefile2 = ""
+    dizionario1 = ""
+    dizionario2 = ""
+    x = 0
+    y = 0
+    xy = 0
 
     def __init__(self, nomefile1, nomefile2):
-        self.nomefile1 = nomefile1
-        self.nomefile2 = nomefile2
+        self.dizionario1 = DIZIONARIOTOTALE[nomefile1]
+        self.dizionario2 = DIZIONARIOTOTALE[nomefile2]
+        self.calcolacoseno()
+
+    def calcolacoseno(self):
+        for singolakey in self.dizionario1.keys():
+            self.x = self.x + self.dizionario1[singolakey]* self.dizionario1[singolakey]
+            if singolakey in self.dizionario2.keys():
+                self.xy = self.xy + self.dizionario1[singolakey]*self.dizionario2[singolakey]
+        for singolakey in self.dizionario2.keys():
+            self.y = self.y + self.dizionario2[singolakey]* self.dizionario2[singolakey]
+        self.x = sqrt(self.x)
+        self.y = sqrt(self.y)
+        coseno = (self.xy)/(self.x * self.y)
+        print(coseno)
+        return coseno
 
 
 class Lettorefile:
@@ -23,7 +41,6 @@ class Lettorefile:
         self.listanomefile = listafile
         for singolofile in listafile:
             self.readerpage(singolofile)
-        print(DIZIONARIOTOTALE)
 
     def readerpage(self, nomefile):
         singlefile = open(nomefile, 'r')
@@ -44,6 +61,7 @@ def main():
         ELENCOFILE[i] = "risultati_" + str(i) + "_changed.txt"
 
     Lettorefile(ELENCOFILE)
+    confrontaarray("risultati_5_changed.txt","risultati_10_changed.txt")
 
 # Esecutore intero progetto
 if __name__ == "__main__":
