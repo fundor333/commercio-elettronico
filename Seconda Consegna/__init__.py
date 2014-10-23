@@ -6,8 +6,14 @@ DIZIONARIOTOTALE = {}
 NUM = 665
 ELENCOFILE = range(NUM)
 
-# class confrontaarray:
-# class generatorediz:
+
+class confrontaarray:
+    nomefile1 = ""
+    nomefile2 = ""
+
+    def __init__(self, nomefile1, nomefile2):
+        self.nomefile1 = nomefile1
+        self.nomefile2 = nomefile2
 
 
 class Lettorefile:
