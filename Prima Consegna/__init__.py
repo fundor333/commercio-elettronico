@@ -48,7 +48,7 @@ class Contaparole:
                                 dictionary[singolaparola.lower()] = 1
             self.adddizionario(dictionary)
 
-    def appoggiodict(self, line, dictionary):
+    def generasingolodizionario(self, line, dictionary):
         for singolaparola in line.split():
             singolaparola = singolaparola.sub('\W')
             if singolaparola in dictionary.keys():
@@ -68,7 +68,7 @@ class Contaparole:
         nome = open(filename, "w")
         nome.writelines("parola pagineDiPresenza ricorrenze\n")
         # TODO Ordinare per frequenza partendo da .items
-        i=0
+        i = 0
         a = range(len(self.main_dict.items()))
         for elemento in self.main_dict.items():
             a[i] = elemento[1][1]
@@ -165,7 +165,7 @@ def main():
 
     listaurl = {}
     for url in appoggio:
-        if url.split("/search?q=")[0]!="":
+        if url.split("/search?q=")[0] != "":
             url = url.split("/url?q=")[1]
             url = url.split('&sa=')[0]
             listaurl[url] = "inserito"
@@ -179,7 +179,7 @@ def main():
 
     num = len(listanomi)
     listanomi = {}
-    for i in range(1,num):
+    for i in range(1, num):
         listanomi["risultati_" + str(i) + "_changed"] = "inserito"
 
     diz = {}

@@ -23,3 +23,26 @@ Consegnare (entro fine ottobre): codice sorgente, relazione individuale di una p
 ===========================
 
 Utilizzo di LaTeX ed R per costruire la documentazione in modo dinamico dal file di output
+
+
+### Seconda consegna ###
+
+Content based recommender:
+
+* costruire il vector space model per la collezione di testi create nelle scorse lezioni (oppure utilizzare i testi delle notizie Ansa resi disponibili)
+* cold start: scegliere un documento e trovare i documenti simili (coseno)
+* warm start: scegliere alcuni documenti di vostro interesse e generare dei suggerimenti basati sui contenuti dei documenti scelti  (coseno) 
+    
+===========================   
+
+suggerimenti:
+
+* utilizzare un array associativo per gestire il lessico ed associare un codice numerico a ciascun termine
+* il lessico ed il vector space model possono essere salvati e riutilizzati (sono validi fino a che non cambia il contenuto della collezione)
+
+===========================
+    
+Altre attività:
+
+* provare con una misura di distanza diversa
+* utilizzare i contatore delle occorrenze di ciascun termine e numero di documenti per termine per calcolare TF/IDF
