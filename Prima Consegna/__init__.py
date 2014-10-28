@@ -1,4 +1,4 @@
-__author__ = 'Fundor333'
+__author__ = 'Matteo Scarpa 845087'
 
 #!/usr/bin/python
 import codecs
@@ -83,7 +83,7 @@ class Contaparole:
         nome.write("rank ricorrenze\n")
         for numero in a:
             nome.writelines(str(i) + " " + str(numero) + "\n")
-            i = i + 1
+            i += 1
         nome.close()
 
 
@@ -108,7 +108,6 @@ class ElaboratoreRicerca:
         outputfile = codecs.open(nome + ".txt", 'w', 'utf-8')
         outputfile.write(decode_html(nome))
         outputfile.close()
-
 
     def googleesecutore(self, flag, numeromassimo, waiting, fileurlout, query):
         if flag == 0:
