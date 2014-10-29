@@ -5,32 +5,29 @@
 \usepackage[italian]{babel}
 
  \title{Prima consegna del corso di Commercio Elettronico}
- \author{Matteo Scarpa}
+ \author{Matteo Scarpa 845087}
   \date{\today}
 
 \begin{document}
 	\maketitle
 
-Il programma \'e stato sviluppato per scaricare un numero variabile di pagine dei risultati da Google (cento \'e il massimo consigliato perché poi il sito blocca il tuo ip in quanto crede che il programma sia un attacco DOS) e rielabora le pagine passate come risultati per fare un conteggio delle frequenza delle parole presenti nel sito.
-	
-Per come \'e stato scritto il programma, questo scarta in automatico pagine web non contenenti articoli e parole formate da caratteri speciali. In oltre produce al massimo $100*n+2*n+3$ file ove $n$ \'e il numero di ricerce eseguite su Google. Il valore di pagine esaminate \'e variabile in quanto non tutti i risultati di Google sono articoli che rispondono alla nostra query ma anche pagine riassuntive o di ricerca o $404$ che non vengono esaminate dal programma.
+Il programma \'e stato sviluppato per scaricare un numero variabile di pagine dei risultati da Google (nel mio caso tutti gli atricoli riguardanti la parola chiave "crisi" presenti sul sito www.repubblica.it ) e rielabora le pagine passate come risultati per fare un conteggio delle frequenza delle parole presenti nel sito.
+Per come \'e stato scritto il programma, questo scarta in automatico pagine web non contenenti articoli e tutto cio' che non è una lettera dell'alfabeto o uno spazio bianco. In questo modo ho eliminato tutti gli elementi superflui al nostro scopo.
+
+Questo programma produce al massimo $100*n+2*n+3$ file ove $n$ \'e il numero di ricerce eseguite su Google. Il valore di pagine esaminate \'e variabile in quanto non tutti i risultati di Google sono articoli che corrispondono alla nostra query ma possono trattarsi anche di pagine riassuntive o di ricerca o pagine $404$ che non vengono esaminate dal programma.
 	
 <<echo=FALSE>>=
 file <- read.table("modoutput.txt",header=T,sep=" ")
 @
 
-\section*{Analisi dei dati}
 \begin{center}
 	
 <<fig=TRUE,echo=FALSE>>=
 plot( file$rank, file$ricorrenze,xlab="rank", ylab="ricorrenze",main="Grafico con scala lineare")
 @
 
-\end{center}
 
 I dati ricavati mostrano una \textit{long tail} molto evidente che evidenziano la possibilit\'a di rappresentare i dati attraverso una funzione logaritmica.
-
-\begin{center}
 	
 <<fig=TRUE,echo=FALSE>>=
 plot(log(file$rank),log(file$ricorrenze),xlab="rank", ylab="ricorrenze",main="Grafico con scala logaritmica")
