@@ -1,4 +1,4 @@
-__author__ = 'Fundor333'
+__author__ = 'Matteo Scarpa 845087'
 
 #!/usr/bin/python
 import codecs
@@ -13,8 +13,7 @@ import BeautifulSoup
 GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&num=100&start="
 FILEURL = "url"
 NUMERORISULTATI = 100  # il valore indicato va moltiplicato per 100
-WAITINGGOOLETIME = 2  # in secondi per ritardare google
-WAITINOTHERTIME = 0 # in secondi per ritardare i risultati
+WAITINGTIME = 3  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
 CERCAINGOOGLE = 0  # Mettere a 0 per poter scaricare risultati aggiornati
@@ -68,6 +67,7 @@ class Contaparole:
     def printer(self, filename):
         nome = open(filename, "w")
         nome.writelines("parola pagineDiPresenza ricorrenze\n")
+        # TODO Ordinare per frequenza partendo da .items
         i = 0
         a = range(len(self.main_dict.items()))
         for elemento in self.main_dict.items():
@@ -109,7 +109,7 @@ class ElaboratoreRicerca:
         outputfile.write(decode_html(nome))
         outputfile.close()
 
-    def esecutoreunico(self, flag, numeromassimo, waiting, fileout, query, lunghezza, google):
+    def googleesecutore(self, flag, numeromassimo, waiting, fileurlout, query):
         if flag == 0:
             print("Start downloading from result")
             for i in range(len(self.url.keys())):
@@ -117,15 +117,23 @@ class ElaboratoreRicerca:
                 time.sleep(waiting)
                 urllib.urlretrieve(self.url.keys()[i], str(self.listafilename.keys()[i]) + '.html')
                 self.printer(self.listafilename.keys()[i])
-            if google == 0:
-                output = codecs.open(fileout + ".txt", 'w', 'utf-8')
-            for i in range(lunghezza):
-                if google != 0:
-                    output = codecs.open(fileout.keys()[i] + "_changed.txt", 'w', 'utf-8')
+            output = codecs.open(fileurlout + ".txt", 'w', 'utf-8')
+            for i in range(len(self.listafilename.keys())):
                 self.elaboratorequery(decode_html(self.listafilename.keys()[i]), query, output)
-                if google != 0:
-                    output.close()
-            if google == 0:
+            output.close()
+        for i in range(numeromassimo):
+            self.printer(self.listafilename.keys()[i])
+
+    def altroesecutore(self, flag, numeromassimo, fileout, query):
+        if flag == 0:
+            print("Start downloading from urls")
+            for i in range(len(self.url.keys())):
+                print("Waiting number " + str(i + 1) + " of " + str(numeromassimo))
+                urllib.urlretrieve(self.url.keys()[i], str(self.listafilename.keys()[i]) + '.html')
+                self.printer(self.listafilename.keys()[i])
+            for i in range(len(fileout)):
+                output = codecs.open(fileout.keys()[i] + "_changed.txt", 'w', 'utf-8')
+                self.elaboratorequery(decode_html(self.listafilename.keys()[i]), query, output)
                 output.close()
         for i in range(numeromassimo):
             self.printer(self.listafilename.keys()[i])
@@ -150,7 +158,7 @@ def main():
         listaurl[GOOGLEURL + str(i * 10)] = "inserito"
         listanomi["pagine_di_ricerca_" + str(i)] = "inserito"
     appoggio = ElaboratoreRicerca(listaurl, listanomi)
-    appoggio.esecutoreunico(CERCAINGOOGLE, NUMERORISULTATI, WAITINGGOOLETIME, FILEURL, QUERYGOOGLE, len(listanomi.keys()), 0)
+    appoggio.googleesecutore(CERCAINGOOGLE, NUMERORISULTATI, WAITINGTIME, FILEURL, QUERYGOOGLE)
 
     appoggio = open(FILEURL + ".txt", 'r')
 
@@ -166,7 +174,7 @@ def main():
         listanomi["risultati_" + str(i)] = "inserito"
 
     appoggio = ElaboratoreRicerca(listaurl, listanomi)
-    appoggio.esecutoreunico(CERCAINRESULT, len(listaurl), WAITINOTHERTIME, listanomi, QUERYSITO, len(listanomi), 1)
+    appoggio.altroesecutore(CERCAINRESULT, len(listaurl), listanomi, QUERYSITO)
 
     num = len(listanomi)
     listanomi = {}
