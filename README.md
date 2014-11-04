@@ -35,7 +35,7 @@ Content based recommender:
     
 ===========================   
 
-suggerimenti:
+Suggerimenti:
 
 * utilizzare un array associativo per gestire il lessico ed associare un codice numerico a ciascun termine
 * il lessico ed il vector space model possono essere salvati e riutilizzati (sono validi fino a che non cambia il contenuto della collezione)
@@ -46,3 +46,21 @@ Altre attività:
 
 * provare con una misura di distanza diversa
 * utilizzare i contatore delle occorrenze di ciascun termine e numero di documenti per termine per calcolare TF/IDF
+
+### Seconda consegna bis ###
+Obiettivi: utilizzare le librerie scipy/numpy per il calcolo delle similarità tra documenti e gensim per gestione del corpus e topic modelling
+
+Training
+* generare matrici e vettori casuali
+* calcolare prodotti tra vettori e tra matrice e vettore (ATTENZIONE, il prodotto di due vettori deve essere un numero. Controllare il risultato!!!)
+* calcolare le distanze tra due vettori utilizzando il paccehtto scipy.spatial.distance (http://docs.scipy.org/doc/scipy-0.14.0/reference/spatial.distance.html#module-scipy.spatial.distance)
+* calcolare SVD per una matrice casuale 300x300
+* moltiplicare le matrici ottenute e sottrarre la matrice originale dal risultato. Verificare la differenza
+* seguire i tutorial di gensim
+
+============================
+
+Esercitazione
+* modificare l'esercitazione 2 utilizzando le funzioni di distanza di numpy
+* trovare, per diversi valori di K, i K topic principali nei documenti estratti per l'esercitazione 1
+* confrontare i risultati della ricerca per similarità con quelli ottenuti nell'esercitazione 2
