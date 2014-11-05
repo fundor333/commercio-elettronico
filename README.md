@@ -50,7 +50,8 @@ Altre attività:
 ### Seconda consegna bis ###
 Obiettivi: utilizzare le librerie scipy/numpy per il calcolo delle similarità tra documenti e gensim per gestione del corpus e topic modelling
 
-Training
+Training:
+
 * generare matrici e vettori casuali
 * calcolare prodotti tra vettori e tra matrice e vettore (ATTENZIONE, il prodotto di due vettori deve essere un numero. Controllare il risultato!!!)
 * calcolare le distanze tra due vettori utilizzando il paccehtto scipy.spatial.distance (http://docs.scipy.org/doc/scipy-0.14.0/reference/spatial.distance.html#module-scipy.spatial.distance)
@@ -60,7 +61,8 @@ Training
 
 ============================
 
-Esercitazione
+Esercitazione:
+
 * modificare l'esercitazione 2 utilizzando le funzioni di distanza di numpy
 * trovare, per diversi valori di K, i K topic principali nei documenti estratti per l'esercitazione 1
 * confrontare i risultati della ricerca per similarità con quelli ottenuti nell'esercitazione 2
