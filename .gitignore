@@ -63,3 +63,8 @@ Doc/.RData
 Doc/.Rhistory
 Doc/.Rapp.history
 Doc/PrimaConsegna.aux
+*/mongod.lock
+*/local.0
+*/journal
+*/_tmp
+*/local.ns
