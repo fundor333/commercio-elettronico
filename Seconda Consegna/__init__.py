@@ -4,7 +4,9 @@ import re
 __author__ = 'Fundor333'
 DIZIONARIOTOTALE = {}
 
-#Calcola la distanza tra i due dizionari
+# Calcola la distanza tra i due dizionari
+
+
 def coscalc(dizionario1, dizionario2):
     x = 0
     y = 0
@@ -23,11 +25,33 @@ def coscalc(dizionario1, dizionario2):
         coseno = 0
     return coseno
 
+
+def readerpage(listanomefile):
+    for nomefile in listanomefile:
+        singlefile = open(nomefile, 'r')
+        dictionary = {}
+        for line in singlefile:
+            for parolanonelaborata in line.split():
+                for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
+                    if singolaparola != "":
+                        if singolaparola in dictionary.keys():
+                            dictionary[singolaparola.lower()] += 1
+                        else:
+                            dictionary[singolaparola.lower()] = 1
+        DIZIONARIOTOTALE[nomefile] = dictionary
+
+def userarray(listafiles):
+    pass
+
+
 class Lexicon:
+    def __init__(self):
+        pass
+
     lastnumber = 0
     dictionaryWord = {}
 
-    def addDocument(self, filename):
+    def adddocument(self, filename):
         fileopened = open(filename)
         for line in fileopened:
             for word in line:
@@ -35,33 +59,12 @@ class Lexicon:
                     self.dictionaryWord[word] = self.lastnumber
                     self.lastnumber += 1
 
-    def getNumberWord(self, word):
+    def getnumberword(self, word):
         return self.dictionaryWord[word]
-
-class Lettorefile:
-    listanomefile = []
-
-    def __init__(self, listafile):
-        self.listanomefile = listafile
-        self.readerpage()
-
-    def readerpage(self):
-        for nomefile in self.listanomefile:
-            singlefile = open(nomefile, 'r')
-            dictionary = {}
-            for line in singlefile:
-                for parolanonelaborata in line.split():
-                    for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
-                        if singolaparola != "":
-                            if singolaparola in dictionary.keys():
-                                dictionary[singolaparola.lower()] += 1
-                            else:
-                                dictionary[singolaparola.lower()] = 1
-            DIZIONARIOTOTALE[nomefile] = dictionary
 
 
 def main():
-    print("Ciao")
+    pass
 
 # Esecutore intero progetto
 if __name__ == "__main__":
