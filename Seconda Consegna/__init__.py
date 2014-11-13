@@ -27,6 +27,7 @@ def coscalc(dizionario1, dizionario2):
 
 
 def readerpage(listanomefile):
+    dizionario ={}
     for nomefile in listanomefile:
         singlefile = open(nomefile, 'r')
         dictionary = {}
@@ -38,10 +39,13 @@ def readerpage(listanomefile):
                             dictionary[singolaparola.lower()] += 1
                         else:
                             dictionary[singolaparola.lower()] = 1
-        DIZIONARIOTOTALE[nomefile] = dictionary
+        dizionario[nomefile] = dictionary
+    return dizionario
 
 def userarray(listafiles):
-    pass
+    arrayout = {}
+    for filess in listafiles:
+        pass
 
 
 class Lexicon:
