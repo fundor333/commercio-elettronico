@@ -4,6 +4,8 @@ import re
 __author__ = 'Fundor333'
 DIZIONARIOTOTALE = {}
 
+URLFILE=""
+
 # Calcola la distanza tra i due dizionari
 
 
@@ -42,10 +44,14 @@ def readerpage(listanomefile):
         dizionario[nomefile] = dictionary
     return dizionario
 
-def userarray(listafiles):
-    arrayout = {}
+def userarray(listafiles,lexicon):
+    arrayout = []
+    for i in lexicon.lastnumber:
+        arrayout[i] = 0
     for filess in listafiles:
-        pass
+        for lines in filess:
+            for word in lines:
+                arrayout[lexicon.getnumberword(word)] += 1
 
 
 class Lexicon:
@@ -68,7 +74,11 @@ class Lexicon:
 
 
 def main():
-    pass
+    listurl = open(URLFILE)
+    i=0
+    for num in listurl:
+        inputfile = open("risultati_"+str(i)+"_changed")
+        i+=1
 
 # Esecutore intero progetto
 if __name__ == "__main__":
