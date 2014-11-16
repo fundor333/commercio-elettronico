@@ -74,10 +74,12 @@ def getfromgoogle(numberpages):
         for line in filein:
             refline += line
         outdictionary[i] = refline
+    numberfile = i
 
     for text in outdictionary.items():
         maindict = adddictionary(maindict, getsingledict(text[1]))
-    printdict(maindict, OUTPITFILENAME)
+    printdict(maindict, OUTPITFILENAME, numberfile)
+    return numberfile
 
 
 def adddictionary(maindict, secondarydictionary):
@@ -97,11 +99,11 @@ def getsingledict(imputtext):
             dictionary[word] += 1
         else:
             dictionary[word] = 1
-    return dictionary
 
 
-def printdict(dictionary, filename):
+def printdict(dictionary, filename, number):
     fileout = codecs.open('./out/' + filename + '.txt', 'w', 'utf-8')
+    fileout.write(number)
     for key in dictionary:
         fileout.write(key + " "+ str(dictionary[key][0])+ " "+ str(dictionary[key][1]) + '\n')
     fileout.close()

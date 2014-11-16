@@ -15,7 +15,7 @@ def matrixrandom(xsize, ysize):
 
 
 def multiplayer(array1, array2):
-    return numpy.dot(array1,array2)
+    return numpy.dot(array1, array2)
 
 
 def distancecof(array1, array2):
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     u, s, v = mysvd(a)
     s = diag(s)
     print (a)
-    print (numpy.mat(u)*numpy.mat(s)*numpy.mat(v)-a)
+    print (numpy.mat(u) * numpy.mat(s) * numpy.mat(v) - a)
