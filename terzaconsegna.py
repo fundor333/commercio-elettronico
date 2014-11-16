@@ -8,8 +8,9 @@ from pymongo import MongoClient
 class databaseMongo():
     client = MongoClient('localhost', 27017)
 
-    def __init__(self,dbname):
+    def __init__(self, dbname):
         self.db = self.client[dbname]
+
 
 def main():
     databaseMongo("provaDB")

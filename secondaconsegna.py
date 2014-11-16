@@ -11,7 +11,7 @@ DIZIONARIOTOTALE = {}
 LEXICONNAME = "./out/out.txt"
 USERARRAYNAME = "userarrayname"
 PAGENUMBER = 99
-HASLEXICON = 0  # Se e' 0 legge il file altrimenti lo genera
+HASLEXICON = 1  # Se e' 0 legge il file altrimenti lo genera
 
 # Calcola la distanza tra i due dizionari
 
@@ -78,15 +78,21 @@ def readerpage(listanomefile):
     return dizionario
 
 
-def readlexicon(lexicon):
-    lexiconnum = lexicon[0]
-    lexicondict = lexicon[1]
+def readlexicon():
+    lexiconnum = 0
+    lexicondict = {}
     filein = open(LEXICONNAME)
+    numline = 0
+    i = 0
     for line in filein:
-        word, m, n = line.split()
-        lexicondict[word] = lexiconnum
-        lexiconnum = lexiconnum + 1
-    return lexiconnum, lexicondict
+        if i == 0:
+            i += 1
+            numline = line
+        else:
+            word, m, n = line.split()
+            lexicondict[word] = lexiconnum
+            lexiconnum = lexiconnum + 1
+    return lexiconnum, lexicondict, numline
 
 
 def userarray(listafiles, lexicon):
@@ -108,15 +114,16 @@ def userarray(listafiles, lexicon):
 
 # Esecutore intero progetto
 if __name__ == "__main__":
-    if HASLEXICON != 0:
-        getfromgoogle(NUMERORISULTATI)
-    lexicon = (0, {})
+    numberofline = 0
     appoggio = []
+    lexicon = (0, {})
     if HASLEXICON == 0:
-        lexicon = readlexicon(lexicon)
+        lexiconnum, lexicondict, numberofline = readlexicon()
+        lexicon = (lexiconnum, lexicondict)
     else:
-        for i in range(0, 300):
+        numberofline = getfromgoogle(NUMERORISULTATI)
+        for i in range(0, numberofline):
             inputfile = "./out/" + str(i) + ".txt"
-            addtolexicon(lexicon, inputfile)
+            lexicon = addtolexicon(lexicon, inputfile)
             appoggio.append(inputfile)
     printlexicon(lexicon)

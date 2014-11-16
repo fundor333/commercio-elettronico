@@ -68,16 +68,18 @@ def getfromgoogle(numberpages):
         num = getarticle(url, num)
     maindict = {}
 
-    for i in [0, num-1]:
+    for i in [0, num - 1]:
         filein = open("./out/" + str(i) + '.txt')
         refline = ""
         for line in filein:
             refline += line
         outdictionary[i] = refline
+    numberfile = i
 
     for text in outdictionary.items():
         maindict = adddictionary(maindict, getsingledict(text[1]))
-    printdict(maindict, OUTPITFILENAME)
+    printdict(maindict, OUTPITFILENAME, numberfile)
+    return numberfile
 
 
 def adddictionary(maindict, secondarydictionary):
@@ -100,10 +102,11 @@ def getsingledict(imputtext):
     return dictionary
 
 
-def printdict(dictionary, filename):
+def printdict(dictionary, filename, number):
     fileout = codecs.open('./out/' + filename + '.txt', 'w', 'utf-8')
+    fileout.write(str(number))
     for key in dictionary:
-        fileout.write(key + " "+ str(dictionary[key][0])+ " "+ str(dictionary[key][1]) + '\n')
+        fileout.write(key + " " + str(dictionary[key][0]) + " " + str(dictionary[key][1]) + '\n')
     fileout.close()
 
 
