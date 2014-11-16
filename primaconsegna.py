@@ -1,5 +1,7 @@
 import re
+
 import requests
+
 
 __author__ = 'Matteo Scarpa 845087'
 
@@ -10,7 +12,7 @@ import lxml.html as html
 SESSION = requests.Session()
 GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&num=100&start="
 OUTPITFILENAME = "out"
-NUMERORISULTATI = 10000
+NUMERORISULTATI = 1
 WAITINGTIME = 3  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
@@ -45,7 +47,7 @@ def getarticle(url, number):
             reference = ""
             for parolanonelaborata in str(articlebody).split():
                 for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
-                    if singolaparola != '' or singolaparola != ' u ':
+                    if singolaparola != '':
                         reference = reference + " " + singolaparola.lower()
 
             print >> fileout, reference
@@ -57,7 +59,7 @@ def getfromgoogle(numberpages):
     urddictionary = {}
 
     for i in [0, numberpages]:
-        for element in linkgetter(GOOGLEURL + str(i), WAITINGTIME):
+        for element in linkgetter(GOOGLEURL + str(i * 10), WAITINGTIME):
             urddictionary[element] = i
     outdictionary = {}
     num = 0
@@ -75,7 +77,6 @@ def getfromgoogle(numberpages):
 
     for text in outdictionary.items():
         maindict = adddictionary(maindict, getsingledict(text[1]))
-    print(maindict)
     printdict(maindict, OUTPITFILENAME)
 
 

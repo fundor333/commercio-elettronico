@@ -1,3 +1,4 @@
+import codecs
 from math import sqrt
 import re
 
@@ -9,6 +10,16 @@ USERARRAYNAME = "userarrayname"
 PAGENUMBER = 99
 
 # Calcola la distanza tra i due dizionari
+
+def addtolexicon(lexicon, filename):
+    fileopened = open(filename)
+    for line in fileopened:
+        for splitted in line.split():
+            for word in re.split("[^a-zA-Z]", splitted):
+                if word != '' or word != ' ':
+                    if lexicon[1].keys().__contains__(word.lower()) != 1:
+                        lexicon[1][word.lower()] = lexicon[0]
+                        lexicon[0] += 1
 
 
 def coscalc(dizionario1, dizionario2):
@@ -28,6 +39,19 @@ def coscalc(dizionario1, dizionario2):
     except ZeroDivisionError:
         coseno = 0
     return coseno
+
+
+def printlexicon(lexicon):
+    fileout = codecs.open('./out/' + LEXICONNAME + '.txt', 'w', 'utf-8')
+    appoggio = ["" for word, number in lexicon[1].items()]
+    for word, number in lexicon[1].items():
+        print(number)
+        appoggio[number] = word
+    i = 1
+    for word in appoggio:
+        fileout.write(word + " " + str(i) + '\n')
+        i += 1
+    fileout.close()
 
 
 def readerpage(listanomefile):
@@ -55,7 +79,7 @@ def userarray(listafiles, lexicon):
         for lines in filess:
             for splitted in lines:
                 for word in re.split("[^a-zA-Z]", splitted):
-                    if word !='':
+                    if word != '':
                         arrayout[lexicon.getnumberword(word)] += 1
 
     fileout = open(USERARRAYNAME, "w")
@@ -64,49 +88,13 @@ def userarray(listafiles, lexicon):
     fileout.close()
 
 
-class Lexicon:
-    def __init__(self):
-        pass
-
-    lastnumber = 0
-    dictionaryWord = {}
-
-    def getnumberword(self,word):
-        return self.dictionaryWord[word]
-
-    def getprintlexicon(self):
-        fileout = open(LEXICONNAME, "w")
-        appoggio = ["" for word,number in self.dictionaryWord.items()]
-        for word, number in self.dictionaryWord.items():
-            print(number)
-            appoggio[number] = word
-        i = 1
-        for word in appoggio:
-            fileout.write(word + " " + str(i) + '\n')
-            i += 1
-        fileout.close()
-
-    def adddocument(self, filename):
-        fileopened = open(filename)
-        for line in fileopened:
-            for splitted in line.split():
-                for word in re.split("[^a-zA-Z]", splitted):
-                    if word != '' or word != ' ':
-                        if self.dictionaryWord.keys().__contains__(word.lower()) != 1:
-                            self.dictionaryWord[word.lower()] = self.lastnumber
-                            self.lastnumber += 1
-
-
-def main():
-    lexicon = Lexicon()
-    appoggio = []
-    for i in [10,PAGENUMBER]:
-        inputfile = "00" + str(i) + ".txt"
-        lexicon.adddocument(inputfile)
-        appoggio.append(inputfile)
-    lexicon.getprintlexicon()
-    #userarray(appoggio, lexicon)
-
 # Esecutore intero progetto
 if __name__ == "__main__":
-    main()
+    lexicon = (0, {})
+    appoggio = []
+    for i in [10, PAGENUMBER]:
+        inputfile = "00" + str(i) + ".txt"
+        addtolexicon(lexicon, inputfile)
+        appoggio.append(inputfile)
+    printlexicon(lexicon)
+    # userarray(appoggio, lexicon)
