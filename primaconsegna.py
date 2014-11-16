@@ -12,7 +12,7 @@ import lxml.html as html
 SESSION = requests.Session()
 GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&num=100&start="
 OUTPITFILENAME = "out"
-NUMERORISULTATI = 1
+NUMERORISULTATI = 100
 WAITINGTIME = 3  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
@@ -58,23 +58,32 @@ def getarticle(url, number):
 def getfromgoogle(numberpages):
     urddictionary = {}
 
-    for i in [0, numberpages]:
-        for element in linkgetter(GOOGLEURL + str(i * 10), WAITINGTIME):
+    for i in range(0, numberpages):
+        print("Donwloading Google result number " + str(i))
+        resulturl = GOOGLEURL + str(i * 10)
+        for element in linkgetter(resulturl, WAITINGTIME):
             urddictionary[element] = i
     outdictionary = {}
     num = 0
+
+    fileout = open("./out/url.txt", 'w')
+    for name in urddictionary.keys():
+        print("Donwloading url " + name)
+        fileout.write(name + '\n')
+    fileout.close()
 
     for url in urddictionary.keys():
         num = getarticle(url, num)
     maindict = {}
 
-    for i in [0, num-1]:
+    for i in range(0, num - 1):
         filein = open("./out/" + str(i) + '.txt')
         refline = ""
         for line in filein:
             refline += line
         outdictionary[i] = refline
 
+    print("Inizio elaborazione dei dizionari")
     for text in outdictionary.items():
         maindict = adddictionary(maindict, getsingledict(text[1]))
     printdict(maindict, OUTPITFILENAME)
@@ -103,7 +112,7 @@ def getsingledict(imputtext):
 def printdict(dictionary, filename):
     fileout = codecs.open('./out/' + filename + '.txt', 'w', 'utf-8')
     for key in dictionary:
-        fileout.write(key + " "+ str(dictionary[key][0])+ " "+ str(dictionary[key][1]) + '\n')
+        fileout.write(key + " " + str(dictionary[key][0]) + " " + str(dictionary[key][1]) + '\n')
     fileout.close()
 
 

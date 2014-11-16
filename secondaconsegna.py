@@ -2,24 +2,31 @@ import codecs
 from math import sqrt
 import re
 
+from primaconsegna import getfromgoogle, NUMERORISULTATI
+
+
 __author__ = 'Fundor333'
 DIZIONARIOTOTALE = {}
 
-LEXICONNAME = "lexicon"
+LEXICONNAME = "./out/out.txt"
 USERARRAYNAME = "userarrayname"
 PAGENUMBER = 99
+HASLEXICON = 0  # Se e' 0 legge il file altrimenti lo genera
 
 # Calcola la distanza tra i due dizionari
 
 def addtolexicon(lexicon, filename):
+    lexiconnum = lexicon[0]
+    lexicondict = lexicon[1]
     fileopened = open(filename)
     for line in fileopened:
         for splitted in line.split():
             for word in re.split("[^a-zA-Z]", splitted):
                 if word != '' or word != ' ':
-                    if lexicon[1].keys().__contains__(word.lower()) != 1:
-                        lexicon[1][word.lower()] = lexicon[0]
-                        lexicon[0] += 1
+                    if lexicondict.keys().__contains__(word.lower()) != 1:
+                        lexicondict[word.lower()] = lexiconnum
+                        lexiconnum += 1
+    return (lexiconnum, lexicondict)
 
 
 def coscalc(dizionario1, dizionario2):
@@ -42,16 +49,16 @@ def coscalc(dizionario1, dizionario2):
 
 
 def printlexicon(lexicon):
-    fileout = codecs.open('./out/' + LEXICONNAME + '.txt', 'w', 'utf-8')
-    appoggio = ["" for word, number in lexicon[1].items()]
-    for word, number in lexicon[1].items():
-        print(number)
-        appoggio[number] = word
-    i = 1
-    for word in appoggio:
-        fileout.write(word + " " + str(i) + '\n')
-        i += 1
-    fileout.close()
+    if HASLEXICON != 0:
+        fileout = codecs.open(LEXICONNAME, 'w', 'utf-8')
+        appoggio = ["" for word, number in lexicon[1].items()]
+        for word, number in lexicon[1].items():
+            appoggio[number] = word
+        i = 1
+        for word in appoggio:
+            fileout.write(word + " " + str(i) + '\n')
+            i += 1
+        fileout.close()
 
 
 def readerpage(listanomefile):
@@ -71,9 +78,20 @@ def readerpage(listanomefile):
     return dizionario
 
 
+def readlexicon(lexicon):
+    lexiconnum = lexicon[0]
+    lexicondict = lexicon[1]
+    filein = open(LEXICONNAME)
+    for line in filein:
+        word, m, n = line.split()
+        lexicondict[word] = lexiconnum
+        lexiconnum = lexiconnum + 1
+    return lexiconnum, lexicondict
+
+
 def userarray(listafiles, lexicon):
     arrayout = []
-    for _ in [1, lexicon.lastnumber]:
+    for _ in [1, lexicon[0]]:
         arrayout.append(0)
     for filess in listafiles:
         for lines in filess:
@@ -90,11 +108,15 @@ def userarray(listafiles, lexicon):
 
 # Esecutore intero progetto
 if __name__ == "__main__":
+    if HASLEXICON != 0:
+        getfromgoogle(NUMERORISULTATI)
     lexicon = (0, {})
     appoggio = []
-    for i in [10, PAGENUMBER]:
-        inputfile = "00" + str(i) + ".txt"
-        addtolexicon(lexicon, inputfile)
-        appoggio.append(inputfile)
+    if HASLEXICON == 0:
+        lexicon = readlexicon(lexicon)
+    else:
+        for i in range(0, 300):
+            inputfile = "./out/" + str(i) + ".txt"
+            addtolexicon(lexicon, inputfile)
+            appoggio.append(inputfile)
     printlexicon(lexicon)
-    # userarray(appoggio, lexicon)
