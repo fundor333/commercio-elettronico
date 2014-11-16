@@ -169,6 +169,10 @@ def main():
             url = url.split('&sa=')[0]
             listaurl[url] = "inserito"
 
+    fileout= open(FILEURL+".txt",'w')
+    for singleurl in listaurl:
+        fileout.write(singleurl + '\n')
+
     listanomi = {}
     for i in range(len(listaurl)):
         listanomi["risultati_" + str(i)] = "inserito"

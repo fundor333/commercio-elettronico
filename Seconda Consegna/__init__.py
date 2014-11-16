@@ -4,6 +4,10 @@ import re
 __author__ = 'Fundor333'
 DIZIONARIOTOTALE = {}
 
+URLFILE = "url.txt"
+LEXICONNAME = "lexicon"
+USERARRAYNAME = "userarrayname"
+
 # Calcola la distanza tra i due dizionari
 
 
@@ -27,7 +31,7 @@ def coscalc(dizionario1, dizionario2):
 
 
 def readerpage(listanomefile):
-    dizionario ={}
+    dizionario = {}
     for nomefile in listanomefile:
         singlefile = open(nomefile, 'r')
         dictionary = {}
@@ -42,10 +46,20 @@ def readerpage(listanomefile):
         dizionario[nomefile] = dictionary
     return dizionario
 
-def userarray(listafiles):
-    arrayout = {}
+
+def userarray(listafiles, lexicon):
+    arrayout = []
+    for _ in [1, lexicon.lastnumber]:
+        arrayout.append(0)
     for filess in listafiles:
-        pass
+        for lines in filess:
+            for word in lines:
+                arrayout[lexicon.getnumberword(word)] += 1
+
+    fileout = open(USERARRAYNAME, "w")
+    for element in arrayout:
+        fileout.write(str(element)+'\n')
+    fileout.close()
 
 
 class Lexicon:
@@ -55,20 +69,47 @@ class Lexicon:
     lastnumber = 0
     dictionaryWord = {}
 
+    def getprintlexicon(self):
+        fileout = open(LEXICONNAME, "w")
+        appoggio = []
+        for _ in[0,self.dictionaryWord.items().__sizeof__()]:
+            appoggio.append(0)
+        i=0
+        for word, number in self.dictionaryWord.items():
+            appoggio[number]=word
+
+        for word in appoggio:
+            fileout.write(word + " " + str(i) + '\n')
+            i+=1
+        fileout.close()
+
+
     def adddocument(self, filename):
         fileopened = open(filename)
         for line in fileopened:
-            for word in line:
-                if self.dictionaryWord[word] != 0:
-                    self.dictionaryWord[word] = self.lastnumber
-                    self.lastnumber += 1
-
-    def getnumberword(self, word):
-        return self.dictionaryWord[word]
+            for splitted in line.split():
+                for word in re.split("[^a-zA-Z]", splitted):
+                    if (word != '' or word != ' '):
+                        if self.dictionaryWord.keys().__contains__(word.lower()) != 1:
+                            self.dictionaryWord[word.lower()] = self.lastnumber
+                            self.lastnumber += 1
 
 
 def main():
-    pass
+    listurl = open(URLFILE)
+    i = 0
+    lexicon = Lexicon()
+    for _ in listurl:
+        inputfile = "risultati_" + str(i) + "_changed.txt"
+        lexicon.adddocument(inputfile)
+        i += 1
+    lexicon.getprintlexicon()
+    appoggio = []
+    for i in [1, 32]:
+        inputfile = open("risultati_" + str(i) + "_changed.txt")
+        appoggio.append(inputfile)
+
+    userarray(appoggio, lexicon)
 
 # Esecutore intero progetto
 if __name__ == "__main__":
