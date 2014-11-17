@@ -19,7 +19,7 @@ def addtolexicon(lexicon, filename):
     fileopened = open(filename)
     for line in fileopened:
         for splitted in line.split():
-            for word in re.split("[^a-zA-Z]", splitted):
+            for word in re.split('[^a-zA-Z]', splitted):
                 if word != '' or word != ' ':
                     if lexicondict.keys().__contains__(word.lower()) != 1:
                         lexicondict[word.lower()] = lexiconnum
@@ -47,15 +47,15 @@ def coscalc(dizionario1, dizionario2):
 
 
 def printlexicon(lexicon):
-    fileout = codecs.open("second" + LEXICONNAME, 'w', 'utf-8')
-        appoggio = ["" for word, number in lexicon[1].items()]
-        for word, number in lexicon[1].items():
-            appoggio[number] = word
-        i = 1
-        for word in appoggio:
-            fileout.write(word + " " + str(i) + '\n')
-            i += 1
-        fileout.close()
+    fileout = codecs.open(LEXICONNAME + "second.txt", 'w', 'utf-8')
+    appoggio = ["" for word, number in lexicon[1].items()]
+    for word, number in lexicon[1].items():
+        appoggio[number] = word
+    i = 1
+    for word in appoggio:
+        fileout.write(word + " " + str(i) + '\n')
+        i += 1
+    fileout.close()
 
 
 def readerpage(listanomefile):
@@ -136,6 +136,6 @@ if __name__ == "__main__":
         print("Cosin 0.txt with " + str(i) + ".txt")
         tempfilename = "./out/" + str(i) + ".txt"
         tempfilein = open(tempfilename)
-        if coscalc(getsingledict(openfile(singlefile)), getsingledict(openfile(tempfilein))) < 0.000000001:
+        if coscalc(getsingledict(openfile(singlefile)), getsingledict(openfile(tempfilein))) < 0.000000000000001:
             fileout.write(tempfilename + '\n')
     fileout.close()
