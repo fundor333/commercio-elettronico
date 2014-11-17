@@ -2,7 +2,7 @@ import codecs
 from math import sqrt
 import re
 
-from primaconsegna import getfromgoogle, NUMERORISULTATI
+from primaconsegna import getfromgoogle, NUMERORISULTATI, getsingledict
 
 
 __author__ = 'Fundor333'
@@ -10,8 +10,6 @@ DIZIONARIOTOTALE = {}
 
 LEXICONNAME = "./out/out.txt"
 USERARRAYNAME = "userarrayname"
-PAGENUMBER = 99
-HASLEXICON = 1  # Se e' 0 legge il file altrimenti lo genera
 
 # Calcola la distanza tra i due dizionari
 
@@ -49,8 +47,7 @@ def coscalc(dizionario1, dizionario2):
 
 
 def printlexicon(lexicon):
-    if HASLEXICON != 0:
-        fileout = codecs.open(LEXICONNAME, 'w', 'utf-8')
+    fileout = codecs.open("second" + LEXICONNAME, 'w', 'utf-8')
         appoggio = ["" for word, number in lexicon[1].items()]
         for word, number in lexicon[1].items():
             appoggio[number] = word
@@ -112,18 +109,33 @@ def userarray(listafiles, lexicon):
     fileout.close()
 
 
+def openfile(file):
+    stringout = ""
+    for line in file:
+        stringout += line
+    return stringout
+
 # Esecutore intero progetto
 if __name__ == "__main__":
     numberofline = 0
     appoggio = []
     lexicon = (0, {})
-    if HASLEXICON == 0:
+    try:
         lexiconnum, lexicondict, numberofline = readlexicon()
         lexicon = (lexiconnum, lexicondict)
-    else:
+    except IOError:
         numberofline = getfromgoogle(NUMERORISULTATI)
         for i in range(0, numberofline):
             inputfile = "./out/" + str(i) + ".txt"
             lexicon = addtolexicon(lexicon, inputfile)
             appoggio.append(inputfile)
-    printlexicon(lexicon)
+        printlexicon(lexicon)
+    singlefile = "./out/0.txt"
+    fileout = open("./out/singlefile.txt", 'w')
+    for i in range(1, numberofline):
+        print("Cosin 0.txt with " + str(i) + ".txt")
+        tempfilename = "./out/" + str(i) + ".txt"
+        tempfilein = open(tempfilename)
+        if coscalc(getsingledict(openfile(singlefile)), getsingledict(openfile(tempfilein))) < 0.000000001:
+            fileout.write(tempfilename + '\n')
+    fileout.close()

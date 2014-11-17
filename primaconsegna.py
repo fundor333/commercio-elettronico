@@ -58,17 +58,19 @@ def getarticle(url, number):
 def getfromgoogle(numberpages):
     urddictionary = {}
 
-    for i in [0, numberpages]:
+    for i in range(0, numberpages):
+        print("From Google n " + str(i) + " out of " + str(NUMERORISULTATI))
         for element in linkgetter(GOOGLEURL + str(i * 10), WAITINGTIME):
             urddictionary[element] = i
     outdictionary = {}
     num = 0
 
     for url in urddictionary.keys():
+        print("From Url n " + str(num))
         num = getarticle(url, num)
     maindict = {}
 
-    for i in [0, num - 1]:
+    for i in range(0, num - 1):
         filein = open("./out/" + str(i) + '.txt')
         refline = ""
         for line in filein:
