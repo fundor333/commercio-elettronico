@@ -106,7 +106,7 @@ def getsingledict(imputtext):
 
 def printdict(dictionary, filename, number):
     fileout = codecs.open('./out/' + filename + '.txt', 'w', 'utf-8')
-    fileout.write(str(number))
+    fileout.write(str(number)+'\n')
     for key in dictionary:
         fileout.write(key + " " + str(dictionary[key][0]) + " " + str(dictionary[key][1]) + '\n')
     fileout.close()

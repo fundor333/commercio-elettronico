@@ -47,7 +47,7 @@ def coscalc(dizionario1, dizionario2):
 
 
 def printlexicon(lexicon):
-    fileout = codecs.open(LEXICONNAME + "second.txt", 'w', 'utf-8')
+    fileout = codecs.open("./out/lexicon.txt", 'w', 'utf-8')
     appoggio = ["" for word, number in lexicon[1].items()]
     for word, number in lexicon[1].items():
         appoggio[number] = word
@@ -117,22 +117,22 @@ def openfile(file):
 
 # Esecutore intero progetto
 if __name__ == "__main__":
-    numberofline = 0
+    numerofline = 0
     appoggio = []
     lexicon = (0, {})
     try:
-        lexiconnum, lexicondict, numberofline = readlexicon()
+        lexiconnum, lexicondict, numerofline = readlexicon()
         lexicon = (lexiconnum, lexicondict)
     except IOError:
-        numberofline = getfromgoogle(NUMERORISULTATI)
-        for i in range(0, numberofline):
+        numerofline = getfromgoogle(NUMERORISULTATI)
+        for i in range(0, numerofline):
             inputfile = "./out/" + str(i) + ".txt"
             lexicon = addtolexicon(lexicon, inputfile)
             appoggio.append(inputfile)
         printlexicon(lexicon)
     singlefile = "./out/0.txt"
     fileout = open("./out/singlefile.txt", 'w')
-    for i in range(1, numberofline):
+    for i in range(1, int(numerofline)):
         print("Cosin 0.txt with " + str(i) + ".txt")
         tempfilename = "./out/" + str(i) + ".txt"
         tempfilein = open(tempfilename)
