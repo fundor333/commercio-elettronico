@@ -1,7 +1,5 @@
 __author__ = 'Fundor333'
 
-import logging
-
 import numpy
 from scipy.spatial.distance import cosine
 from numpy.linalg import svd

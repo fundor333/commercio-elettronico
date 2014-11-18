@@ -1,11 +1,10 @@
 import codecs
-from math import sqrt
 import re
+
 from scipy.spatial.distance import cosine
 import numpy
 
-
-from primaconsegna import getfromgoogle, NUMERORISULTATI, getsingledict,adddictionary
+from primaconsegna import getfromgoogle, NUMERORISULTATI
 
 
 __author__ = 'Fundor333'
@@ -30,19 +29,10 @@ def addtolexicon(lexicon, filename):
     return (lexiconnum, lexicondict)
 
 
-#TODO da modificare e correggere
-#Non funziona
-def coscalc(dizionario1, dizionario2):
-    arr1=[]
-    arr2=[]
-    for element in dizionario1.keys():
-        arr1.append(element)
-    for element in dizionario2.keys():
-        arr2.append(element)
-    arr1 = numpy.array(arr1)
-    arr2 = numpy.array(arr2)
-    return cosine(arr1,arr2)
-
+# TODO da modificare e correggere
+# Non funziona
+def coscalc(arr1, arr2):
+    return cosine(arr1, arr2)
 
 
 def printlexicon(lexicon):
@@ -57,15 +47,19 @@ def printlexicon(lexicon):
     fileout.close()
 
 
-def readerpage(listanomefile,lexicon):
+def readerpage(file, lexicon):
+    listanomefile = ""
     arraydictionary = []
     numword = lexicon[0]
-    for i in range(0,numword):
-        arraydictionary[i]=0
-    for line in listanomefile:
-        for wordss in line:
-            for word in wordss.split():
-                arraydictionary[lexicon[1][word.lower()]]+=1
+    inputfile = open(file)
+    for line in inputfile:
+        listanomefile += line
+    for i in range(0, numword):
+        arraydictionary.append(0)
+    for wordss in listanomefile.split():
+        for word in re.split("[^a-zA-Z]", wordss):
+            if word != '':
+                arraydictionary[lexicon[1][word.lower()]] += 1
     return numpy.array(arraydictionary)
 
 
@@ -103,12 +97,6 @@ def userarray(listafiles, lexicon):
     fileout.close()
 
 
-def openfile(file):
-    stringout = ""
-    for line in file:
-        stringout += line
-    return stringout
-
 # Esecutore intero progetto
 if __name__ == "__main__":
     numerofline = 0
@@ -125,16 +113,16 @@ if __name__ == "__main__":
             appoggio.append(inputfile)
         printlexicon(lexicon)
 
-    #Partenza a freddo
+    # Partenza a freddo
     print("Cold start")
     singlefile = "./out/0.txt"
     fileout = open("./out/coldstart.txt", 'w')
     for i in range(1, int(numerofline)):
-        print("Cosin 0.txt with " + str(i) + ".txt")
+        print i
         tempfilename = "./out/" + str(i) + ".txt"
-        tempfilein = open(tempfilename)
-        print(coscalc(getsingledict(openfile(singlefile)), getsingledict(openfile(tempfilein))) )
-        fileout.write(tempfilename + '\n')
+        arr1 = readerpage(singlefile, lexicon)
+        arr2 = readerpage(tempfilename, lexicon)
+        fileout.write(str(coscalc(arr1, arr2)) + '\n')
     fileout.close()
 
     #Partenza a caldo

@@ -1,20 +1,36 @@
 __author__ = 'Matteo Scarpa 845087'
 
 import re
-import requests
 import codecs
 import time
+import urllib
+
+import requests
 import lxml.html as html
+import BeautifulSoup
+
 
 SESSION = requests.Session()
 GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&num=100&start="
 OUTPITFILENAME = "out"
-NUMERORISULTATI = 100
+NUMERORISULTATI = 1
 WAITINGTIME = 3  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
 
+
+class AppURLopener(urllib.FancyURLopener):
+    version = "App/1.7"
+
+
 # ####################################################
+def decode_html(nome):
+    html_string = file(str(nome) + '.html').read()
+    converted = BeautifulSoup.UnicodeDammit(html_string, isHTML=True)
+    if not converted.unicode:
+        print("Errore conversione unicode")
+        return ''
+    return converted.unicode
 
 
 def linkgetter(urlpage, waiting):
@@ -34,12 +50,13 @@ def getarticle(url, number):
     if url == "":
         return number
     else:
-        serverresponce = SESSION.get(url)
-        urlhtml = html.fromstring(serverresponce.text)
-        if not urlhtml.xpath(QUERYSITO):
+        serverresponce = open('./out/temp.txt', 'w')
+        urllib.urlretrieve(url, "./html/" + str(number) + '.html')
+        urlhtml = html.fromstring(decode_html("./html/" + str(number)))
+        articlebody = urlhtml.xpath(QUERYSITO)
+        if articlebody == []:
             return number
         else:
-            articlebody = urlhtml.xpath(QUERYSITO)
             fileout = codecs.open('./out/' + str(number) + '.txt', 'w', 'utf-8')
             reference = ""
             for parolanonelaborata in str(articlebody).split():
@@ -103,7 +120,7 @@ def getsingledict(imputtext):
 
 def printdict(dictionary, filename, number):
     fileout = codecs.open('./out/' + filename + '.txt', 'w', 'utf-8')
-    fileout.write(str(number)+'\n')
+    fileout.write(str(number) + '\n')
     for key in dictionary:
         fileout.write(key + " " + str(dictionary[key][0]) + " " + str(dictionary[key][1]) + '\n')
     fileout.close()
@@ -111,4 +128,5 @@ def printdict(dictionary, filename, number):
 
 # Esecutore intero progetto
 if __name__ == "__main__":
+    urllib._urlopener = AppURLopener()
     getfromgoogle(NUMERORISULTATI)
