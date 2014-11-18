@@ -2,7 +2,7 @@ __author__ = 'Fundor333'
 
 from pymongo import MongoClient
 # Shell for start mongo
-# mongod --dbpath Development/commercio-elettronico/Terza\ Consegna/
+# mongod --dbpath Development/commercio-elettronico/mongodb
 
 
 class databaseMongo():

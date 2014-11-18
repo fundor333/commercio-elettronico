@@ -1,8 +1,11 @@
 import codecs
 from math import sqrt
 import re
+from scipy.spatial.distance import cosine
+import numpy
 
-from primaconsegna import getfromgoogle, NUMERORISULTATI, getsingledict
+
+from primaconsegna import getfromgoogle, NUMERORISULTATI, getsingledict,adddictionary
 
 
 __author__ = 'Fundor333'
@@ -27,23 +30,19 @@ def addtolexicon(lexicon, filename):
     return (lexiconnum, lexicondict)
 
 
+#TODO da modificare e correggere
+#Non funziona
 def coscalc(dizionario1, dizionario2):
-    x = 0
-    y = 0
-    xy = 0
-    for singolakey in dizionario1.keys():
-        x = x + dizionario1[singolakey] * dizionario1[singolakey]
-        if singolakey in dizionario2.keys():
-            xy = xy + dizionario1[singolakey] * dizionario2[singolakey]
-    for singolakey in dizionario2.keys():
-        y = y + dizionario2[singolakey] * dizionario2[singolakey]
-    x = sqrt(x)
-    y = sqrt(y)
-    try:
-        coseno = xy / (x * y)
-    except ZeroDivisionError:
-        coseno = 0
-    return coseno
+    arr1=[]
+    arr2=[]
+    for element in dizionario1.keys():
+        arr1.append(element)
+    for element in dizionario2.keys():
+        arr2.append(element)
+    arr1 = numpy.array(arr1)
+    arr2 = numpy.array(arr2)
+    return cosine(arr1,arr2)
+
 
 
 def printlexicon(lexicon):
@@ -58,21 +57,16 @@ def printlexicon(lexicon):
     fileout.close()
 
 
-def readerpage(listanomefile):
-    dizionario = {}
-    for nomefile in listanomefile:
-        singlefile = open(nomefile, 'r')
-        dictionary = {}
-        for line in singlefile:
-            for parolanonelaborata in line.split():
-                for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
-                    if singolaparola != "":
-                        if singolaparola in dictionary.keys():
-                            dictionary[singolaparola.lower()] += 1
-                        else:
-                            dictionary[singolaparola.lower()] = 1
-        dizionario[nomefile] = dictionary
-    return dizionario
+def readerpage(listanomefile,lexicon):
+    arraydictionary = []
+    numword = lexicon[0]
+    for i in range(0,numword):
+        arraydictionary[i]=0
+    for line in listanomefile:
+        for wordss in line:
+            for word in wordss.split():
+                arraydictionary[lexicon[1][word.lower()]]+=1
+    return numpy.array(arraydictionary)
 
 
 def readlexicon():
@@ -130,12 +124,17 @@ if __name__ == "__main__":
             lexicon = addtolexicon(lexicon, inputfile)
             appoggio.append(inputfile)
         printlexicon(lexicon)
+
+    #Partenza a freddo
+    print("Cold start")
     singlefile = "./out/0.txt"
-    fileout = open("./out/singlefile.txt", 'w')
+    fileout = open("./out/coldstart.txt", 'w')
     for i in range(1, int(numerofline)):
         print("Cosin 0.txt with " + str(i) + ".txt")
         tempfilename = "./out/" + str(i) + ".txt"
         tempfilein = open(tempfilename)
-        if coscalc(getsingledict(openfile(singlefile)), getsingledict(openfile(tempfilein))) < 0.000000000000001:
-            fileout.write(tempfilename + '\n')
+        print(coscalc(getsingledict(openfile(singlefile)), getsingledict(openfile(tempfilein))) )
+        fileout.write(tempfilename + '\n')
     fileout.close()
+
+    #Partenza a caldo

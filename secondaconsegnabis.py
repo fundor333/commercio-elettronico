@@ -6,7 +6,6 @@ import numpy
 from scipy.spatial.distance import cosine
 from numpy.linalg import svd
 
-logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 LEXICONNAME = "./out/out.txt"
 USERARRAYNAME = "userarrayname"

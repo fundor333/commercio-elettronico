@@ -1,10 +1,7 @@
-import re
-
-import requests
-
-
 __author__ = 'Matteo Scarpa 845087'
 
+import re
+import requests
 import codecs
 import time
 import lxml.html as html
