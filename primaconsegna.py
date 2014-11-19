@@ -11,9 +11,9 @@ import BeautifulSoup
 
 
 SESSION = requests.Session()
-GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+crisi&num=100&start="
+GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+%2B+politica+OR+crisi+OR+calcio+OR+articolo+OR+articoli&tbm=nws&num=100&start="
 OUTPITFILENAME = "out"
-NUMERORISULTATI = 1
+NUMERORISULTATI = 100
 WAITINGTIME = 3  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'

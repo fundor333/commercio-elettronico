@@ -80,19 +80,21 @@ def readlexicon():
     return lexiconnum, lexicondict, numline
 
 
-def returnsimilar(interestingarray,arrayslist):#arraylist[i][0]=nomefile,arraylist[i][1]=array del file
-    similardictionary={}
+def returnsimilar(interestingarray, arrayslist):  # arraylist[i][0]=nomefile,arraylist[i][1]=array del file
+    similardictionary = {}
     for name in arrayslist:
-        similardictionary[coscalc(similardictionary,name[1])]=name[0]
-    listsorted=sorted(similardictionary, key=lambda key: similardictionary[key])
-    fileout=open("./out/hotstart.txt",'w')
-    for i in range(0,9):
-        fileout.write(similardictionary[listsorted[i]]+'\n')
+        similardictionary[coscalc(interestingarray, name[1])] = name[0]
+    listsorted = sorted(similardictionary, key=lambda key: similardictionary[key])
+    fileout = open("./out/hotstart.txt", 'w')
+    for i in range(0, 9):
+        fileout.write(similardictionary[listsorted[i]] + '\n')
     fileout.close()
 
 
-def sumarray(arra1,arra2):
-    return numpy.add(arra1,arra2)
+def sumarray(arra1, arra2):
+    array1=numpy.array(arra1)
+    array2=numpy.array(arra2)
+    return array1+array2
 
 
 def userarray(listafiles, lexicon):
@@ -133,16 +135,20 @@ if __name__ == "__main__":
     singlefile = "./out/0.txt"
     fileout = open("./out/coldstart.txt", 'w')
     for i in range(1, int(numerofline)):
-        print i
         tempfilename = "./out/" + str(i) + ".txt"
         arr1 = readerpage(singlefile, lexicon)
         arr2 = readerpage(tempfilename, lexicon)
         fileout.write(str(coscalc(arr1, arr2)) + '\n')
     fileout.close()
 
-    #Partenza a caldo
-    mydocument=readerpage("./out/0.txt",lexicon)
-    for i in range(1,5):
-        filein="./out/"+str(i)+".txt"
-        mydocument=sumarray(mydocument,readerpage(filein,lexicon))
-    print(mydocument)
+    # Partenza a caldo
+    print("Hot start")
+    mydocument = readerpage("./out/0.txt", lexicon)
+    for i in range(0, 5):
+        filein = "./out/" + str(i) + ".txt"
+        mydocument = sumarray(mydocument, readerpage(filein, lexicon))
+    arrayslist=[]
+    for i in range(6,int(numerofline)):
+        filename= "./out/"+str(i)+".txt"
+        arrayslist.append((filename,readerpage(filename,lexicon)))
+    returnsimilar(mydocument,arrayslist)
