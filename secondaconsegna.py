@@ -1,3 +1,5 @@
+__author__ = 'Fundor333'
+
 import codecs
 import re
 
@@ -7,13 +9,12 @@ import numpy
 from primaconsegna import getfromgoogle, NUMERORISULTATI
 
 
-__author__ = 'Fundor333'
 DIZIONARIOTOTALE = {}
-
 LEXICONNAME = "./out/out.txt"
 USERARRAYNAME = "userarrayname"
 
 # Calcola la distanza tra i due dizionari
+
 
 def addtolexicon(lexicon, filename):
     lexiconnum = lexicon[0]
@@ -92,9 +93,9 @@ def returnsimilar(interestingarray, arrayslist):  # arraylist[i][0]=nomefile,arr
 
 
 def sumarray(arra1, arra2):
-    array1=numpy.array(arra1)
-    array2=numpy.array(arra2)
-    return array1+array2
+    array1 = numpy.array(arra1)
+    array2 = numpy.array(arra2)
+    return array1 + array2
 
 
 def userarray(listafiles, lexicon):
@@ -138,7 +139,8 @@ if __name__ == "__main__":
         tempfilename = "./out/" + str(i) + ".txt"
         arr1 = readerpage(singlefile, lexicon)
         arr2 = readerpage(tempfilename, lexicon)
-        fileout.write(str(coscalc(arr1, arr2)) + '\n')
+        cosin = coscalc(arr1, arr2)
+        fileout.write(str(cosin) + '\n')
     fileout.close()
 
     # Partenza a caldo
@@ -147,8 +149,8 @@ if __name__ == "__main__":
     for i in range(0, 5):
         filein = "./out/" + str(i) + ".txt"
         mydocument = sumarray(mydocument, readerpage(filein, lexicon))
-    arrayslist=[]
-    for i in range(6,int(numerofline)):
-        filename= "./out/"+str(i)+".txt"
-        arrayslist.append((filename,readerpage(filename,lexicon)))
-    returnsimilar(mydocument,arrayslist)
+    arrayslist = []
+    for i in range(6, int(numerofline)):
+        filename = "./out/" + str(i) + ".txt"
+        arrayslist.append((filename, readerpage(filename, lexicon)))
+    returnsimilar(mydocument, arrayslist)
