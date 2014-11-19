@@ -80,6 +80,21 @@ def readlexicon():
     return lexiconnum, lexicondict, numline
 
 
+def returnsimilar(interestingarray,arrayslist):#arraylist[i][0]=nomefile,arraylist[i][1]=array del file
+    similardictionary={}
+    for name in arrayslist:
+        similardictionary[coscalc(similardictionary,name[1])]=name[0]
+    listsorted=sorted(similardictionary, key=lambda key: similardictionary[key])
+    fileout=open("./out/hotstart.txt",'w')
+    for i in range(0,9):
+        fileout.write(similardictionary[listsorted[i]]+'\n')
+    fileout.close()
+
+
+def sumarray(arra1,arra2):
+    return numpy.add(arra1,arra2)
+
+
 def userarray(listafiles, lexicon):
     arrayout = []
     for _ in [1, lexicon[0]]:
@@ -126,3 +141,8 @@ if __name__ == "__main__":
     fileout.close()
 
     #Partenza a caldo
+    mydocument=readerpage("./out/0.txt",lexicon)
+    for i in range(1,5):
+        filein="./out/"+str(i)+".txt"
+        mydocument=sumarray(mydocument,readerpage(filein,lexicon))
+    print(mydocument)
