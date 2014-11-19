@@ -135,12 +135,15 @@ if __name__ == "__main__":
     print("Cold start")
     singlefile = "./out/0.txt"
     fileout = open("./out/coldstart.txt", 'w')
+    arrayslistcold = {}
+    arr1 = readerpage(singlefile, lexicon)
     for i in range(1, int(numerofline)):
         tempfilename = "./out/" + str(i) + ".txt"
-        arr1 = readerpage(singlefile, lexicon)
         arr2 = readerpage(tempfilename, lexicon)
-        cosin = coscalc(arr1, arr2)
-        fileout.write(str(cosin) + '\n')
+        arrayslistcold[coscalc(arr1, arr2)] = tempfilename
+    listsorted = sorted(arrayslistcold, key=lambda key: arrayslistcold[key])
+    for i in range(0, 9):
+        fileout.write(arrayslistcold[listsorted[i]] + '\n')
     fileout.close()
 
     # Partenza a caldo
@@ -149,8 +152,8 @@ if __name__ == "__main__":
     for i in range(0, 5):
         filein = "./out/" + str(i) + ".txt"
         mydocument = sumarray(mydocument, readerpage(filein, lexicon))
-    arrayslist = []
+    arrayslisthot = []
     for i in range(6, int(numerofline)):
         filename = "./out/" + str(i) + ".txt"
-        arrayslist.append((filename, readerpage(filename, lexicon)))
-    returnsimilar(mydocument, arrayslist)
+        arrayslisthot.append((filename, readerpage(filename, lexicon)))
+    returnsimilar(mydocument, arrayslisthot)
