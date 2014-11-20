@@ -1,12 +1,11 @@
-from numpy.ma import sqrt
+from scipy.spatial.distance import cosine
 
 __author__ = 'Fundor333'
 
 import codecs
 import re
-
 import numpy
-
+from numpy.ma import sqrt
 from primaconsegna import getfromgoogle, NUMERORISULTATI
 
 
@@ -44,9 +43,9 @@ def coscalc(arr1, arr2):
     y = sqrt(y)
     x = sqrt(x)
     cosenocal = 1 - (xy / (x * y))
-    # print cosine(arr1, arr2)
-    #print cosenocal
-    #print(" \n")
+    print cosine(arr1, arr2)
+    print cosenocal
+    print(" \n")
     return cosenocal
 
 
