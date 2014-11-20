@@ -2,7 +2,6 @@ import logging
 
 from gensim import corpora
 
-
 __author__ = 'Fundor333'
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
