@@ -9,7 +9,6 @@ from numpy.ma import sqrt
 from primaconsegna import getfromgoogle, NUMERORISULTATI
 
 
-DIZIONARIOTOTALE = {}
 LEXICONNAME = "./out/out.txt"
 USERARRAYNAME = "userarrayname"
 
@@ -30,9 +29,7 @@ def addtolexicon(lexicon, filename):
     return (lexiconnum, lexicondict)
 
 
-# TODO da modificare e correggere
 def coscalc(arr1, arr2):
-    cosenocal = 0
     x = 0
     y = 0
     xy = 0
