@@ -17,7 +17,7 @@ documents = ["Human machine interface for lab abc computer applications",
              "Graph minors A survey"]
 
 # remove common words and tokenize
-spamword = open("spamword.txt")
+spamword = open("spamword.teo")
 stoplist = None
 for line in spamword:
     stoplist = set(line.split())

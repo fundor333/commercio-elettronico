@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b702e575-c55e-405c-a097-6424d4a210e1" name="Default" comment="Inizio lavoro gensim">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spamword.teo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gensimtutorial.py" afterPath="$PROJECT_DIR$/gensimtutorial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="56fd0330-dba9-45bb-92dc-443db615b3cb" name="Failed commit: Default" comment="Merge branch 'TerzaEsercitazione'&#10;&#10;Conflicts:&#10;&#9;README.md&#10;" />
     <ignored path="commercio-elettronico.iws" />
@@ -37,14 +36,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="gensimtutorial.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gensimtutorial.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gensimtutorial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15345268" vertical-offset="165" max-vertical-offset="585">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spamword.teo" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spamword.teo">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+              <caret line="0" column="69" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,10 +98,10 @@
         <option value="$PROJECT_DIR$/secondaconsegnabis.py" />
         <option value="$PROJECT_DIR$/out/coldstart.txt" />
         <option value="$PROJECT_DIR$/gensimtutoria.py" />
-        <option value="$PROJECT_DIR$/spamword.txt" />
         <option value="$PROJECT_DIR$/out/hotstart.txt" />
         <option value="$PROJECT_DIR$/secondaconsegna.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/spamword.txt" />
         <option value="$PROJECT_DIR$/gensimtutorial.py" />
       </list>
     </option>
@@ -143,20 +152,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="commercio-elettronico" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commercio-elettronico" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commercio-elettronico" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -918,14 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spamword.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
-          <caret line="0" column="67" selection-start-line="0" selection-start-column="67" selection-end-line="0" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/lexicon.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195645">
@@ -1000,11 +987,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gensimtutorial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15345268" vertical-offset="165" max-vertical-offset="585">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spamword.teo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="0" column="69" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
