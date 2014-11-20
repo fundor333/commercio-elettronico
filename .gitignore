@@ -62,3 +62,5 @@ Doc/.RData
 Doc/.Rhistory
 Doc/.Rapp.history
 Doc/PrimaConsegna.aux
+
+*/*.dict

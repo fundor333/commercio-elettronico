@@ -18,15 +18,15 @@ documents = ["Human machine interface for lab abc computer applications",
 
 # remove common words and tokenize
 spamword = open("spamword.txt")
-stoplist = set('in che a di del delle dell della degli gli il la in che ma se'.split())
-texts = [[word for word in document.lower().split() if word not in stoplist]
-         for document in documents]
+stoplist = None
+for line in spamword:
+    stoplist = set(line.split())
+texts = [[word for word in document.lower().split() if word not in stoplist] for document in documents]
 
 # remove words that appear only once
 all_tokens = sum(texts, [])
 tokens_once = set(word for word in set(all_tokens) if all_tokens.count(word) == 1)
-texts = [[word for word in text if word not in tokens_once]
-         for text in texts]
+texts = [[word for word in text if word not in tokens_once] for text in texts]
 
 dictionary = corpora.Dictionary(texts)
 dictionary.save('./out/deerwester.dict')  # store the dictionary, for future reference
