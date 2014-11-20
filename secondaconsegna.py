@@ -92,7 +92,7 @@ def returnsimilar(interestingarray, arrayslist):  # arraylist[i][0]=nomefile,arr
     similardictionary = {}
     for name in arrayslist:
         similardictionary[coscalc(interestingarray, name[1])] = name[0]
-    fileout = open("./out/hotstart.txt", 'w')
+    fileout = open("./out/warmstart.txt", 'w')
     listsorted = similardictionary.keys()
     listsorted.sort()
     for i in range(len(listsorted) - 9, len(listsorted)):
@@ -155,7 +155,7 @@ def main():
     fileout.close()
 
     # Partenza a caldo
-    print("Hot start")
+    print("Warm start")
     mydocument = readerpage("./out/0.txt", lexicon)
     for i in range(19, 40):
         filein = "./out/" + str(i) + ".txt"
