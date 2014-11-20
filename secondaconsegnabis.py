@@ -1,15 +1,18 @@
+from requests import models
+
+__author__ = 'Fundor333'
+
 import linecache
 import logging
 
-from gensim import corpora
+from gensim import corpora,models
 
 from primaconsegna import getfromgoogle, NUMERORISULTATI
 
 
-__author__ = 'Fundor333'
-
 LEXICONNAME = "./out/out.txt"
 DICTIONARYNAME = './out/deerwester.dict'
+CORPUSNAME = './out/deerwester.mm'
 
 
 def readlexicon():
@@ -38,15 +41,23 @@ def makedictionary():
     texts = [[word for word in text if word not in tokens_once] for text in texts]
     dictio = corpora.Dictionary(texts)
     dictio.save(DICTIONARYNAME)  # store the dictionary, for future reference
-    return dictio
+    return dictio, texts
+
+
+def makecorpus(dictionary, texts):
+    corpus = [dictionary.doc2bow(text) for text in texts]
+    corpora.MmCorpus.serialize(CORPUSNAME, corpus)  # store to disk, for later use
+    return corpus
 
 
 def main():
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-    dictelaborate = makedictionary()
-    new_doc = "Human computer interaction"
-    new_vec = dictelaborate.doc2bow(new_doc.lower().split())
-    print(new_vec)
+    dictio, texts = makedictionary()
+    corpus = makecorpus(dictio, texts)
+    tfidf = models.TfidfModel(corpus)
+    corpus_tfidf = tfidf[corpus]
+    for doc in corpus_tfidf:
+        print(doc)
 
 
 if __name__ == "__main__":
