@@ -1,9 +1,10 @@
+from numpy.ma import sqrt
+
 __author__ = 'Fundor333'
 
 import codecs
 import re
 
-from scipy.spatial.distance import cosine
 import numpy
 
 from primaconsegna import getfromgoogle, NUMERORISULTATI
@@ -31,9 +32,19 @@ def addtolexicon(lexicon, filename):
 
 
 # TODO da modificare e correggere
-# Non funziona
 def coscalc(arr1, arr2):
-    return cosine(arr1, arr2)
+    cosenocal = 0
+    x = 0
+    y = 0
+    xy = 0
+    for num in range(0, arr1.size - 1):
+        x += arr1[num] * arr1[num]
+        y += arr2[num] * arr2[num]
+        xy += arr1[num] * arr2[num]
+    y = sqrt(y)
+    x = sqrt(x)
+    cosenocal = 1 - (xy / (x * y))
+    return cosenocal
 
 
 def printlexicon(lexicon):
