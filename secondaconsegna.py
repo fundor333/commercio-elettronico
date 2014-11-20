@@ -44,6 +44,9 @@ def coscalc(arr1, arr2):
     y = sqrt(y)
     x = sqrt(x)
     cosenocal = 1 - (xy / (x * y))
+    # print cosine(arr1, arr2)
+    #print cosenocal
+    #print(" \n")
     return cosenocal
 
 
