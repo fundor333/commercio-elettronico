@@ -36,14 +36,18 @@ def makedictionary():
     all_tokens = sum(texts, [])
     tokens_once = set(word for word in set(all_tokens) if all_tokens.count(word) == 1)
     texts = [[word for word in text if word not in tokens_once] for text in texts]
-    dictionary = corpora.Dictionary(texts)
-    dictionary.save(DICTIONARYNAME)  # store the dictionary, for future reference
-    return dictionary
+    dictio = corpora.Dictionary(texts)
+    dictio.save(DICTIONARYNAME)  # store the dictionary, for future reference
+    return dictio
+
 
 def main():
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-    dictelaborate=makedictionary()
-    print dictelaborate
+    dictelaborate = makedictionary()
+    new_doc = "Human computer interaction"
+    new_vec = dictelaborate.doc2bow(new_doc.lower().split())
+    print(new_vec)
+
 
 if __name__ == "__main__":
     main()
