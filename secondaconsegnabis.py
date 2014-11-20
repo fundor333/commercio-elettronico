@@ -1,80 +1,33 @@
-import codecs
-import re
+import logging
+
+from gensim import corpora
 
 __author__ = 'Fundor333'
 
-from primaconsegna import getfromgoogle, NUMERORISULTATI
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
-DIZIONARIOTOTALE = {}
-LEXICONNAME = "./out/out.txt"
-USERARRAYNAME = "userarrayname"
+documents = ["Human machine interface for lab abc computer applications",
+             "A survey of user opinion of computer system response time",
+             "The EPS user interface management system",
+             "System and human system engineering testing of EPS",
+             "Relation of user perceived response time to error measurement",
+             "The generation of random binary unordered trees",
+             "The intersection graph of paths in trees",
+             "Graph minors IV Widths of trees and well quasi ordering",
+             "Graph minors A survey"]
 
+# remove common words and tokenize
+spamword = open("spamword.teo")
+stoplist = None
+for line in spamword:
+    stoplist = set(line.split())
+texts = [[word for word in document.lower().split() if word not in stoplist] for document in documents]
 
-def addtolexicon(lexicon, filename):
-    lexiconnum = lexicon[0]
-    lexicondict = lexicon[1]
-    fileopened = open(filename)
-    for line in fileopened:
-        for splitted in line.split():
-            for word in re.split('[^a-zA-Z]', splitted):
-                if word != '' or word != ' ':
-                    if lexicondict.keys().__contains__(word.lower()) != 1:
-                        lexicondict[word.lower()] = lexiconnum
-                        lexiconnum += 1
-    return (lexiconnum, lexicondict)
+# remove words that appear only once
+all_tokens = sum(texts, [])
+tokens_once = set(word for word in set(all_tokens) if all_tokens.count(word) == 1)
+texts = [[word for word in text if word not in tokens_once] for text in texts]
 
-
-def readlexicon():
-    lexiconnum = 0
-    lexicondict = {}
-    filein = open(LEXICONNAME)
-    numline = 0
-    i = 0
-    for line in filein:
-        if i == 0:
-            i += 1
-            numline = line
-        else:
-            word, m, n = line.split()
-            lexicondict[word] = lexiconnum
-            lexiconnum = lexiconnum + 1
-    return lexiconnum, lexicondict, numline
-
-
-def printlexicon(lexicon):
-    fileout = codecs.open("./out/lexicon.txt", 'w', 'utf-8')
-    appoggio = ["" for word, number in lexicon[1].items()]
-    for word, number in lexicon[1].items():
-        appoggio[number] = word
-    i = 1
-    for word in appoggio:
-        fileout.write(word + " " + str(i) + '\n')
-        i += 1
-    fileout.close()
-
-# Esecutore intero progetto
-
-
-if __name__ == "__main__":
-    numerofline = 0
-    appoggio = []
-    lexicon = (0, {})
-    try:
-        lexiconnum, lexicondict, numerofline = readlexicon()
-        lexicon = (lexiconnum, lexicondict)
-        print("Reading the Lexicon")
-    except IOError:
-        numerofline = getfromgoogle(NUMERORISULTATI)
-        print("Generating the Lexicon")
-        for i in range(0, numerofline):
-            inputfile = "./out/" + str(i) + ".txt"
-            lexicon = addtolexicon(lexicon, inputfile)
-            appoggio.append(inputfile)
-        printlexicon(lexicon)
-
-
-    # Partenza a freddo
-    print("Cold start")
-
-    # Partenza a caldo
-    print("Hot start")
+dictionary = corpora.Dictionary(texts)
+dictionary.save('./out/deerwester.dict')  # store the dictionary, for future reference
+print(dictionary)
