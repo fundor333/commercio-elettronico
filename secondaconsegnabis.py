@@ -16,17 +16,16 @@ def readlexicon():
     return linecache.getline(LEXICONNAME, 0)
 
 
-def makedictionary(listfilename):
+def makedictionary():
     documents = []
     try:
-        fistline = linecache.getline(LEXICONNAME, 0)
+        fistline = linecache.getline(LEXICONNAME, 1)
     except IOError:
         fistline = getfromgoogle(NUMERORISULTATI)
-
     for i in range(0, int(fistline)):
-        filein = open(".out/" + i + ".txt")
-    for line in filein:
-        documents.append(line)
+        filein = open("./out/" + str(i) + ".txt")
+        for line in filein:
+            documents.append(line)
 
     spamword = open("spamword.teo")
     stoplist = None
@@ -41,6 +40,10 @@ def makedictionary(listfilename):
     dictionary.save(DICTIONARYNAME)  # store the dictionary, for future reference
     return dictionary
 
+def main():
+    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+    dictelaborate=makedictionary()
+    print dictelaborate
 
 if __name__ == "__main__":
-    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+    main()

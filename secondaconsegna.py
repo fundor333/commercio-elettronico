@@ -123,8 +123,7 @@ def userarray(listafiles, lexicon):
     fileout.close()
 
 
-# Esecutore intero progetto
-if __name__ == "__main__":
+def main():
     numerofline = 0
     appoggio = []
     lexicon = (0, {})
@@ -166,3 +165,8 @@ if __name__ == "__main__":
         filename = "./out/" + str(i) + ".txt"
         arrayslisthot.append((filename, readerpage(filename, lexicon)))
     returnsimilar(mydocument, arrayslisthot)
+
+
+# Esecutore intero progetto
+if __name__ == "__main__":
+    main()
