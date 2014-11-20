@@ -17,6 +17,7 @@ documents = ["Human machine interface for lab abc computer applications",
              "Graph minors A survey"]
 
 # remove common words and tokenize
+spamword = open("spamword.txt")
 stoplist = set('in che a di del delle dell della delli degli gli il la in che ma se'.split())
 texts = [[word for word in document.lower().split() if word not in stoplist]
          for document in documents]

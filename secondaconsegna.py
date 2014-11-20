@@ -1,11 +1,11 @@
-from scipy.spatial.distance import cosine
-
 __author__ = 'Fundor333'
 
 import codecs
 import re
+
 import numpy
 from numpy.ma import sqrt
+
 from primaconsegna import getfromgoogle, NUMERORISULTATI
 
 
@@ -43,9 +43,6 @@ def coscalc(arr1, arr2):
     y = sqrt(y)
     x = sqrt(x)
     cosenocal = 1 - (xy / (x * y))
-    print cosine(arr1, arr2)
-    print cosenocal
-    print(" \n")
     return cosenocal
 
 
@@ -98,9 +95,10 @@ def returnsimilar(interestingarray, arrayslist):  # arraylist[i][0]=nomefile,arr
     similardictionary = {}
     for name in arrayslist:
         similardictionary[coscalc(interestingarray, name[1])] = name[0]
-    listsorted = sorted(similardictionary, key=lambda key: similardictionary[key])
     fileout = open("./out/hotstart.txt", 'w')
-    for i in range(0, 9):
+    listsorted = similardictionary.keys()
+    listsorted.sort()
+    for i in range(len(listsorted) - 9, len(listsorted)):
         fileout.write(similardictionary[listsorted[i]] + '\n')
     fileout.close()
 
@@ -153,16 +151,17 @@ if __name__ == "__main__":
     for i in range(1, int(numerofline)):
         tempfilename = "./out/" + str(i) + ".txt"
         arr2 = readerpage(tempfilename, lexicon)
-        arrayslistcold[coscalc(arr1, arr2)] = tempfilename
-    listsorted = sorted(arrayslistcold, key=lambda key: arrayslistcold[key])
-    for i in range(0, 9):
-        fileout.write(arrayslistcold[listsorted[i]] + '\n')
+        arrayslistcold[str(coscalc(arr1, arr2))] = tempfilename
+    listcold = arrayslistcold.keys()
+    listcold.sort()
+    for i in range(len(arrayslistcold) - 9, len(arrayslistcold)):
+        fileout.write(arrayslistcold[listcold[i]] + '\n')
     fileout.close()
 
     # Partenza a caldo
     print("Hot start")
     mydocument = readerpage("./out/0.txt", lexicon)
-    for i in range(0, 5):
+    for i in range(19, 40):
         filein = "./out/" + str(i) + ".txt"
         mydocument = sumarray(mydocument, readerpage(filein, lexicon))
     arrayslisthot = []
