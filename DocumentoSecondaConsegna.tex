@@ -1,0 +1,36 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T1]{fontenc}	
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+
+ \title{Seconda del corso di Commercio Elettronico}
+ \author{Matteo Scarpa 845087}
+  \date{\today}
+
+\begin{document}
+	\maketitle
+	
+	Questa è la seconda esercitazione del corso e prevede di creare dei suggerimenti attraverso due sistemi (attraverso il calcolo della distanza con il coseno e attraverso l'estrapolazione delle parole significative e confrontando queste tra i vari documenti). 
+	
+	\section*{Struttura dei programmi}
+	Entrambi i programmi richiedono l'uso della prima esercitazione, la quale è stata modificata per rendere i testi e i file di output più semplicemente utilizzabili nella seconda esercitazione. Infatti utilizzo il file "./out/out.txt", ove sono salvati tutti itermini dei documenti scaricati con relativa frequenza e il numero di documenti così esaminato. In caso di assenza di tale documento viene invocata una funzione della prima consegna che scarica i file aggiornati e rielabora il documento.
+	
+	Successivamente  vengono elaborati i documenti e vengono rielaborati nella forma consona e salvati in strutture dati appropriate.  Quindi vengono simulate prima una partenza a freddo (generazione di suggerimenti di somiglianza di un documento rispetto al gruppo di interesse) e successivamente una partenza a caldo (generazione di suggerimenti di somiglianza di un gruppo di documenti rispetto al gruppo di interesse) per entrambi i metodi e salvati in file.
+	
+	\section*{Confronto}
+	Sono stati confrontati i tempi di esecuzione dei due script (nel caso siano già stati scaricati i file e creato il dizionario).
+\begin{table}[h]
+\begin{tabular}{|l|l|l|ll}
+\cline{1-3}
+ & secondaconsegna.py & secondaconsegnabis.py &  &  \\ \cline{1-3}
+Real & 10.674 sec & 0.366 &  &  \\ \cline{1-3}
+User & 6.830 sec & 0.099 &  &  \\ \cline{1-3}
+Sys & 0.330 sec & 0.067 sec &  &  \\ \cline{1-3}
+\end{tabular}
+\end{table}
+
+Sono stati confrontati gli output dei due script nei due casi e si è scoperto che i risultati sono differenti. Questo perchè il metodo del coseno prevede il confronto tra tutte le parole dei documenti mentre il secondo script elabora solo una parte significativa del documento. 
+Questo porta prima ad un risparmio notevole del tempo nel secondo caso e in una precisione maggiore in quanto ottengo risultati che non tengono conto di "parole di disturbo".
+
+\end{document}

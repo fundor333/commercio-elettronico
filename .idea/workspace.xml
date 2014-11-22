@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b702e575-c55e-405c-a097-6424d4a210e1" name="Default" comment="Cambiamento del codice contenuto nel gitignore">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/local.0" afterPath="$PROJECT_DIR$/mongodb/local.0" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DatabaseMongoClass.py" afterPath="$PROJECT_DIR$/DatabaseMongoClass.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/local.ns" afterPath="$PROJECT_DIR$/mongodb/local.ns" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb/mongod.lock" afterPath="$PROJECT_DIR$/mongodb/mongod.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongostart.sh" afterPath="$PROJECT_DIR$/mongostart.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/primaconsegna.py" afterPath="$PROJECT_DIR$/primaconsegna.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/terzaconsegna.py" afterPath="$PROJECT_DIR$/terzaconsegna.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b702e575-c55e-405c-a097-6424d4a210e1" name="Default" comment="Cambiamento del codice contenuto nel gitignore" />
     <list id="56fd0330-dba9-45bb-92dc-443db615b3cb" name="Failed commit: Default" comment="Merge branch 'TerzaEsercitazione'&#10;&#10;Conflicts:&#10;&#9;README.md&#10;" />
     <ignored path="commercio-elettronico.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -575,7 +565,11 @@
       <created>1416664102887</created>
       <updated>1416664102887</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Cambiamento del codice contenuto nel gitignore">
+      <created>1416675840835</created>
+      <updated>1416675840835</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
