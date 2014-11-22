@@ -56,7 +56,6 @@ target/
 
 *.html
 *.txt
-*.tex
 *.pdf
 Doc/.RData
 Doc/.Rhistory

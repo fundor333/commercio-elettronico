@@ -2,12 +2,13 @@ __author__ = 'Matteo Scarpa 845087'
 
 import re
 import codecs
-import time
 import urllib
 
 import requests
 import lxml.html as html
 import BeautifulSoup
+
+import time
 
 
 SESSION = requests.Session()
