@@ -13,7 +13,7 @@
         </ServerConfiguration>
       </list>
     </option>
-    <option name="shellPath" value="/usr/local/bin/mongo" />
+    <option name="shellPath" value="/usr/local/bin/mongod" />
   </component>
 </project>
 

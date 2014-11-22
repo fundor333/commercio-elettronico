@@ -41,13 +41,13 @@ def makedictionary():
     tokens_once = set(word for word in set(all_tokens) if all_tokens.count(word) == 1)
     texts = [[word for word in text if word not in tokens_once] for text in texts]
     dictio = corpora.Dictionary(texts)
-    dictio.save(DICTIONARYNAME)  # store the dictionary, for future reference
+    dictio.save(DICTIONARYNAME)
     return dictio, texts
 
 
 def makecorpus(dictionary, texts):
     corpus = [dictionary.doc2bow(text) for text in texts]
-    corpora.MmCorpus.serialize(CORPUSNAME, corpus)  # store to disk, for later use
+    corpora.MmCorpus.serialize(CORPUSNAME, corpus)
     return corpus
 
 
@@ -55,7 +55,6 @@ def makelsi(corpus, dictionary):
     tfidf = models.TfidfModel(corpus)
     corpus_tfidf = tfidf[corpus]
     lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=2)
-    corpus_lsi = lsi[corpus_tfidf]
     lsi.save(LSINAME)
     return models.LsiModel.load(LSINAME)
 
