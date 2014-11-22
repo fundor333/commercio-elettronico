@@ -4,7 +4,7 @@ from pymongo import MongoClient
 # Shell for start mongo
 # mongod --dbpath Development/commercio-elettronico/mongodb
 
-class databasemongo():
+class database():
     client = None
     posts = client.posts()
 
@@ -17,5 +17,5 @@ class databasemongo():
     def getcollectionnames(self):
         return self.client.collection_names()
 
-    def getquery(self, textquery):
+    def makequery(self, textquery):
         return self.posts.find_one(textquery)
