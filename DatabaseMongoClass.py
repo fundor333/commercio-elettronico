@@ -23,5 +23,5 @@ class database():
     def makequery(self, textquery):
         return self.posts.find_one(textquery)
 
-    def getindex(self, ):
-        return self.db.collection.ensureIndex()
+    def getindex(self, textformatted):
+        return self.db.collection.ensureIndex(textformatted)
