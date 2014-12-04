@@ -10,15 +10,14 @@ class database():
         client = MongoClient(host, port)
         self.db = client[name]
 
-    def getcollection(self, namecollection):
-        return self.db[namecollection]
+    def getcollection(self, nameofcollection):
+        return self.db[nameofcollection]
 
-    def insert(self, nameofcollection, element):
-        collection = self.getcollection(nameofcollection)
-        return collection.insert(element)
-
-    def getcollectionnames(self):
+    def getnamecollection(self):
         return self.db.collection_names()
 
-    def getindex(self,collection,indexjeson):
-        return self.getcollection(collection).ensureIndex(indexjeson)
+    def insert(self, nameofcollection, element):
+        return self.db[nameofcollection].insert(element)
+
+    def getindex(self, nameofcollection, indexjeson):
+        return self.db[nameofcollection].ensure_index(indexjeson)

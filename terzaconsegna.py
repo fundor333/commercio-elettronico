@@ -5,10 +5,10 @@ import linecache
 from DatabaseMongoClass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
-INSERITO = 0
+INSERITO = 1
 NAMEDB = "Silvestri"
 DBM = database(NAMEDB, 'localhost', 27017)
-COLLECTIONNAME = "Documenti"
+COLLECTIONNAME = "documenti"
 
 
 def elaboratoretesti(texts, namefile):
@@ -17,8 +17,8 @@ def elaboratoretesti(texts, namefile):
 
 def main():
     try:
-        openfile= open("./out/" + OUTPITFILENAME + ".txt")
-        fistline = linecache.getline(openfile, 1)
+        open("./out/" + OUTPITFILENAME + ".txt")
+        fistline = linecache.getline("./out/" + OUTPITFILENAME + ".txt", 1)
         print("Ho recuperato i documenti")
     except IOError:
         fistline = getfromgoogle(NUMERORISULTATI)
@@ -37,10 +37,11 @@ def main():
 
         print("##############")
         print("Fine degli ID nei documenti")
-
+    print(DBM.getnamecollection())
     print("Elaboro i dati")
     indexdb = DBM.getindex(COLLECTIONNAME, "{'body': 'text'}")
     print(indexdb)
+
 
 if __name__ == "__main__":
     main()
