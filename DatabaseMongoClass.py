@@ -19,3 +19,6 @@ class database():
 
     def getcollectionnames(self):
         return self.db.collection_names()
+
+    def getindex(self,collection,indexjeson):
+        return self.getcollection(collection).ensureIndex(indexjeson)
