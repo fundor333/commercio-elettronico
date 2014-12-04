@@ -41,6 +41,9 @@ def main():
     print("Elaboro i dati")
     indexdb = DBM.getindex(COLLECTIONNAME, "{'body': 'text'}")
     print(indexdb)
+    reduction = DBM.mapreducer(COLLECTIONNAME, COLLECTIONNAME)
+    for line in reduction:
+        print(line['id'], line['value']['count'])
 
 
 if __name__ == "__main__":
