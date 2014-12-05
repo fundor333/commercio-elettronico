@@ -18,9 +18,6 @@ class database():
     def getnamecollection(self):
         return self.db.collection_names()
 
-    def getnamecollection(self):
-        return self.db.collection_names()
-
     def insert(self, nameofcollection, element):
         return self.db[nameofcollection].insert(element)
 
