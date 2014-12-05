@@ -24,7 +24,5 @@ class database():
     def getindex(self, nameofcollection, indexjeson):
         return self.db[nameofcollection].ensure_index(indexjeson)
 
-    def mapreducer(self):
-        mapper = Code(open('mapper.js', 'r').read())
-        reducer = Code(open('reducer.js', 'r').read())
-        return self.db["documenti"].map_reduce(mapper, reducer, "risultati").find().sort("{value:-1}")
+    def mapreducer(self, mapper, reducer, nomerisultati, collectionname):
+        return self.db[collectionname].map_reduce(mapper, reducer, nomerisultati)
