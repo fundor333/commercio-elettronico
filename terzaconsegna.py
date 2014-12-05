@@ -1,3 +1,5 @@
+from bson import Code
+
 __author__ = 'Fundor333'
 
 import linecache
@@ -6,7 +8,7 @@ from DatabaseMongoClass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
 
-INSERITO = 0
+INSERITO = 1
 NAMEDB = "Silvestri"
 DBM = database(NAMEDB, 'localhost', 27017)
 COLLECTIONNAME = "documenti"
@@ -38,13 +40,20 @@ def main():
 
         print("##############")
         print("Fine degli ID nei documenti")
-    print(DBM.getnamecollection())
     print("Elaboro i dati")
-    # indexdb = DBM.getindex(COLLECTIONNAME, "{'body': 'text'}")
-    # reduction = DBM.mapreducer(COLLECTIONNAME, "", MAP, REDUCE)
-    #for element in reduction.find():
-    #    print(element)
-
+    mapper = Code(open('mapper.js', 'r').read())
+    reducer = Code(open('reducer.js', 'r').read())
+    reduction = DBM.mapreducer(mapper, reducer, "risultati", COLLECTIONNAME)
+    print("Frequenza delle parole")
+    listword = []
+    fileout = open("terzaout.txt", 'w')
+    outlexicon = open("lexicon.txt", 'w')
+    for element in reduction.find():
+        fileout.write(str(element['_id']) + " " + str(element['value']) + '\n')
+        listword.append(str(element['_id']))
+        outlexicon.write(str(element['_id']) + '\n')
+    fileout.close()
+    outlexicon.close()
 
 if __name__ == "__main__":
     main()
