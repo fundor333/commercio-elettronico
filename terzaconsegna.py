@@ -6,7 +6,7 @@ from DatabaseMongoClass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
 
-INSERITO = 1
+INSERITO = 0
 NAMEDB = "Silvestri"
 DBM = database(NAMEDB, 'localhost', 27017)
 COLLECTIONNAME = "documenti"
