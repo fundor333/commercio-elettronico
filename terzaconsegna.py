@@ -5,6 +5,7 @@ import linecache
 from DatabaseMongoClass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
+
 INSERITO = 1
 NAMEDB = "Silvestri"
 DBM = database(NAMEDB, 'localhost', 27017)
@@ -39,11 +40,10 @@ def main():
         print("Fine degli ID nei documenti")
     print(DBM.getnamecollection())
     print("Elaboro i dati")
-    indexdb = DBM.getindex(COLLECTIONNAME, "{'body': 'text'}")
-    print(indexdb)
-    reduction = DBM.mapreducer(COLLECTIONNAME, COLLECTIONNAME)
-    for line in reduction:
-        print(line['id'], line['value']['count'])
+    # indexdb = DBM.getindex(COLLECTIONNAME, "{'body': 'text'}")
+    # reduction = DBM.mapreducer(COLLECTIONNAME, "", MAP, REDUCE)
+    #for element in reduction.find():
+    #    print(element)
 
 
 if __name__ == "__main__":
