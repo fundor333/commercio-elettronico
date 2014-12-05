@@ -1,3 +1,5 @@
+from bson import Code
+
 __author__ = 'Fundor333'
 
 from pymongo import MongoClient
@@ -10,12 +12,22 @@ class database():
         client = MongoClient(host, port)
         self.db = client[name]
 
-    def getcollection(self, namecollection):
-        return self.db[namecollection]
+    def getcollection(self, nameofcollection):
+        return self.db[nameofcollection]
+
+    def getnamecollection(self):
+        return self.db.collection_names()
+
+    def getnamecollection(self):
+        return self.db.collection_names()
 
     def insert(self, nameofcollection, element):
-        collection = self.getcollection(nameofcollection)
-        return collection.insert(element)
+        return self.db[nameofcollection].insert(element)
 
-    def getcollectionnames(self):
-        return self.db.collection_names()
+    def getindex(self, nameofcollection, indexjeson):
+        return self.db[nameofcollection].ensure_index(indexjeson)
+
+    def mapreducer(self):
+        mapper = Code(open('mapper.js', 'r').read())
+        reducer = Code(open('reducer.js', 'r').read())
+        return self.db["documenti"].map_reduce(mapper, reducer, "risultati").find().sort("{value:-1}")
