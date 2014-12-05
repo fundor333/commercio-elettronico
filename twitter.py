@@ -8,6 +8,7 @@ from datitwitter import APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET
 
 NAMEDB = "twitter"
 DBM = database(NAMEDB, 'localhost', 27017)
+COLLECTIONNAME = "tweet"
 
 
 class MyStreamer(TwythonStreamer):
@@ -20,14 +21,9 @@ class MyStreamer(TwythonStreamer):
         self.disconnect()
 
 
-def mongotwitter():
-    pass
-
-
 def main():
     stream = MyStreamer(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
     stream.statuses.filter(locations="10.623150,44.791538,13.101060,46.680580")
-    mongotwitter()
 
 
 if __name__ == '__main__':
