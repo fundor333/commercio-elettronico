@@ -1,4 +1,5 @@
 from bson import Code
+import pymongo
 
 __author__ = 'Fundor333'
 
@@ -54,6 +55,8 @@ def main():
         outlexicon.write(str(element['_id']) + '\n')
     fileout.close()
     outlexicon.close()
+    for line in reduction.find().sort("value", pymongo.DESCENDING).limit(10):
+        print line['_id']
 
 if __name__ == "__main__":
     main()
