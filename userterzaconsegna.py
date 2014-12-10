@@ -31,8 +31,13 @@ class User:
 
     # TODO sistemare il JSON che ritorna i dati
     def getjson(self):
-        stringa = "{testi:"
+        stringa = "{testi:["
+        i = 0
         for element in self.document:
-            stringa += "," + str(element)
-        stringa += "}"
+            if i != 0:
+                stringa += ","
+            else:
+                i += 1
+            stringa += '"' + str(element) + '"'
+        stringa += "]}"
         return stringa

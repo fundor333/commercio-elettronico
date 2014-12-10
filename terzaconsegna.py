@@ -63,8 +63,8 @@ def main():
     documentlist = {"./out/7.txt", "./out/6.txt", "./out/5.txt", "./out/4.txt", "./out/3.txt", "./out/2.txt",
                     "./out/1.txt", "./out/0.txt"}
     utente = User(documentlist, LEXICON)
-    print utente.getjson()
-    DBM.insert("user", utente.getjson())
+    print(utente.getjson())
+    # DBM.insert("user", utente.getjson)
 
 if __name__ == "__main__":
     main()
