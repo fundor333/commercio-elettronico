@@ -29,7 +29,6 @@ class User:
 
         return arrayout
 
-    # TODO sistemare il JSON che ritorna i dati
     def getjson(self):
         stringa = "{testi:["
         i = 0
