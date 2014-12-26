@@ -23,14 +23,16 @@ def elaboratoretesti(texts, namefile):
     return {"_id": namefile, "body": texts}
 
 
-def main():
+def recuperodocumenti():
     try:
         open("./out/" + OUTPITFILENAME + ".txt")
         fistline = linecache.getline("./out/" + OUTPITFILENAME + ".txt", 1)
         print("Ho recuperato i documenti")
+
     except IOError:
         fistline = getfromgoogle(NUMERORISULTATI)
         print("Ho generato i documenti")
+
     if INSERITO == 0:
         print("Ecco gli ID dei documenti")
         print("##############")
@@ -45,6 +47,9 @@ def main():
 
         print("##############")
         print("Fine degli ID nei documenti")
+
+
+def elaborodocumenti():
     print("Elaboro i dati")
     mapper = Code(open('mapper.js', 'r').read())
     reducer = Code(open('reducer.js', 'r').read())
@@ -60,6 +65,11 @@ def main():
     outlexicon.close()
     for line in reduction.find().sort("value", pymongo.DESCENDING).limit(10):
         print line['_id']
+
+
+def main():
+    recuperodocumenti()
+    elaborodocumenti()
     documentlist = {"./out/7.txt", "./out/6.txt", "./out/5.txt", "./out/4.txt", "./out/3.txt", "./out/2.txt",
                     "./out/1.txt", "./out/0.txt"}
     utente = User(documentlist, LEXICON)
