@@ -141,7 +141,7 @@ def main():
     if INSERITO == 0:
         utente = User(documentlist, LEXICON, "utente")
         DBM.insert("user", utente.getjson())
-    partenza()
+        # partenza()
 
 if __name__ == "__main__":
     main()
