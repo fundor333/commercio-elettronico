@@ -6,8 +6,10 @@ __author__ = 'Fundor333'
 class User:
     lexicon = {}
     document = []
+    username = ""
 
-    def __init__(self, documentlist, lexicon):
+    def __init__(self, documentlist, lexicon, username):
+        self.username = username
         for document in documentlist:
             self.document.append(document)
         i = 0
@@ -18,7 +20,7 @@ class User:
 
     def userarray(self, maxnum):
         arrayout = [maxnum]
-        for element in self.lexicon:
+        for _ in self.lexicon:
             arrayout.append(0)
         for files in self.document:
             for lines in files:
@@ -30,13 +32,10 @@ class User:
         return arrayout
 
     def getjson(self):
-        stringa = "{testi:["
-        i = 0
+        # Genera e gestisce un dizionario
+        jsondict = {'_id': self.username}
+        stringa = []
         for element in self.document:
-            if i != 0:
-                stringa += ","
-            else:
-                i += 1
-            stringa += '"' + str(element) + '"'
-        stringa += "]}"
-        return stringa
+            stringa.append(element)
+        jsondict['text'] = stringa
+        return jsondict
