@@ -35,9 +35,10 @@ def readlexicon():
             i += 1
             numline = line
         else:
-            word, m, n = line.split()
-            lexicondict[word] = lexiconnum
-            lexiconnum = lexiconnum + 1
+            word = line.split()
+            for singe in word:
+                lexicondict[singe] = lexiconnum
+                lexiconnum = lexiconnum + 1
     return lexiconnum, lexicondict, numline
 
 def elaboratoretesti(texts, namefile):
@@ -65,7 +66,6 @@ def recuperodocumenti():
             filein = open(fileinname)
             for line in filein:
                 textappend += line
-            print(DBM.insert(COLLECTIONNAME, elaboratoretesti(textappend, fileinname)))
 
         print("##############")
         print("Fine degli ID nei documenti")
@@ -85,8 +85,10 @@ def elaborodocumenti():
         outlexicon.write(str(element['_id']) + '\n')
     fileout.close()
     outlexicon.close()
-    for line in reduction.find().sort("value", pymongo.DESCENDING).limit(10):
-        print line['_id']
+    outfile = open("parolepiufrequenti.txt", 'w')
+    for line in reduction.find().sort("value", pymongo.DESCENDING).limit(20):
+        outfile.write(line['_id'] + "\n")
+    outfile.close()
 
 
 def coscalc(arr1, arr2):
@@ -113,16 +115,15 @@ def readerpage(inputfile, lexicon):
     return numpy.array(arraydictionary)
 
 
-def partenza(elencofile):
+def partenza():
     numerofline = 0
-    appoggio = []
     lexicon = readlexicon()
     singlefile = DBM.returntext(COLLECTIONNAME, "./out/0.txt")["body"]
-    fileout = open("./out/start.txt", 'w')
+    fileout = open("start.txt", 'w')
     arrayslist = {}
     arr1 = readerpage(singlefile, lexicon)
     for i in range(1, int(numerofline)):
-        tempfilename = "./out/" + str(i) + ".txt"
+        tempfilename = DBM.returntext(COLLECTIONNAME, "./out/" + str(i) + ".txt")["body"]
         arr2 = readerpage(tempfilename, lexicon)
         arrayslist[str(coscalc(arr1, arr2))] = tempfilename
     listcold = arrayslist.keys()
@@ -137,9 +138,10 @@ def main():
     elaborodocumenti()
     documentlist = {"./out/7.txt", "./out/6.txt", "./out/5.txt", "./out/4.txt", "./out/3.txt", "./out/2.txt",
                     "./out/1.txt", "./out/0.txt"}
-    utente = User(documentlist, LEXICON, "utente0")
-    DBM.insert("user", utente.getjson())
-
+    if INSERITO == 0:
+        utente = User(documentlist, LEXICON, "utente")
+        DBM.insert("user", utente.getjson())
+    partenza()
 
 if __name__ == "__main__":
     main()
