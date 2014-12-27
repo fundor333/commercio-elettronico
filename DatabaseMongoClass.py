@@ -24,3 +24,6 @@ class database():
 
     def mapreducer(self, mapper, reducer, nomerisultati, collectionname):
         return self.db[collectionname].map_reduce(mapper, reducer, nomerisultati)
+
+    def returntext(self, nameofthecollection, nameofthefile):
+        return self.db[nameofthecollection].find_one({"_id": nameofthefile})

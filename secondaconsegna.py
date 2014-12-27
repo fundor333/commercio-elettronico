@@ -26,7 +26,7 @@ def addtolexicon(lexicon, filename):
                     if lexicondict.keys().__contains__(word.lower()) != 1:
                         lexicondict[word.lower()] = lexiconnum
                         lexiconnum += 1
-    return (lexiconnum, lexicondict)
+    return lexiconnum, lexicondict
 
 
 def coscalc(arr1, arr2):

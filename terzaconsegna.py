@@ -1,4 +1,8 @@
+import re
+
 from bson import Code
+import numpy
+from numpy.ma import sqrt
 import pymongo
 
 from userterzaconsegna import User
@@ -16,8 +20,25 @@ INSERITO = 1
 NAMEDB = "Silvestri"
 DBM = database(NAMEDB, 'localhost', 27017)
 COLLECTIONNAME = "documenti"
+LEXICONNAME = "lexicon.txt"
 LEXICON = []
 
+
+def readlexicon():
+    lexiconnum = 0
+    lexicondict = {}
+    filein = open(LEXICONNAME)
+    numline = 0
+    i = 0
+    for line in filein:
+        if i == 0:
+            i += 1
+            numline = line
+        else:
+            word, m, n = line.split()
+            lexicondict[word] = lexiconnum
+            lexiconnum = lexiconnum + 1
+    return lexiconnum, lexicondict, numline
 
 def elaboratoretesti(texts, namefile):
     jsoonvar = {"_id": namefile, "body": texts}
@@ -57,7 +78,7 @@ def elaborodocumenti():
     reduction = DBM.mapreducer(mapper, reducer, "risultati", COLLECTIONNAME)
     print("Frequenza delle parole")
     fileout = open("terzaout.txt", 'w')
-    outlexicon = open("lexicon.txt", 'w')
+    outlexicon = open(LEXICONNAME, 'w')
     for element in reduction.find():
         fileout.write(str(element['_id']) + " " + str(element['value']) + '\n')
         LEXICON.append(str(element['_id']))
@@ -66,6 +87,49 @@ def elaborodocumenti():
     outlexicon.close()
     for line in reduction.find().sort("value", pymongo.DESCENDING).limit(10):
         print line['_id']
+
+
+def coscalc(arr1, arr2):
+    x = 0
+    y = 0
+    xy = 0
+    for num in range(0, arr1.size - 1):
+        x += arr1[num] * arr1[num]
+        y += arr2[num] * arr2[num]
+        xy += arr1[num] * arr2[num]
+    y = sqrt(y)
+    x = sqrt(x)
+    cosenocal = 1 - (xy / (x * y))
+    return cosenocal
+
+
+def readerpage(inputfile, lexicon):
+    listanomefile = ""
+    arraydictionary = []
+    for parts in listanomefile.split():
+        for word in re.split("[^a-zA-Z]", parts):
+            if word != '':
+                arraydictionary[lexicon[1][word.lower()]] += 1
+    return numpy.array(arraydictionary)
+
+
+def partenza(elencofile):
+    numerofline = 0
+    appoggio = []
+    lexicon = readlexicon()
+    singlefile = DBM.returntext(COLLECTIONNAME, "./out/0.txt")["body"]
+    fileout = open("./out/start.txt", 'w')
+    arrayslist = {}
+    arr1 = readerpage(singlefile, lexicon)
+    for i in range(1, int(numerofline)):
+        tempfilename = "./out/" + str(i) + ".txt"
+        arr2 = readerpage(tempfilename, lexicon)
+        arrayslist[str(coscalc(arr1, arr2))] = tempfilename
+    listcold = arrayslist.keys()
+    listcold.sort()
+    for i in range(len(arrayslist) - 9, len(arrayslist)):
+        fileout.write(arrayslist[listcold[i]] + '\n')
+    fileout.close()
 
 
 def main():

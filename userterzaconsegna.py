@@ -28,7 +28,6 @@ class User:
                     for word in re.split("[^a-zA-Z]", splitted):
                         if word != '':
                             arrayout[self.lexicon[word]] += 1
-
         return arrayout
 
     def getjson(self):
