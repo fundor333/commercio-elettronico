@@ -28,18 +28,11 @@ def readlexicon():
     lexiconnum = 0
     lexicondict = {}
     filein = open(LEXICONNAME)
-    numline = 0
-    i = 0
-    for line in filein:
-        if i == 0:
-            i += 1
-            numline = line
-        else:
-            word = line.split()
-            for singe in word:
-                lexicondict[singe] = lexiconnum
-                lexiconnum = lexiconnum + 1
-    return lexiconnum, lexicondict, numline
+    for word in filein:
+        if word != "" and word != "\n":
+            lexicondict[word.replace("\n", "")] = lexiconnum
+            lexiconnum += 1
+    return lexicondict, lexiconnum
 
 def elaboratoretesti(texts, namefile):
     jsoonvar = {"_id": namefile, "body": texts}
@@ -49,26 +42,26 @@ def elaboratoretesti(texts, namefile):
 def recuperodocumenti():
     try:
         open("./out/" + OUTPITFILENAME + ".txt")
-        fistline = linecache.getline("./out/" + OUTPITFILENAME + ".txt", 1)
+        num = linecache.getline("./out/" + OUTPITFILENAME + ".txt", 1)
         print("Ho recuperato i documenti")
 
     except IOError:
-        fistline = getfromgoogle(NUMERORISULTATI)
+        num = getfromgoogle(NUMERORISULTATI)
         print("Ho generato i documenti")
 
     if INSERITO == 0:
         print("Ecco gli ID dei documenti")
         print("##############")
 
-        for i in range(0, int(fistline)):
+        for i in range(0, num):
             textappend = ""
             fileinname = "./out/" + str(i) + ".txt"
             filein = open(fileinname)
             for line in filein:
                 textappend += line
-
         print("##############")
         print("Fine degli ID nei documenti")
+    return num
 
 
 def elaborodocumenti():
@@ -105,43 +98,42 @@ def coscalc(arr1, arr2):
     return cosenocal
 
 
-def readerpage(inputfile, lexicon):
-    listanomefile = ""
-    arraydictionary = []
-    for parts in listanomefile.split():
+def readerpage(inputfile, lexicon, numword):
+    arraydictionary = range(0, numword)
+    for parts in inputfile.split():
         for word in re.split("[^a-zA-Z]", parts):
-            if word != '':
-                arraydictionary[lexicon[1][word.lower()]] += 1
+            if word != '' and word != "u":
+                arraydictionary[lexicon[word.lower()]] += 1
     return numpy.array(arraydictionary)
 
 
-def partenza():
-    numerofline = 0
-    lexicon = readlexicon()
+def partenza(numerodoc):
+    print(numerodoc)
+    lexicon, numword = readlexicon()
     singlefile = DBM.returntext(COLLECTIONNAME, "./out/0.txt")["body"]
     fileout = open("start.txt", 'w')
     arrayslist = {}
-    arr1 = readerpage(singlefile, lexicon)
-    for i in range(1, int(numerofline)):
+    arr1 = readerpage(singlefile, lexicon, numword)
+    for i in range(1, int(numerodoc)):
         tempfilename = DBM.returntext(COLLECTIONNAME, "./out/" + str(i) + ".txt")["body"]
-        arr2 = readerpage(tempfilename, lexicon)
+        arr2 = readerpage(tempfilename, lexicon, numword)
         arrayslist[str(coscalc(arr1, arr2))] = tempfilename
     listcold = arrayslist.keys()
     listcold.sort()
-    for i in range(len(arrayslist) - 9, len(arrayslist)):
+    for i in range(len(arrayslist) - 1, len(arrayslist)):
         fileout.write(arrayslist[listcold[i]] + '\n')
     fileout.close()
 
 
 def main():
-    recuperodocumenti()
+    numerodoc = recuperodocumenti()
     elaborodocumenti()
     documentlist = {"./out/7.txt", "./out/6.txt", "./out/5.txt", "./out/4.txt", "./out/3.txt", "./out/2.txt",
                     "./out/1.txt", "./out/0.txt"}
     if INSERITO == 0:
         utente = User(documentlist, LEXICON, "utente")
         DBM.insert("user", utente.getjson())
-        # partenza()
+    partenza(numerodoc)
 
 if __name__ == "__main__":
     main()
