@@ -13,7 +13,7 @@ import BeautifulSoup
 SESSION = requests.Session()
 GOOGLEURL = "https://www.google.it/search?q=site:www.repubblica.it+%2B+politica+OR+crisi+OR+calcio+OR+articolo+OR+articoli&tbm=nws&num=100&start="
 OUTPITFILENAME = "out"
-NUMERORISULTATI = 2
+NUMERORISULTATI = 100
 WAITINGTIME = 3  # in secondi
 QUERYGOOGLE = '//h3[@class="r"]/a/@href'
 QUERYSITO = '//*[@itemprop="articleBody"]/text()'
@@ -61,7 +61,6 @@ def getarticle(url, number):
             stopword = open("spamword.teo")
             stoplist = None
             for line in stopword:
-                print line
                 stoplist = set(line.split())
             for parolanonelaborata in str(articlebody).split():
                 for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
