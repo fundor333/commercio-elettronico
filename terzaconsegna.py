@@ -54,12 +54,14 @@ def recuperodocumenti():
         print("Ecco gli ID dei documenti")
         print("##############")
 
-        for i in range(0, num):
+        for i in range(0, int(num)):
             textappend = ""
             fileinname = "./out/" + str(i) + ".txt"
             filein = open(fileinname)
             for line in filein:
                 textappend += line
+            print(DBM.insert(COLLECTIONNAME, elaboratoretesti(textappend, fileinname)))
+
         print("##############")
         print("Fine degli ID nei documenti")
     return num
