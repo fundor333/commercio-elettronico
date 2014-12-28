@@ -34,6 +34,7 @@ def readlexicon():
             lexiconnum += 1
     return lexicondict, lexiconnum
 
+
 def elaboratoretesti(texts, namefile):
     jsoonvar = {"_id": namefile, "body": texts}
     return jsoonvar
@@ -108,19 +109,19 @@ def readerpage(inputfile, lexicon, numword):
 
 
 def partenza(numerodoc):
-    print(numerodoc)
     lexicon, numword = readlexicon()
     singlefile = DBM.returntext(COLLECTIONNAME, "./out/0.txt")["body"]
-    fileout = open("start.txt", 'w')
+    fileout = open("similitudiniterza.txt", 'w')
     arrayslist = {}
     arr1 = readerpage(singlefile, lexicon, numword)
     for i in range(1, int(numerodoc)):
-        tempfilename = DBM.returntext(COLLECTIONNAME, "./out/" + str(i) + ".txt")["body"]
-        arr2 = readerpage(tempfilename, lexicon, numword)
-        arrayslist[str(coscalc(arr1, arr2))] = tempfilename
+        filename = "./out/" + str(i) + ".txt"
+        filebody = DBM.returntext(COLLECTIONNAME, filename)["body"]
+        arr2 = readerpage(filebody, lexicon, numword)
+        arrayslist[str(coscalc(arr1, arr2))] = filename
     listcold = arrayslist.keys()
     listcold.sort()
-    for i in range(len(arrayslist) - 1, len(arrayslist)):
+    for i in range(len(arrayslist) - 9, len(arrayslist)):
         fileout.write(arrayslist[listcold[i]] + '\n')
     fileout.close()
 
@@ -134,6 +135,7 @@ def main():
         utente = User(documentlist, LEXICON, "utente")
         DBM.insert("user", utente.getjson())
     partenza(numerodoc)
+
 
 if __name__ == "__main__":
     main()
