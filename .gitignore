@@ -63,3 +63,8 @@ Doc/.Rapp.history
 Doc/PrimaConsegna.aux
 
 */*.dict
+.idea
+datitwitter.py
+out
+mongodb
+.texpadtmp

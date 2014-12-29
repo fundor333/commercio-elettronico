@@ -3,12 +3,11 @@ __author__ = 'Matteo Scarpa 845087'
 import re
 import codecs
 import urllib
+import time
 
 import requests
 import lxml.html as html
 import BeautifulSoup
-
-import time
 
 
 SESSION = requests.Session()
@@ -51,7 +50,6 @@ def getarticle(url, number):
     if url == "":
         return number
     else:
-        serverresponce = open('./out/temp.txt', 'w')
         urllib.urlretrieve(url, "./html/" + str(number) + '.html')
         urlhtml = html.fromstring(decode_html("./html/" + str(number)))
         articlebody = urlhtml.xpath(QUERYSITO)
@@ -60,9 +58,13 @@ def getarticle(url, number):
         else:
             fileout = codecs.open('./out/' + str(number) + '.txt', 'w', 'utf-8')
             reference = ""
+            stopword = open("spamword.teo")
+            stoplist = None
+            for line in stopword:
+                stoplist = set(line.split())
             for parolanonelaborata in str(articlebody).split():
                 for singolaparola in re.split("[^a-zA-Z]", parolanonelaborata):
-                    if singolaparola != '':
+                    if singolaparola != '' or singolaparola not in stoplist:
                         reference = reference + " " + singolaparola.lower()
 
             print >> fileout, reference
