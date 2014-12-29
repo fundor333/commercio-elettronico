@@ -18,8 +18,9 @@ from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
 
 INSERITO = 0
-NAMEDB = "TerzaEsercitazione"
-DBM = database(NAMEDB, 'localhost', 27017)
+DBNAME = "TerzaEsercitazione"
+DBHOST = 'localhost'
+DBPORT = 27017
 DOCUMENTCOLLECTION = "documenti"
 LEXICONNAME = "lexicon.txt"
 LEXICON = []
@@ -45,7 +46,7 @@ def elaboratoretesti(texts, namefile):
     return jsoonvar
 
 
-def recuperodocumenti():
+def recuperodocumenti(databasemongo):
     try:
         open("./out/" + OUTPITFILENAME + ".txt")
         num = linecache.getline("./out/" + OUTPITFILENAME + ".txt", 1)
@@ -65,7 +66,7 @@ def recuperodocumenti():
             filein = open(fileinname)
             for line in filein:
                 textappend += line
-                print(DBM.insert(DOCUMENTCOLLECTION, elaboratoretesti(textappend, fileinname)))
+                print(databasemongo.insert(DOCUMENTCOLLECTION, elaboratoretesti(textappend, fileinname)))
 
         print("##############")
         print("Fine degli ID nei documenti")
@@ -74,11 +75,11 @@ def recuperodocumenti():
     return num
 
 
-def elaborodocumenti():
+def elaborodocumenti(databasemongo):
     print("Elaboro i dati")
     mapper = Code(open('mapper.js', 'r').read())
     reducer = Code(open('reducer.js', 'r').read())
-    reduction = DBM.mapreducer(mapper, reducer, "risultati", DOCUMENTCOLLECTION)
+    reduction = databasemongo.mapreducer(mapper, reducer, "risultati", DOCUMENTCOLLECTION)
     print("Frequenza delle parole")
     fileout = open("terzaout.txt", 'w')
     outlexicon = open(LEXICONNAME, 'w')
@@ -117,18 +118,18 @@ def readerpage(inputfile, lexicon, numword):
     return numpy.array(arraydictionary)
 
 
-def partenza(numerodoc, utente):
+def partenza(numerodoc, utente, databasemongo):
     lexicon, numword = readlexicon()
     fileout = open("similitudiniterza.txt", 'w')
     contenitore_nome_testi = utente.getjson()["text"]
     filebody = ""
     for text in contenitore_nome_testi:
-        filebody += DBM.returntext(DOCUMENTCOLLECTION, text)["body"]
+        filebody += databasemongo.returntext(DOCUMENTCOLLECTION, text)["body"]
     arr1 = readerpage(filebody, lexicon, numword)
     arrayslist = {}
     for i in range(1, int(numerodoc)):
         filename = "./out/" + str(i) + ".txt"
-        filebody = DBM.returntext(DOCUMENTCOLLECTION, filename)["body"]
+        filebody = databasemongo.returntext(DOCUMENTCOLLECTION, filename)["body"]
         arr2 = readerpage(filebody, lexicon, numword)
         arrayslist[str(coscalc(arr1, arr2))] = filename
     listcold = arrayslist.keys()
@@ -139,18 +140,19 @@ def partenza(numerodoc, utente):
 
 
 def main():
-    numerodoc = recuperodocumenti()
-    elaborodocumenti()
-    utente = User(DOCUMENTLIST, LEXICON, "utente")
     try:
-        DBM.insert(USERCOLLECTION, utente.getjson())
-    except DuplicateKeyError:
-        print()
-    partenza(numerodoc, utente)
+        databasemongo = database(DBNAME, DBHOST, DBPORT)
+        numerodoc = recuperodocumenti(databasemongo)
+        elaborodocumenti(databasemongo)
+        utente = User(DOCUMENTLIST, LEXICON, "utente")
+        try:
+            databasemongo.insert(USERCOLLECTION, utente.getjson())
+        except DuplicateKeyError:
+            print()
+        partenza(numerodoc, utente, databasemongo)
+    except ConnectionFailure:
+        print("Errore di Connessione")
 
 
 if __name__ == "__main__":
-    try:
         main()
-    except ConnectionFailure:
-        print("La connessione col DB non e' stata possibile")
