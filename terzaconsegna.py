@@ -16,12 +16,13 @@ from DatabaseMongoClass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
 
-INSERITO = 0
+INSERITO = 1
 NAMEDB = "Silvestri"
 DBM = database(NAMEDB, 'localhost', 27017)
 COLLECTIONNAME = "documenti"
 LEXICONNAME = "lexicon.txt"
 LEXICON = []
+USERCOLLECTION = "user"
 
 
 def readlexicon():
@@ -110,12 +111,15 @@ def readerpage(inputfile, lexicon, numword):
     return numpy.array(arraydictionary)
 
 
-def partenza(numerodoc):
+def partenza(numerodoc, utente):
     lexicon, numword = readlexicon()
-    singlefile = DBM.returntext(COLLECTIONNAME, "./out/0.txt")["body"]
     fileout = open("similitudiniterza.txt", 'w')
+    contenitore_nome_testi = utente.getjson()["text"]
+    filebody = ""
+    for text in contenitore_nome_testi:
+        filebody += DBM.returntext(COLLECTIONNAME, text)["body"]
+    arr1 = readerpage(filebody, lexicon, numword)
     arrayslist = {}
-    arr1 = readerpage(singlefile, lexicon, numword)
     for i in range(1, int(numerodoc)):
         filename = "./out/" + str(i) + ".txt"
         filebody = DBM.returntext(COLLECTIONNAME, filename)["body"]
@@ -133,10 +137,10 @@ def main():
     elaborodocumenti()
     documentlist = {"./out/7.txt", "./out/6.txt", "./out/5.txt", "./out/4.txt", "./out/3.txt", "./out/2.txt",
                     "./out/1.txt", "./out/0.txt"}
+    utente = User(documentlist, LEXICON, "utente")
     if INSERITO == 0:
-        utente = User(documentlist, LEXICON, "utente")
-        DBM.insert("user", utente.getjson())
-    partenza(numerodoc)
+        DBM.insert(USERCOLLECTION, utente.getjson())
+    partenza(numerodoc, utente)
 
 
 if __name__ == "__main__":
