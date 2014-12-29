@@ -17,7 +17,6 @@ from mongodbclass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
 
-INSERITO = 0
 DBNAME = "TerzaEsercitazione"
 DBHOST = 'localhost'
 DBPORT = 27017
@@ -27,7 +26,6 @@ LEXICON = []
 USERCOLLECTION = "user"
 DOCUMENTLIST = {"./out/7.txt", "./out/6.txt", "./out/5.txt", "./out/4.txt", "./out/3.txt", "./out/2.txt",
                 "./out/1.txt", "./out/0.txt"}
-
 
 
 def readlexicon():
@@ -155,4 +153,4 @@ def main():
 
 
 if __name__ == "__main__":
-        main()
+    main()
