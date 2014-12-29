@@ -4,6 +4,7 @@ from bson import Code
 import numpy
 from numpy.ma import sqrt
 import pymongo
+from pymongo.errors import DuplicateKeyError, ConnectionFailure
 
 from userclass import User
 
@@ -16,8 +17,8 @@ from mongodbclass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
 
-INSERITO = 1
-NAMEDB = "Silvestri"
+INSERITO = 0
+NAMEDB = "TerzaEsercitazione"
 DBM = database(NAMEDB, 'localhost', 27017)
 DOCUMENTCOLLECTION = "documenti"
 LEXICONNAME = "lexicon.txt"
@@ -54,7 +55,7 @@ def recuperodocumenti():
         num = getfromgoogle(NUMERORISULTATI)
         print("Ho generato i documenti")
 
-    if INSERITO == 0:
+    try:
         print("Ecco gli ID dei documenti")
         print("##############")
 
@@ -64,10 +65,12 @@ def recuperodocumenti():
             filein = open(fileinname)
             for line in filein:
                 textappend += line
-            print(DBM.insert(DOCUMENTCOLLECTION, elaboratoretesti(textappend, fileinname)))
+                print(DBM.insert(DOCUMENTCOLLECTION, elaboratoretesti(textappend, fileinname)))
 
         print("##############")
         print("Fine degli ID nei documenti")
+    except DuplicateKeyError:
+        print ("Documenti gia' presenti nel DB")
     return num
 
 
@@ -139,10 +142,15 @@ def main():
     numerodoc = recuperodocumenti()
     elaborodocumenti()
     utente = User(DOCUMENTLIST, LEXICON, "utente")
-    if INSERITO == 0:
+    try:
         DBM.insert(USERCOLLECTION, utente.getjson())
+    except DuplicateKeyError:
+        print()
     partenza(numerodoc, utente)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except ConnectionFailure:
+        print("La connessione col DB non e' stata possibile")
