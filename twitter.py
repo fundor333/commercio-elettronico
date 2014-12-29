@@ -2,7 +2,7 @@ __author__ = 'Fundor333'
 
 from twython import TwythonStreamer
 
-from DatabaseMongoClass import database
+from mongodbclass import database
 from datitwitter import APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET
 
 

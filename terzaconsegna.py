@@ -4,24 +4,28 @@ from bson import Code
 import numpy
 from numpy.ma import sqrt
 import pymongo
+from pymongo.errors import DuplicateKeyError, ConnectionFailure
 
-from userterzaconsegna import User
+from userclass import User
 
 
 __author__ = 'Fundor333'
 
 import linecache
 
-from DatabaseMongoClass import database
+from mongodbclass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
 
 
-INSERITO = 0
-NAMEDB = "Silvestri"
-DBM = database(NAMEDB, 'localhost', 27017)
-COLLECTIONNAME = "documenti"
+DBNAME = "TerzaEsercitazione"
+DBHOST = 'localhost'
+DBPORT = 27017
+DOCUMENTCOLLECTION = "documenti"
 LEXICONNAME = "lexicon.txt"
 LEXICON = []
+USERCOLLECTION = "user"
+DOCUMENTLIST = {"./out/7.txt", "./out/6.txt", "./out/5.txt", "./out/4.txt", "./out/3.txt", "./out/2.txt",
+                "./out/1.txt", "./out/0.txt"}
 
 
 def readlexicon():
@@ -40,7 +44,7 @@ def elaboratoretesti(texts, namefile):
     return jsoonvar
 
 
-def recuperodocumenti():
+def recuperodocumenti(databasemongo):
     try:
         open("./out/" + OUTPITFILENAME + ".txt")
         num = linecache.getline("./out/" + OUTPITFILENAME + ".txt", 1)
@@ -50,7 +54,7 @@ def recuperodocumenti():
         num = getfromgoogle(NUMERORISULTATI)
         print("Ho generato i documenti")
 
-    if INSERITO == 0:
+    try:
         print("Ecco gli ID dei documenti")
         print("##############")
 
@@ -60,18 +64,20 @@ def recuperodocumenti():
             filein = open(fileinname)
             for line in filein:
                 textappend += line
-            print(DBM.insert(COLLECTIONNAME, elaboratoretesti(textappend, fileinname)))
+                print(databasemongo.insert(DOCUMENTCOLLECTION, elaboratoretesti(textappend, fileinname)))
 
         print("##############")
         print("Fine degli ID nei documenti")
+    except DuplicateKeyError:
+        print ("Documenti gia' presenti nel DB")
     return num
 
 
-def elaborodocumenti():
+def elaborodocumenti(databasemongo):
     print("Elaboro i dati")
     mapper = Code(open('mapper.js', 'r').read())
     reducer = Code(open('reducer.js', 'r').read())
-    reduction = DBM.mapreducer(mapper, reducer, "risultati", COLLECTIONNAME)
+    reduction = databasemongo.mapreducer(mapper, reducer, "risultati", DOCUMENTCOLLECTION)
     print("Frequenza delle parole")
     fileout = open("terzaout.txt", 'w')
     outlexicon = open(LEXICONNAME, 'w')
@@ -110,15 +116,18 @@ def readerpage(inputfile, lexicon, numword):
     return numpy.array(arraydictionary)
 
 
-def partenza(numerodoc):
+def partenza(numerodoc, utente, databasemongo):
     lexicon, numword = readlexicon()
-    singlefile = DBM.returntext(COLLECTIONNAME, "./out/0.txt")["body"]
     fileout = open("similitudiniterza.txt", 'w')
+    contenitore_nome_testi = utente.getjson()["text"]
+    filebody = ""
+    for text in contenitore_nome_testi:
+        filebody += databasemongo.returntext(DOCUMENTCOLLECTION, text)["body"]
+    arr1 = readerpage(filebody, lexicon, numword)
     arrayslist = {}
-    arr1 = readerpage(singlefile, lexicon, numword)
     for i in range(1, int(numerodoc)):
         filename = "./out/" + str(i) + ".txt"
-        filebody = DBM.returntext(COLLECTIONNAME, filename)["body"]
+        filebody = databasemongo.returntext(DOCUMENTCOLLECTION, filename)["body"]
         arr2 = readerpage(filebody, lexicon, numword)
         arrayslist[str(coscalc(arr1, arr2))] = filename
     listcold = arrayslist.keys()
@@ -129,14 +138,18 @@ def partenza(numerodoc):
 
 
 def main():
-    numerodoc = recuperodocumenti()
-    elaborodocumenti()
-    documentlist = {"./out/7.txt", "./out/6.txt", "./out/5.txt", "./out/4.txt", "./out/3.txt", "./out/2.txt",
-                    "./out/1.txt", "./out/0.txt"}
-    if INSERITO == 0:
-        utente = User(documentlist, LEXICON, "utente")
-        DBM.insert("user", utente.getjson())
-    partenza(numerodoc)
+    try:
+        databasemongo = database(DBNAME, DBHOST, DBPORT)
+        numerodoc = recuperodocumenti(databasemongo)
+        elaborodocumenti(databasemongo)
+        utente = User(DOCUMENTLIST, LEXICON, "utente")
+        try:
+            databasemongo.insert(USERCOLLECTION, utente.getjson())
+        except DuplicateKeyError:
+            print()
+        partenza(numerodoc, utente, databasemongo)
+    except ConnectionFailure:
+        print("Errore di Connessione")
 
 
 if __name__ == "__main__":

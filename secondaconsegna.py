@@ -26,7 +26,7 @@ def addtolexicon(lexicon, filename):
                     if lexicondict.keys().__contains__(word.lower()) != 1:
                         lexicondict[word.lower()] = lexiconnum
                         lexiconnum += 1
-    return lexiconnum, lexicondict
+    return (lexiconnum, lexicondict)
 
 
 def coscalc(arr1, arr2):
@@ -45,7 +45,7 @@ def coscalc(arr1, arr2):
 
 def printlexicon(lexicon):
     fileout = codecs.open("./out/lexicon.txt", 'w', 'utf-8')
-    appoggio = ["" for word, number in lexicon[1].items()]
+    appoggio = ["" for _ in lexicon[1].items()]
     for word, number in lexicon[1].items():
         appoggio[number] = word
     i = 1
@@ -72,27 +72,27 @@ def readerpage(file, lexicon):
 
 
 def readlexicon():
-    lexiconnum = 0
-    lexicondict = {}
+    lexicon_num = 0
+    lexicon_dict = {}
     filein = open(LEXICONNAME)
-    numline = 0
+    num_line = 0
     i = 0
     for line in filein:
         if i == 0:
             i += 1
-            numline = line
+            num_line = line
         else:
             word, m, n = line.split()
-            lexicondict[word] = lexiconnum
-            lexiconnum = lexiconnum + 1
-    return lexiconnum, lexicondict, numline
+            lexicon_dict[word] = lexicon_num
+            lexicon_num = lexicon_num + 1
+    return lexicon_num, lexicon_dict, num_line
 
 
 def returnsimilar(interestingarray, arrayslist):  # arraylist[i][0]=nomefile,arraylist[i][1]=array del file
     similardictionary = {}
     for name in arrayslist:
         similardictionary[coscalc(interestingarray, name[1])] = name[0]
-    fileout = open("./out/warmstart.txt", 'w')
+    fileout = open(LEXICONNAME, 'w')
     listsorted = similardictionary.keys()
     listsorted.sort()
     for i in range(len(listsorted) - 9, len(listsorted)):
@@ -124,34 +124,36 @@ def userarray(listafiles, lexicon):
 
 
 def main():
-    numerofline = 0
     appoggio = []
     lexicon = (0, {})
     try:
-        lexiconnum, lexicondict, numerofline = readlexicon()
-        lexicon = (lexiconnum, lexicondict)
-    except IOError:
-        numerofline = getfromgoogle(NUMERORISULTATI)
-        for i in range(0, numerofline):
+        lexicon_num, lexicondict, numero_file = readlexicon()
+        lexicon = (lexicon_num, lexicondict)
+        printlexicon(lexicon)
+    except Exception:
+        numero_file = getfromgoogle(NUMERORISULTATI)
+        for i in range(0, numero_file):
             inputfile = "./out/" + str(i) + ".txt"
-            lexicon = addtolexicon(lexicon, inputfile)
+            lexicon_num, lexicondict, = addtolexicon(lexicon, inputfile)
+            lexicon = (lexicon_num, lexicondict)
             appoggio.append(inputfile)
         printlexicon(lexicon)
+
 
     # Partenza a freddo
     print("Cold start")
     singlefile = "./out/0.txt"
     fileout = open("./out/coldstart.txt", 'w')
-    arrayslistcold = {}
+    arrayslist_cold = {}
     arr1 = readerpage(singlefile, lexicon)
-    for i in range(1, int(numerofline)):
+    for i in range(1, int(numero_file)):
         tempfilename = "./out/" + str(i) + ".txt"
         arr2 = readerpage(tempfilename, lexicon)
-        arrayslistcold[str(coscalc(arr1, arr2))] = tempfilename
-    listcold = arrayslistcold.keys()
+        arrayslist_cold[str(coscalc(arr1, arr2))] = tempfilename
+    listcold = arrayslist_cold.keys()
     listcold.sort()
-    for i in range(len(arrayslistcold) - 9, len(arrayslistcold)):
-        fileout.write(arrayslistcold[listcold[i]] + '\n')
+    for i in range(len(arrayslist_cold) - 9, len(arrayslist_cold)):
+        fileout.write(arrayslist_cold[listcold[i]] + '\n')
     fileout.close()
 
     # Partenza a caldo
@@ -161,7 +163,7 @@ def main():
         filein = "./out/" + str(i) + ".txt"
         mydocument = sumarray(mydocument, readerpage(filein, lexicon))
     arrayslisthot = []
-    for i in range(6, int(numerofline)):
+    for i in range(6, int(numero_file)):
         filename = "./out/" + str(i) + ".txt"
         arrayslisthot.append((filename, readerpage(filename, lexicon)))
     returnsimilar(mydocument, arrayslisthot)
