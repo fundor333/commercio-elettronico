@@ -1,0 +1,37 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T1]{fontenc}	
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+
+ \title{Terza consegna del corso di Commercio Elettronico}
+ \author{Matteo Scarpa 845087}
+  \date{\today}
+
+\begin{document}
+	\maketitle
+	
+	Questa è la terza esercitazione del corso e prevede di creare dei suggerimenti attraverso l'utilizzo di un database (MongoDB). 
+	
+	\section*{Struttura dei programmi}
+	Entrambi i programmi richiedono l'uso della prima esercitazione, la quale è stata modificata per rendere i testi più puliti.  I file così ottenuti vengono quindi inseriti nel database. Successivamente viene applicata loro una mapreduce per ottenere il lexicon e calcola la frequenza delle parole nei testi.
+	
+Successivamente genera un utente su un elenco di documenti dato	via codice attraverso una classe user. Questo viene fatto per avere del codice più modulare.
+
+Stessa cosa viene realizzata per il database. Viene creata una classe apposita per gestire il collegamento al database e la operazioni che avvengono in esso. Questo è stato fatto per avere una variabile globale che indica il database e permette le operazioni su di esso potendo riciclare il codice per l'esercitazione successiva.\footnote{Infatti l'uso di una classe isola il codice rendendo il codice modulare e, di conseguenza, più facile da mantenere}
+			
+	\section*{Confronto}
+	Sono stati confrontati i tempi di esecuzione dei due script (nel caso siano già stati scaricati i file e inseriti i dati nel database).
+\begin{table}[h]
+\begin{tabular}{|l|l|l|ll}
+\cline{1-3}
+ & secondaconsegna.py & terzaconsegna.py &  &  \\ \cline{1-3}
+Real & 10.933 sec & 8.869 sec&  &  \\ \cline{1-3}
+User & 5.340 sec & 2.995 sec&  &  \\ \cline{1-3}
+Sys & 0.431 sec & 0.221sec &  &  \\ \cline{1-3}
+\end{tabular}
+\end{table}
+
+Sono stati confrontati gli output dei due script nei due casi e si è scoperto che i risultati sono differenti. Personalmente mi aspettavo 
+
+\end{document}
