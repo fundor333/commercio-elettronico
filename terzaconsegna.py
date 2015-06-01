@@ -8,14 +8,12 @@ from pymongo.errors import DuplicateKeyError, ConnectionFailure
 
 from userclass import User
 
-
 __author__ = 'Fundor333'
 
 import linecache
 
 from mongodbclass import database
 from primaconsegna import getfromgoogle, NUMERORISULTATI, OUTPITFILENAME
-
 
 DBNAME = "TerzaEsercitazione"
 DBHOST = 'localhost'
@@ -64,12 +62,12 @@ def recuperodocumenti(databasemongo):
             filein = open(fileinname)
             for line in filein:
                 textappend += line
-                print(databasemongo.insert(DOCUMENTCOLLECTION, elaboratoretesti(textappend, fileinname)))
+                print((databasemongo.insert(DOCUMENTCOLLECTION, elaboratoretesti(textappend, fileinname))))
 
         print("##############")
         print("Fine degli ID nei documenti")
     except DuplicateKeyError:
-        print ("Documenti gia' presenti nel DB")
+        print("Documenti gia' presenti nel DB")
     return num
 
 
@@ -108,7 +106,7 @@ def coscalc(arr1, arr2):
 
 
 def readerpage(inputfile, lexicon, numword):
-    arraydictionary = range(0, numword)
+    arraydictionary = list(range(0, numword))
     for parts in inputfile.split():
         for word in re.split("[^a-zA-Z]", parts):
             if word != '' and word != "u":
@@ -130,7 +128,7 @@ def partenza(numerodoc, utente, databasemongo):
         filebody = databasemongo.returntext(DOCUMENTCOLLECTION, filename)["body"]
         arr2 = readerpage(filebody, lexicon, numword)
         arrayslist[str(coscalc(arr1, arr2))] = filename
-    listcold = arrayslist.keys()
+    listcold = list(arrayslist.keys())
     listcold.sort()
     for i in range(len(arrayslist) - 9, len(arrayslist)):
         fileout.write(arrayslist[listcold[i]] + '\n')

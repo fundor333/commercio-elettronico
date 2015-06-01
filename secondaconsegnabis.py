@@ -6,7 +6,6 @@ from gensim import corpora, models, similarities
 
 from primaconsegna import getfromgoogle, NUMERORISULTATI
 
-
 LEXICONNAME = "./out/out.txt"
 DICTIONARYNAME = './out/deerwester.dict'
 CORPUSNAME = './out/deerwester.mm'

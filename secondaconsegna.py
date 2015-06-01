@@ -8,7 +8,6 @@ from numpy.ma import sqrt
 
 from primaconsegna import getfromgoogle, NUMERORISULTATI
 
-
 LEXICONNAME = "./out/out.txt"
 USERARRAYNAME = "userarrayname"
 
@@ -23,7 +22,7 @@ def addtolexicon(lexicon, filename):
         for splitted in line.split():
             for word in re.split('[^a-zA-Z]', splitted):
                 if word != '' or word != ' ':
-                    if lexicondict.keys().__contains__(word.lower()) != 1:
+                    if list(lexicondict.keys()).__contains__(word.lower()) != 1:
                         lexicondict[word.lower()] = lexiconnum
                         lexiconnum += 1
     return (lexiconnum, lexicondict)
@@ -45,8 +44,8 @@ def coscalc(arr1, arr2):
 
 def printlexicon(lexicon):
     fileout = codecs.open("./out/lexicon.txt", 'w', 'utf-8')
-    appoggio = ["" for _ in lexicon[1].items()]
-    for word, number in lexicon[1].items():
+    appoggio = ["" for _ in list(lexicon[1].items())]
+    for word, number in list(lexicon[1].items()):
         appoggio[number] = word
     i = 1
     for word in appoggio:
@@ -93,7 +92,7 @@ def returnsimilar(interestingarray, arrayslist):  # arraylist[i][0]=nomefile,arr
     for name in arrayslist:
         similardictionary[coscalc(interestingarray, name[1])] = name[0]
     fileout = open(LEXICONNAME, 'w')
-    listsorted = similardictionary.keys()
+    listsorted = list(similardictionary.keys())
     listsorted.sort()
     for i in range(len(listsorted) - 9, len(listsorted)):
         fileout.write(similardictionary[listsorted[i]] + '\n')
@@ -150,7 +149,7 @@ def main():
         tempfilename = "./out/" + str(i) + ".txt"
         arr2 = readerpage(tempfilename, lexicon)
         arrayslist_cold[str(coscalc(arr1, arr2))] = tempfilename
-    listcold = arrayslist_cold.keys()
+    listcold = list(arrayslist_cold.keys())
     listcold.sort()
     for i in range(len(arrayslist_cold) - 9, len(arrayslist_cold)):
         fileout.write(arrayslist_cold[listcold[i]] + '\n')
@@ -167,7 +166,6 @@ def main():
         filename = "./out/" + str(i) + ".txt"
         arrayslisthot.append((filename, readerpage(filename, lexicon)))
     returnsimilar(mydocument, arrayslisthot)
-
 
 # Esecutore intero progetto
 if __name__ == "__main__":
